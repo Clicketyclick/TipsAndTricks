@@ -8,4 +8,7 @@ Title dir[%dirpath()] file[%filename()]
 '!include ./List.iuml
 '!plantuml::List.iuml[].
 List <|.. ArrayList
+
+List -> ArrayList: %dirpath()
+
 @enduml
