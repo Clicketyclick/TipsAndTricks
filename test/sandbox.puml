@@ -1,0 +1,7 @@
+@startuml
+' http://plantuml.com/preprocessing
+' include
+
+!include List.iuml
+List <|.. ArrayList
+@enduml
