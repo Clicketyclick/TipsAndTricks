@@ -2,6 +2,6 @@
 ' http://plantuml.com/preprocessing
 ' include
 
-!include List.iuml
+!include https://raw.githubusercontent.com/Clicketyclick/TipsAndTricks/master/test/List.iuml
 List <|.. ArrayList
 @enduml
