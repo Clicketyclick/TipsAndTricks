@@ -3,8 +3,9 @@
 ' include
 
 title
-Read from file %filename()
-Path is %dirpath()
+Read from file [%filename()]
+Path is [%dirpath()]
+env is %getenv()
 end title
 
 'Title dir[%dirpath()] file[%filename()]
