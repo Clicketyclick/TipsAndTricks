@@ -13,6 +13,8 @@ end title
 '!include https://raw.githubusercontent.com/Clicketyclick/TipsAndTricks/master/test/List.iuml
 '!include ./List.iuml
 '!plantuml::List.iuml[].
+!include %dirpath()/List.iuml
+
 List <|.. ArrayList
 
 'List -> ArrayList: %dirpath()
