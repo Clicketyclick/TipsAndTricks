@@ -5,7 +5,7 @@
 title
 Read from file [%filename()]
 Path is [%dirpath()]
-env is %getenv()
+env is %getenv("")
 end title
 
 'Title dir[%dirpath()] file[%filename()]
