@@ -2,8 +2,10 @@
 ' http://plantuml.com/preprocessing
 ' include
 
+Title dir[%dirpath%] file[%filename%]
+
 '!include https://raw.githubusercontent.com/Clicketyclick/TipsAndTricks/master/test/List.iuml
-!include ./List.iuml
-!plantuml::List.iuml[].
+'!include ./List.iuml
+'!plantuml::List.iuml[].
 List <|.. ArrayList
 @enduml
