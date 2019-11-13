@@ -14,4 +14,4 @@ Misc tips and tricks
                  XXX
 ```
 
-- [Index](docs/) for various tips and tricks. Index is subdevided by platform
+- [Shell script](shell.txt) tips for shell scripts, vi, awk and a few Perl one-liners. (Comments in danish - sorry)
