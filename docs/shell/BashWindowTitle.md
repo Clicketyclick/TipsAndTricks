@@ -4,6 +4,7 @@ Default:
 
 `PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '`
 
+Use `wtitle`to update window title - and maintain current prompt 
 ```bash
 # https://unix.stackexchange.com/a/574983
 wtitle() {
