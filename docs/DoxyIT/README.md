@@ -4,6 +4,8 @@ T&T for NotePad++ and DoxyIT
 
 Modifications and implemtation in NotePad++
 
+Note! DoxyIT may only work in the 32bit version of Notepad++
+
 
 ## Php
 
