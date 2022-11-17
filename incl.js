@@ -31,7 +31,8 @@ var HEAD =  TIME+ "<div align='right'>"
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
   + "</div>";
 
-document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML;
+var FOOTER = "<hr>&copy;2022 Clicketyclick.dk";
+document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML + FOOTER;
 
 console.log("Incl.js Header inserted");
 console.log("Incl.js ended");
