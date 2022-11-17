@@ -1,5 +1,5 @@
 console.log("Incl.js loaded");
 
-document.getElementById("header").innerHTML += "Incl. included: " . document.lastModified ;
+document.getElementById("header").innerHTML += "Incl. included: "  ;
 
 console.log("Incl.js ended");
