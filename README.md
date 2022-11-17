@@ -1,4 +1,4 @@
-# TipsAndTricks
+# TipsAndTricks [&#x1F3E0;](/)[&#x2303;](..)
 
 [&#x1F3E0;](/)
 
