@@ -1,4 +1,6 @@
-<p align="right">[&#x2303;](..)[&#x1F3E0;]</p> 
+<span align="right"><a href=".."><kbd>&#x2303;</kbd></a>
+[&#x1F3E0;](/)
+</span> 
 
 # TipsAndTricks (/)
 
@@ -18,3 +20,18 @@ Misc tips and tricks
 ```
 
 - [Index](docs/) for various tips and tricks. Index is subdevided by platform
+- [DOS batch](docs/batch/) 
+- [DoxyIT](docs/DoxyIT) 
+- [ExifTool](docs/exiftool ) 
+- [Hardware](docs/hardware) 
+- [KeePass](docs/keepass) KeePass password manager
+- [Linux batch](docs/shell) 
+- [M$ Windows](docs/windows) 
+- [Notepad++](docs/Notepad++/) Notepad++ 
+- [Plantuml](docs/plantuml) 
+- [SQLite](docs/SQLite/) 
+- [TotalCmd](docs/TotalCmd) 
+- [Unicode](docs/unicode) Unicode, UTF-8 
+
+
+
