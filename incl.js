@@ -9,7 +9,8 @@ document.getElementsByTagName("body")[0].innerHTML =
     +REPO
   +"/releases' title='Releases'><kbd>&#x24C7;</kbd></a><a href='https://github.com/BIT-SDUB/"
     +REPO
-  +"' title='Source'><kbd>&lt;&gt;</kbd></a> <a href='..' title='Up'><kbd>&#x2303;</kbd></a><a href='/' title='Home'><kbd>&#x1F3E0;</kbd></a></div>]" 
+  +"' title='Source'><kbd>&lt;&gt;</kbd></a> <a href='..' title='Up'><kbd>&#x2303;</kbd></a><a href='/' title='Home'><kbd>&#x1F3E0;</kbd></a></div>]"
+  + "<button onclick=\"location.href='/'\" type='button'>HOME</button>"
   + document.getElementsByTagName("body")[0].innerHTML;
 console.log("Incl.js Header inserted");
 console.log("Incl.js ended");
