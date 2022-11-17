@@ -7,11 +7,11 @@ document.getElementsByTagName("body")[0].innerHTML =
 // Demo
   + "<button onclick=\"location.href='https://bit-sdub.github.io/"
     +REPO
-  +"/demo.html' title='Demo' type='button' title='Up'>&#x24B9;</button>"
+  +"/demo.html'\" title='Demo' type='button' title='Up'>&#x24B9;</button>"
 // Releases
   + "<button onclick=\"location.href='https://bit-sdub.github.io/"
     +REPO
-  +"/releases' title='Releases' type='button' title='Up'>&#x24C7;</button>"
+  +"/releases'\" title='Releases' type='button' title='Up'>&#x24C7;</button>"
 
 /*
   "[</a><div align='right'><a href='https://bit-sdub.github.io/"
@@ -32,7 +32,7 @@ document.getElementsByTagName("body")[0].innerHTML =
 // Source
   + "<button onclick=\"location.href='https://github.com/BIT-SDUB/"
     +REPO
-  +"' type='button' title='Source'>&lt;&gt;</button>"
+  +"'\" type='button' title='Source'>&lt;&gt;</button>"
 
   + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
