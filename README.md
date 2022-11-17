@@ -1,5 +1,7 @@
 # TipsAndTricks
 
+[&#x1F3E0;](/)
+
 Misc tips and tricks
 
 ```
