@@ -2,9 +2,9 @@ console.log("Incl.js loaded");
 //document.getElementsByTagName("body")[0].innerHTML = "HEADER HERE<div align='right'><a href='..' title='Up'><kbd>&#x2303;</kbd></a><a href='/' title='Home'><kbd>&#x1F3E0;</kbd></a></div></a> HEADER END" + document.getElementsByTagName("body")[0].innerHTML;
 var SITE  = "Clicketyclick";
 var REPO  = "TipsAndTricks";
-var TIME  = "2022-11-17T16:19:58";
+var TIME  = "";//2022-11-17T16:19:58";
 
-var HEAD =  TIME+ "[<div align='right'>"
+var HEAD =  TIME+ "<div align='right'>"
 // Demo
   + "<button onclick=\"location.href='https://"
     + SITE
@@ -29,7 +29,7 @@ var HEAD =  TIME+ "[<div align='right'>"
   + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
 // Home
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
-  + "</div>]";
+  + "</div>";
 
 document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML;
 
