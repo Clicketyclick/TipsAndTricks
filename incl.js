@@ -1,9 +1,9 @@
 console.log("Incl.js loaded");
 //document.getElementsByTagName("body")[0].innerHTML = "HEADER HERE<div align='right'><a href='..' title='Up'><kbd>&#x2303;</kbd></a><a href='/' title='Home'><kbd>&#x1F3E0;</kbd></a></div></a> HEADER END" + document.getElementsByTagName("body")[0].innerHTML;
 var REPO = "TipsAndTricks";
-
+var TIME= "2022-11-17T16:05:37";
 document.getElementsByTagName("body")[0].innerHTML = 
-  "[</a><div align='right'>"
+  TIME+ "[</a><div align='right'>"
 // Demo
   + "<button onclick=\"location.href='https://bit-sdub.github.io/"
     +REPO
