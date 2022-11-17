@@ -1,10 +1,6 @@
-# incl-test
-<script async type="text/javascript" src="incl.js"></script>
+# incl-test.md
 
-<!-- Custom JavaScript files set in YAML front matter -->
-{% for js in page.customjs %}
-<script async type="text/javascript" src="{{ js }}"></script>
-{% endfor %}
+<script async type="text/javascript" src="incl.js"></script>
 
 Done
 ---
