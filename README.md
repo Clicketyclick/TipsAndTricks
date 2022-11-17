@@ -1,6 +1,6 @@
-# TipsAndTricks [&#x1F3E0;](/)[&#x2303;](..)
+<p align="right">[&#x2303;](..)[&#x1F3E0;]</p> 
 
-[&#x1F3E0;](/)
+# TipsAndTricks (/)
 
 Misc tips and tricks
 
