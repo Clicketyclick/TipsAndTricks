@@ -1,6 +1,7 @@
-<span align="right"><a href=".."><kbd>&#x2303;</kbd></a>
-[&#x1F3E0;](/)
-</span> 
+<p align="right">
+ <a href=".."><kbd>&#x2303;</kbd></a>
+ [&#x1F3E0;](/)
+</p> 
 
 # TipsAndTricks (/)
 
