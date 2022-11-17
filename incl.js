@@ -7,10 +7,13 @@ document.getElementsByTagName("body")[0].innerHTML =
     +REPO
   +"/demo.html' title='Demo'><kbd>&#x24B9;</kbd></a><a href='https://bit-sdub.github.io/"
     +REPO
-  +"/releases' title='Releases'><kbd>&#x24C7;</kbd></a><a href='https://github.com/BIT-SDUB/"
+  +"/releases' title='Releases'><kbd>&#x24C7;</kbd></a>"
+  + "<button onclick=\"location.href='https://github.com/BIT-SDUB/"
     +REPO
   +"' title='Source'><kbd>&lt;&gt;</kbd></a> <a href='..' title='Up'><kbd>&#x2303;</kbd></a><a href='/' title='Home'><kbd>&#x1F3E0;</kbd></a></div>]"
-  + "<button onclick=\"location.href='/'\" type='button'>HOME</button>"
+  + "<button onclick=\"location.href='..'\" type='button' title='Up'>&lt;&gt;</button>"
+  + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
+  + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
   + document.getElementsByTagName("body")[0].innerHTML;
 console.log("Incl.js Header inserted");
 console.log("Incl.js ended");
