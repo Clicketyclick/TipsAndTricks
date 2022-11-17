@@ -1,9 +1,6 @@
-<p align="right">
- <a href=".."><kbd>&#x2303;</kbd></a>
- [&#x1F3E0;](/)
-</p> 
+<p align="right"><a href=".." title="Up"><kbd>&#x2303;</kbd></a><a href="/" title="Home"><kbd>&#x1F3E0;</kbd></a></p>
 
-# TipsAndTricks (/)
+# TipsAndTricks
 
 Misc tips and tricks
 
