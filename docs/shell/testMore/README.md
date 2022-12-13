@@ -9,20 +9,15 @@ Using simple test like:
 - like - string matches a regex pattern
 - unlike - string does NOT match regex pattern
 
-This module is simply included
-
-```shell
-. "./testMore.sh"
-```
-And ready to use
+This module is simply included 
+and ready to use
 
 The process is:
 1. Include the module using `. "./testMore.sh"`
 2. `dump_header`
-3. Set plan - `testMore_tests=`
-4. Run the tests
+3. Plan a number of tests - `testMore_tests=`
+4. Run the tests: `ok`. `is`, `isnt`, `like`, `unlike`
 5. Terminate with `done_testing`
-
 
 ### Example: testMore.t.sh
 ```shell
