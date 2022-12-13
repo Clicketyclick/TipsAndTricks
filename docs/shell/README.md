@@ -3,7 +3,8 @@
 
 ## Modules / libraries
 
-- [trim](trim.sh) - trim leading and trailing whitespace from string
+- [testMore](testMore/) - yet another framework for writing test scripts
+- [trim](trim/) - trim leading and trailing whitespace from string
 
 ## Tricks
 
