@@ -2,6 +2,10 @@
 
 [Shell by example](shell.sh)
 
+## Modules / libraries
+
+- [trim](trim.sh) - trim leading and trailing whitespace from string
+
 ## Set window title in Bash
 
 Default:
