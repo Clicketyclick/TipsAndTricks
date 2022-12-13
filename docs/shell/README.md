@@ -7,4 +7,4 @@
 
 ## Tricks
 
-- [Set window title](wtitle) in Bash
+- [Set window title](BashWindowTitle) in Bash
