@@ -4,6 +4,8 @@
 
 - The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
 
+- [getCover](getCover.cmd) - Download book covers by ISBN
+
 
 ## Usefull links
 
@@ -12,7 +14,7 @@
     
 ### Not so usefull links
 
-- [DOS Batch Programming - Eric Phelps](//www.ericphelps.com/batch/)
+- [DOS Batch Programming - Eric Phelps](https://www.ericphelps.com/batch/)
     - Common DOS workarounds and methods to accomplish tasks not covered in the Win9x manual. Particular emphasis on processing lists and lines of data.
 - [Converting DOS Batch Files to Shell Scripts](https://linux.die.net/abs-guide/dosbatch)
     - Even the crippled DOS batch file language allowed writing some fairly powerful scripts and applications, though they often required extensive kludges and ...
