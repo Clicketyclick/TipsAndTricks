@@ -1,3 +1,8 @@
+<!--
+![dos_batch_scripts](https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)
+-->
+<img align="right" width="100" height="100" src="https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)">
+
 # DOS batch scripts
 
 - The ["_" Windows Batch Library](https://github.com/ClicketyClickDK/Underscore) (The "underscore" Windows Batch Library) is a collection of generic, ready-to-use batch scripts - and has a life (and repository) of it's own.
