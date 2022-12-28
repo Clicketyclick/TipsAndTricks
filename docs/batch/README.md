@@ -4,7 +4,7 @@
 
 - The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
 
-- [getCover](getBookCover/) - Download book covers by ISBN
+- [getBookCover](getBookCover/) - Download book covers by ISBN
 
 
 ## Usefull links
