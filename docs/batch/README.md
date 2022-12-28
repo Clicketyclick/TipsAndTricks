@@ -1,7 +1,7 @@
 <!--
 ![dos_batch_scripts](https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)
 -->
-<img align="right" width="100" height="100" src="https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)">
+<img align="right" width="100" height=auto src="dos_batch_scripts.jpg">
 
 # DOS batch scripts
 
