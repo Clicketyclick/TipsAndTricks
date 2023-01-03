@@ -11,6 +11,7 @@
 
 - [getBookCover](getBookCover/) - Download book covers by ISBN
 
+- [How to get piped input in windows batch file?](https://stackoverflow.com/a/52583931/7485823)
 
 ## Usefull links
 
