@@ -1,6 +1,8 @@
 # SQLite
 
 
+- [Delete rows with duplicate values](delete_rows_with_duplicate_values) (https://stackoverflow.com/a/74994082/7485823)
+
 
 ## Paradox
 
