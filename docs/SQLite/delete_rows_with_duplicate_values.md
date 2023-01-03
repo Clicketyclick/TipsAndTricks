@@ -1,7 +1,10 @@
+# SQLite
 
-Example from: [stackoverflow.com](https://stackoverflow.com/a/74994082/7485823)
+## How to delete all rows with duplicate values in 2 columns but keep the last inserted row?
+- Example from: [stackoverflow.com](https://stackoverflow.com/a/74994082/7485823)
+- SQLfiddle: http://sqlfiddle.com/#!7/6cc1d/1
 
-How to delete all rows with duplicate values in 2 columns but keep the last inserted row?
+
 
 > I want to remove any rows that have duplicate values 
 > in columns val1 and val2 (so that would be rows 1 and 2) 
