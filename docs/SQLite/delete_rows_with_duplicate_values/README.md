@@ -11,11 +11,14 @@
 > but keep the row that was inserted last (row 2). 
 > In the example table only row 1 would be removed.
 
-```sqlite3
+```sql
 CREATE TABLE queue
     (`id` int, `val1` int, `val2` int, `timestamp` float, `datatype` int )
 ;
-    
+
+```
+``` sql
+
 INSERT INTO queue
     (`id`, `val1`, `val2`, `timestamp`, `datatype`)
 VALUES
@@ -27,7 +30,7 @@ VALUES
     (6, 60, 100, 1471862500, 1)
 ;
 ```
-```sqlite3
+``` sql
 DELETE
 FROM queue
 WHERE rowid NOT IN (
