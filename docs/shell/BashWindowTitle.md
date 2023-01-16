@@ -1,4 +1,21 @@
-# Set window title in Bash
+
+
+## How to change the title of the mintty window?
+https://superuser.com/a/886247
+
+Add these lines in your .bashrc that define 2 functions:
+
+```bash
+function settitle() {
+      export PS1="\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ "
+      echo -ne "\e]0;$1\a"
+}
+function settitlepath() {
+      export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n$ "
+}
+```
+
+## Set window title in Bash
 
 Default:
 
