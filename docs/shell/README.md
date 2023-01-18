@@ -9,3 +9,4 @@
 ## Tricks
 
 - [Set window title](BashWindowTitle.md) in Bash
+- [Linux Shell Tip: Remove files with names that contains spaces, and special characters such as -, —](https://www.linux.com/training-tutorials/linux-shell-tip-remove-files-names-contains-spaces-and-special-characters-such/)
