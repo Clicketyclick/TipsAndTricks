@@ -1,14 +1,5 @@
-<html>
-<style>
-
-h2 {
-color: green;
-}
-</style>
-</html>
 [Shell by example](shell.sh)
 
-<h2>h2</h2>
 ## Modules / libraries
 
 - [testMore](testMore/) - yet another framework for writing test scripts
