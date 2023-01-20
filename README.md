@@ -14,20 +14,16 @@ Misc tips and tricks
                   X
                  XXX
 ```
-
 - [Index](docs/) for various tips and tricks. Index is subdevided by platform
 - [DOS batch](docs/batch/) 
 - [DoxyIT](docs/DoxyIT) 
 - [ExifTool](docs/exiftool ) 
 - [Hardware](docs/hardware) 
-- [KeePass](docs/keepass) KeePass password manager
-- [Linux batch](docs/shell) 
+- [KeePass](docs/keepass) Password Manager
+- [Linux](docs/shell)  batch, shell, etc.
 - [M$ Windows](docs/windows) 
-- [Notepad++](docs/Notepad++/) Notepad++ 
+- [Notepad++](docs/Notepad++/)
 - [Plantuml](docs/plantuml) 
 - [SQLite](docs/SQLite/) 
 - [TotalCmd](docs/TotalCmd) 
 - [Unicode](docs/unicode) Unicode, UTF-8 
-
-
-
