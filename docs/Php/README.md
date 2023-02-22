@@ -1,7 +1,7 @@
 ## PHP 
 
-[of-course.md](of-course.md)
-[of-course](of-course)
+- [of-course.md](of-course.md)
+<!-- [of-course](of-course) will download the file -->
 
 
 ### CORS on PHP (Of CORse)
@@ -13,4 +13,11 @@ If you don't have access to configure Apache, you can still send the header from
 ```
 Note: as with all uses of the PHP header function, this must be before any output has been sent from the server.
 
-https://enable-cors.org/server_php.html
+Source: https://enable-cors.org/server_php.html
+
+If you only want to open for a specific server:
+```php
+ <?php
+ header("Access-Control-Allow-Origin: SOURCE-SERVER");
+```
+
