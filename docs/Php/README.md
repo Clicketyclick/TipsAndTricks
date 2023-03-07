@@ -1,6 +1,6 @@
 ## PHP 
 
-[CORS on PHP (Of CORse)(of-course.html)
+[CORS on PHP (Of CORse)](of-course.html)
 
 
 ### INI config
