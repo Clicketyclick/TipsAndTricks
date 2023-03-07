@@ -22,7 +22,8 @@ Misc tips and tricks
 - [Linux](docs/shell)  batch, shell, etc.
 - [M$ Windows](docs/windows) 
 - [Notepad++](docs/Notepad++/)
-- [Plantuml](docs/plantuml) 
+- [Plantuml](docs/plantuml)
+- [PHP](docs/Php) 
 - [SQLite](docs/SQLite/) 
 - [TotalCmd](docs/TotalCmd) 
 - [Unicode](docs/unicode) Unicode, UTF-8 
