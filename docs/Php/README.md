@@ -1,5 +1,8 @@
 ## PHP 
 
+[CORS on PHP (Of CORse)(of-course.html)
+
+
 ### INI config
 
 Mimimum changes to php.ini (from php.ini-development)
