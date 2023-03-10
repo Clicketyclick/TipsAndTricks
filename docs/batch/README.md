@@ -9,7 +9,7 @@
 - The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
 - [getBookCover](getBookCover/) - Download book covers by ISBN
 - [How to get piped input in windows batch file?](https://stackoverflow.com/a/52583931/7485823)
-- [Elevation, local and domain admin](/Elevator/)
+- [Elevation, local and domain admin](Elevator/)
 
 ## Usefull links
 
