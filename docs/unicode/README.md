@@ -18,3 +18,4 @@ And UTF-8
 - <kbd>⌥ Option</kbd>
 - <kbd>⇪ Caps Lock</kbd>
 - <kbd>Tab ↹</kbd>
+
