@@ -14,8 +14,11 @@ And UTF-8
 - <kbd>⊞ Windows</kbd> U+229E ⊞ SQUARED PLUS
 - <kbd>⌘ Command</kbd>
 - <kbd>⇧ Shift</kbd>
-- <kbd>⇧ Shift</kbd>
 - <kbd>⌥ Option</kbd>
 - <kbd>⇪ Caps Lock</kbd>
-- <kbd>Tab ↹</kbd>
-
+- <kbd>Tab ↹</kbd> Tablular left and right
+- <kbd>&uarr;</kbd> &amp;uarr; Up arrow
+- <kbd>&darr;</kbd> &amp;darr; Down arrow
+- <kbd>&larr;</kbd> &amp;larr; Left arrow
+- <kbd>&rarr;</kbd> &amp;rarr; Right arrow
+- <kbd>⏎ Enter</kbd> (U+23CE)
