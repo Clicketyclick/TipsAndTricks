@@ -12,3 +12,9 @@ Set Date to: `yyyy-MM-ddTHH:mm:ss`
 > Settings / Shortcut mapper
 
 Filter on `Date` and add shortcut [Alt]+[F5]
+
+
+## Plugins
+### NppMarkdownPanel
+
+- Styles.css - [Border in tables and fieldsets](NppMarkdownPanel.html)
