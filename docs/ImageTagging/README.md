@@ -39,12 +39,15 @@ Reference: [Re: XMP and/or IPTC: set some required metadata fields...](https://n
 More complex data sets can be stored as XML in `iptc` files: Luxor.iptc
 
 <fieldset>
+
 <legend>
 Warning! &#x26A0;
-<legend>
+</legend>
 
-  Loading an `iptc` template will overwrite ALL dataelements in the picture.<br>
+Loading an `iptc` template will overwrite ALL dataelements in the picture.
+<br>
 You cannot pick and choose.
+
 </fieldset>
 
 ```
