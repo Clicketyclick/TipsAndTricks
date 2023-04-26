@@ -50,6 +50,9 @@ You cannot pick and choose.
 
 </fieldset>
 
+<details>
+    <summary>Example: Luxor.uptc</summary>
+
 ```
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE iptc_template><iptc_template version="1.0">
     <tag_5/>
@@ -125,3 +128,5 @@ You cannot pick and choose.
     </tag_122>
 </iptc_template>
 ```
+
+</details>
