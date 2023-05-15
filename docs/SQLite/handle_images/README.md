@@ -70,15 +70,13 @@ function file2base64( $filename )
     return base64_encode(file_get_contents( $filename ));
 }   // file2base64()
 
-function base642file( $filename, $blob )
+function base64_2file( $filename, $blob )
 {
     return file_put_contents( $filename, base64_decode( $blob ) );
-}   // base642file()
+}   // base64_2file()
 
 ?>
 ```
-
-
 
 References:
 - [Compile and load](https://www.sqlite.org/loadext.html)
