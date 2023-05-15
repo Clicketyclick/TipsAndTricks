@@ -2,6 +2,8 @@
 
 Newlines (and other special characters) can be escaped using the `CHAR()` function or using the hex `X'0A'`
 
+Beaware that if you're operating in a mixed environment you should use the two level replacement. This can be used on both Windows and Linux.
+
 ### Example
 ```sql
 DROP TABLE IF EXISTS temp_config;
