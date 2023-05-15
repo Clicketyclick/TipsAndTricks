@@ -1,6 +1,7 @@
 
 ## Tips and tricks on SQLite
 
+- [Handle newlines](handle_newlines/)
 - [Delete rows with duplicate values](delete_rows_with_duplicate_values) (https://stackoverflow.com/a/74994082/7485823)
 - [Insert UUID as ID](Insert_UUID_as_ID) (https://stackoverflow.com/a/22725697/7485823)
 - [Extract nested JSON from SQLite](SQLite2JSON_hash/) (Based on [Stackoverflow](https://stackoverflow.com/a/61004015/7485823) )
