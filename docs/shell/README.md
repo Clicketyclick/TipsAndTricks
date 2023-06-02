@@ -14,6 +14,8 @@
 ```shell
 date -u +%Y-%m-%dT%H:%M:%S%z
 ```
+### crontab guru
+The quick and simple editor for cron schedule expressions by Cronitor: https://crontab.guru/#*/10_7-17_*_*_*
 
 ## External
 
