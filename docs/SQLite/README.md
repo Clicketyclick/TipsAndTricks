@@ -8,6 +8,28 @@
 - [Extract nested JSON from SQLite](SQLite2JSON_hash/) (Based on [Stackoverflow](https://stackoverflow.com/a/61004015/7485823) )
 - [UUID as default value for id](DefaultUUID/) (Based on [Stackoverflow: SQLite - Generate GUID/UUID on SELECT INTO statement](https://stackoverflow.com/a/66625212) )
 
+## sqlean - All the Missing SQLite Functions
+- [nalgeon / sqlean](https://github.com/nalgeon/sqlean) All the Missing SQLite Functions
+
+A true gold mine on extentions to SQLite.
+
+These are the most popular functions. They are tested, documented and organized into the domain modules with clear API.
+
+Think of them as the extended standard library for SQLite:
+
+- crypto: hashing, encoding and decoding data
+- define: user-defined functions and dynamic sql
+- fileio: read and write files
+- fuzzy: fuzzy string matching and phonetics
+- ipaddr: IP address manipulation
+- math: math functions
+- regexp: regular expressions
+- stats: math statistics
+- text: string functions
+- unicode: Unicode support
+- uuid: Universally Unique IDentifiers
+- vsv: CSV files as virtual tables
+- The single-file sqlean bundle contains all extensions from the main set.
 
 ## TIMESTAMP vs. ISO8601 dates
 
