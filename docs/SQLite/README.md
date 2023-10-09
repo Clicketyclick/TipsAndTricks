@@ -1,9 +1,9 @@
 
 ## Tips and tricks on SQLite
 
-- [Handle images](handle_images/)
-- [Handle newlines](handle_newlines/)
-- [Delete rows with duplicate values](delete_rows_with_duplicate_values) (https://stackoverflow.com/a/74994082/7485823)
+- [Handle images](handle_images/) - Raw images or Base64 encoded images
+- [Handle newlines](handle_newlines/) - Newlines (and other special characters) can be escaped using the CHAR() function or using the hex X'0A'.
+- [Delete rows with duplicate values](delete_rows_with_duplicate_values) (https://stackoverflow.com/a/74994082/7485823) - How to delete all rows with duplicate values in 2 columns but keep the last inserted row?
 - [Insert UUID as ID](Insert_UUID_as_ID) (https://stackoverflow.com/a/22725697/7485823)
 - [Extract nested JSON from SQLite](SQLite2JSON_hash/) (Based on [Stackoverflow](https://stackoverflow.com/a/61004015/7485823) )
 - [UUID as default value for id](DefaultUUID/) (Based on [Stackoverflow: SQLite - Generate GUID/UUID on SELECT INTO statement](https://stackoverflow.com/a/66625212) )
