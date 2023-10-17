@@ -6,13 +6,19 @@ Images in current dir and descriptions in subdir `desc` as .TXT files.
     └───desc
 ```
 
-For short run:
+For short - download:
+
+- [desc2json.cmd](desc2json.cmd) - the script that parses all description files in the `desc` subdirectory and builds a JSON
+- [global.json](global.json) - Template for global information ie. owner 
+
+Modify `global.json` and run:
 
 ```
-Desc2Json.cmd 
+desc2json.cmd
 %exiftool% -json="desc.default.utf-8.json" *.tif
 ```
 
+Where `%exiftool%` is an environtment variable pointing to the local ExifTool installation.
 
 
 ## export to JSON file
