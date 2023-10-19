@@ -2,7 +2,7 @@
 ## Tips and tricks on SQLite
  
   
-- [Handle images](handle_images/). 
+- [Handle images](handle_images/)  
 Raw images or Base64 encoded images
 - [Handle newlines](handle_newlines/).  
  Newlines (and other special characters) can be escaped using the CHAR() function or using the hex X'0A'.
@@ -13,7 +13,8 @@ How to delete all rows with duplicate values in 2 columns but keep the last inse
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/22725697/7485823))
 - [Extract nested JSON from SQLite](SQLite2JSON_hash/)
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/61004015/7485823))
-- [UUID as default value for id](DefaultUUID/) - SQLite - Generate GUID/UUID on SELECT INTO statement
+[UUID as default value for id](DefaultUUID/)  
+SQLite - Generate GUID/UUID on SELECT INTO statement
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/66625212))
 - [sqlean](sqlean/)  
 All the Missing SQLite Functions (From [nalgeon / sqlean](https://github.com/nalgeon/sqlean))
