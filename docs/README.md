@@ -1,6 +1,6 @@
 ---
 layout: forward
-target: https://example.com
+target: https://clicketyclick.github.io
 ---
 
 
