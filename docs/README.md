@@ -1,8 +1,9 @@
 ---
 layout: forward
-target: https://clicketyclick.github.io
+target: https://clicketyclick.github.io/index.html
 ---
 
+REDIRECT TO https://clicketyclick.github.io/index.html
 
 # TipsAndTricks
 
