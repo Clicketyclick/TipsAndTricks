@@ -5,8 +5,6 @@ target: https://clicketyclick.github.io/index.html
 
 
 
-REDIRECT TO https://clicketyclick.github.io/index.html
-
 # TipsAndTricks
 
 Misc tips and tricks
