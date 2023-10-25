@@ -8,13 +8,14 @@
 - The ["_" Windows Batch Library](https://github.com/ClicketyClickDK/Underscore) (The "underscore" Windows Batch Library) is a collection of generic, ready-to-use batch scripts - and has a life (and repository) of it's own.
 - The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
 - [getBookCover](getBookCover/) - Download book covers by ISBN
-- [How to get piped input in windows batch file?](https://stackoverflow.com/a/52583931/7485823)
+- [How to get piped input in windows batch file? <img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/52583931/7485823)
 - [Elevation, local and domain admin](Elevator/)
 
 ## Usefull links
 
-- [DosTips - The DOS Batch Guide](https://www.dostips.com)
-    - This DOS batch guide brings structure into your DOS script by using real function like constructs within a DOS batch file.
+- [DosTips - The DOS Batch Guide <img src="https://www.dostips.com/DosTipsLogo.gif" title="Link to DosTips" width=16px height=auto>](https://www.dostips.com).  
+This DOS batch guide brings structure into your DOS script by using real function like constructs within a DOS batch file.
+ 
 <!--
 ### Not so usefull links
 
