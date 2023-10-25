@@ -1,4 +1,5 @@
-[Shell by example](shell.sh)
+
+- [Shell script by example](shell.sh) tips for shell scripts, vi, awk and a few Perl one-liners. (Comments in danish - sorry)
 
 ## Modules / libraries
 
