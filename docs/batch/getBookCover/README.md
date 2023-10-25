@@ -1,6 +1,6 @@
 
 
-file      |getBookCover.cmd
+file      |[getBookCover.cmd](getBookCover.cmd)
 ---|---
 brief     |Download book covers by ISBN
 details   |Read ISBN as argument 1 - or piped in
