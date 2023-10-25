@@ -1,6 +1,6 @@
 # Unicode
 
-And UTF-8
+... And UTF-8
 
 - [Key shortcuts, Unicode and UTF-8 tables](https://www.key-shortcut.com/en/)
     - The website contains a collection of useful (for me) tips and tricks regading PC keyboards. Besides other topics you will find
