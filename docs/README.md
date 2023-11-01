@@ -8,7 +8,7 @@
    - [DoxyIT](/TipsAndTricks/DoxyIT) 
    - [ExifTool](/TipsAndTricks/exiftool ) 
    - [Hardware](/TipsAndTricks/hardware)
-   - [Javascripts](/TipsAndTricks/Javascripts) 
+   - [Javascripts](/TipsAndTricks/Javascript) 
    - [KeePass](/TipsAndTricks/keepass) Password Manager
    - [Linux batch](/TipsAndTricks/shell) Shell, Bash, vi etc.
    - [M$ Windows](/TipsAndTricks/windows) 
