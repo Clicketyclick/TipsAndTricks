@@ -1,4 +1,6 @@
+## Date to EPOCH and vice versa
 
+```sql
 -- Date to EPOCH and vice versa
 
 DROP TABLE MyTable;
@@ -25,3 +27,4 @@ SELECT * from MyTable;
 UPDATE MyTable SET iso = (SELECT DATETIME(ROUND(epoch ), 'unixepoch'));
 
 SELECT * from MyTable;
+```
