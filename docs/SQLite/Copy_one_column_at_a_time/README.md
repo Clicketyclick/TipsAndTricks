@@ -28,3 +28,4 @@ SET colB = (
 select * from table1;
 select * from tableB;
 ```
+https://stackoverflow.com/a/17703189
