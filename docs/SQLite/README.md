@@ -22,5 +22,7 @@ All the Missing SQLite Functions (From [nalgeon / sqlean](https://github.com/nal
 Date and time functions
 - [Paradox](paradox/)  
 Convert Paradox data to SQLite
+- [Date_to_epoch](Date_to_epoch)  
+Date to EPOCH and vice versa
 
 
