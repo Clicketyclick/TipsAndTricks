@@ -1,3 +1,5 @@
+### Copy one column at a time
+
 ```sql
 -- Copy one column at a time
 drop table table1;
@@ -29,3 +31,18 @@ select * from table1;
 select * from tableB;
 ```
 https://stackoverflow.com/a/17703189
+
+
+### Copy potential column
+Copy column if exists - else insert default value
+```sql
+UPDATE audit
+SET start = (   -- Set field in target
+SELECT CASE 
+         WHEN (SELECT name FROM pragma_table_info('audit_old') WHERE name = 'start')    -- column is found?
+           IS NULL THEN ''                                                              -- Error if NOT
+         ELSE ( select start from audit_old WHERE rowid = audit.rowid)                  -- Else get value
+       END 
+	--WHERE rowid = audit.rowid                                                           -- Line by line
+);
+```
