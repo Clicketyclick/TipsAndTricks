@@ -1,7 +1,7 @@
 ## Wrap commands with comments
 
 
-(Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/1456019))
+(Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto> - Commenting in a Bash script inside a multiline command](https://stackoverflow.com/a/1456019))
 
 
 This will have some overhead, but technically it does answer your question:
