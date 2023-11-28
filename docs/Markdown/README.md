@@ -35,6 +35,7 @@ Just like &lt;fieldset&gt; etc
 
 [^2]: (Snip from [<img src="../githup-mark.png" title="Link to Github" width=16px height=auto> - Basic writing and formatting syntax - Alerts](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts))
 
+<fieldset><legend>Warning</legend>NOT available Github Pages - only in Github Source!</fieldset>
 
 ```html
 > [!NOTE]
