@@ -27,5 +27,5 @@ Just like &lt;fieldset&gt; etc
 ```html
 <fieldset><legend>Note</legend>Github removes the HTML tag &lt;mark&gt;</fieldset>
 ```
-- <fieldset><legend>Note</legend>Github removes the HTML tag &lt;mark&gt;</fieldset>
+<fieldset><legend>Note</legend>Github removes the HTML tag &lt;mark&gt; - but they will be visible on Github Pages!</fieldset>
 
