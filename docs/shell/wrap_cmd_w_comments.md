@@ -27,3 +27,28 @@ echo abc |        # Normal comment OK here
      uniq         # Final comment
 ) > file
 ```
+
+Compressed:
+
+```shell
+# This will send "one" to STDOUT=output 
+# and "two" via STDERR to STDOUT and wc
+( echo one ; echo "two three" >&2 ) 2>&1 1>/tmp/output | wc
+```
+
+Or expanded:
+```shell
+(
+    ( 
+        echo one                # Writes to STDOUT
+        echo "two Three" >&2    # Writes to STDERR 
+    ) 2>&1 1>/tmp/output        # Redirect STDERR to STDOUT and Redirect original STDOUT to file
+) | wc                          # Wordcount original STDERR as STDOUT
+```
+
+Should produce:
+
+>       1       1      11
+
+and send "one" to `/tmp/output`
+
