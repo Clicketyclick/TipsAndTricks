@@ -1,9 +1,9 @@
-### Copy one column at a time
+### Copy one column at a time (if exist)
 
 ```sql
 -- Copy one column at a time
-drop table table1;
-drop table table2;
+DROP TABLE table1;
+DROP TABLE table2;
 
 CREATE TABLE table1 (col1 TEXT, col2 TEXT);
 CREATE TABLE tableB (colA TEXT, colB TEXT);
@@ -16,7 +16,7 @@ VALUES
 
 -- Copy col1
 INSERT INTO tableB (colB)
-select col1 from table1
+SELECT col1 FROM table1
 ;
 
 -- copy col2
@@ -27,8 +27,8 @@ SET colB = (
 	WHERE rowid = tableB.rowid
 );
 
-select * from table1;
-select * from tableB;
+SELECT * FROM table1;
+SELECT * FROM tableB;
 ```
 https://stackoverflow.com/a/17703189
 
@@ -41,7 +41,7 @@ SET start = (   -- Set field in target
 SELECT CASE 
          WHEN (SELECT name FROM pragma_table_info('audit_old') WHERE name = 'start')    -- column is found?
            IS NULL THEN ''                                                              -- Error if NOT
-         ELSE ( select start from audit_old WHERE rowid = audit.rowid)                  -- Else get value
+         ELSE ( SELECT start FROM audit_old WHERE rowid = audit.rowid)                  -- Else get value
        END 
 	--WHERE rowid = audit.rowid                                                           -- Line by line
 );
