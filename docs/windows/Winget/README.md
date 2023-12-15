@@ -1,7 +1,7 @@
 ## Winget - The Windows Package Manager <img src="../../winget.jpg" title="Logo to Winget" width=48px height=auto>
 
 The [Windows Package Manager](https://en.wikipedia.org/wiki/Windows_Package_Manager) 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/6/63/20050601172023%21Wikipedia-logo.png/120px-Wikipedia-logo.png" title="Link to Wikipedia" width="48px" height=auto>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/6/63/20050601172023%21Wikipedia-logo.png/120px-Wikipedia-logo.png" title="Link to Wikipedia" width="32px" height=auto>
 consists of a command-line utility and a set of services for installing applications. 
 Independent software vendors can use it as a distribution channel for their software packages.
 
