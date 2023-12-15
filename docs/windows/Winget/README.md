@@ -17,5 +17,7 @@ winget upgrade --all
 Packages that do not have a version number available
 
 ```ps
+winget list | Select-String -Pattern 'unknown'  -SimpleMatch
+' or case sensitive
 winget list | Select-String -Pattern 'Unknown' -CaseSensitive -SimpleMatch
 ```
