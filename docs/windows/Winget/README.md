@@ -28,3 +28,8 @@ winget list | Select-String -Pattern 'unknown'  -SimpleMatch
 ' or case sensitive
 winget list | Select-String -Pattern 'Unknown' -CaseSensitive -SimpleMatch
 ```
+## References
+
+- [Winget: The best way to keep Windows apps updated](https://www.computerworld.com/article/3684171/winget-the-best-way-to-keep-windows-apps-updated.html) / Ed Tittel,
+Computerworld | JAN 19, 2023 3:00 AM PST
+- [How to automatically keep your Windows applications updated](https://www.zdnet.com/home-and-office/work-life/how-to-automatically-keep-your-windows-applications-updated/) / Lance Whitney, Contributor, ZDNET Oct. 26, 2022 at 8:49 a.m. PT
