@@ -3,13 +3,15 @@
 
 ### Install
 
+[How to install the Linux Windows Subsystem in Windows 11](https://techcommunity.microsoft.com/t5/windows-11/how-to-install-the-linux-windows-subsystem-in-windows-11/m-p/2701207) / ammarjaved ‎Aug 30 2021 10:15 PM - last edited on ‎Nov 09 2023 11:09 AM
+
 Install using Command Prompt
 1. Start CMD with administrative privileges.
 2. Execute `wsl --install` command.
 3. Run `wsl -l -o` to list other Linux releases.
 4. You can install your favorite Linux distribution, use `wsl --install -d NameofLinuxDistro`.
 
->When the operation is finished, restart your PC.You can start the Linux distribution from your Start menu.
+> When the operation is finished, restart your PC.You can start the Linux distribution from your Start menu.
  
 
 ### Install Using Windows Features
