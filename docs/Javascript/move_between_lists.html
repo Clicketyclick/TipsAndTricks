@@ -1,0 +1,72 @@
+<h1>JavaScript - move between lists</h1>
+<ul>
+<li><a href="https://stackoverflow.com/a/19719961">Trying to move one option to another select list</a> Stackoverflow
+<li><a href="https://jsfiddle.net/Z8xRp/3/">Fiddle example</a>
+</ul>
+
+<!--
+
+Add command to Notepad++ Run:
+[Notepad++ Run menu](https://npp-user-manual.org/docs/run-menu/)
+
+```
+"C:\Program Files\Google\Chrome\Application\chrome.exe" "$(FULL_CURRENT_PATH)"
+```
+-->
+
+
+<script>
+    function moveRight() {
+        var selItem = document.forms[0].leftList.selectedIndex;
+        if (selItem == -1) {
+            window.alert("You must first select an item on the left side.")
+        } else {
+            document.forms[0].rightList.add(document.forms[0].leftList[selItem], null);
+        }
+    }
+    function moveLeft() {
+        var selItem = document.forms[0].rightList.selectedIndex;
+        if (selItem == -1) {
+            window.alert("You must first select an item on the right side.")
+        } else {
+            document.forms[0].leftList.add(document.forms[0].rightList[selItem], null);
+        }
+    }
+</script>
+
+<form name="form1" onsubmit="return false;">
+<table>
+    <tr>
+        <td>
+            <select name="leftList" size="14"  multiple>
+                <option value="1">Left List Option 1</option>
+                <option value="2">Left List Option 2</option>
+                <option value="3">Left List Option 3</option>
+                <option value="4">Left List Option 4</option>
+                <option value="5">Left List Option 5</option>
+            </select>
+        </td>
+
+        <td>
+            <button onclick="moveRight()"   title="Move option to the right">&rarr;</button>
+            <br>
+            <button onclick="moveLeft()"    title="Move option to the left">&larr;</button>
+        </td>
+
+        <td>
+            <select name="rightList" size="14"  multiple>
+                <option value="1">Right List Option 1</option>
+                <option value="2">Right List Option 2</option>
+                <option value="3">Right List Option 3</option>
+                <option value="4">Right List Option 4</option>
+                <option value="5">Right List Option 5</option>
+            </select><br>
+        </td>
+    </tr>
+
+</table>
+</form>
+
+<ol>
+<li>Limited to moving one item at a time</li>
+</ol>
