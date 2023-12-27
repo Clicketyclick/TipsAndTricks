@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<header>
+
+<script>
+
+/**
+ *  @fn           checkbox2json
+ *  @brief        Convert a list of checkboxes to JSON
+ *  
+ *  @param [in] 	Checkbox name
+ *  @param [in] 	Include all elements (checked or not)
+ *  @return     	JSON
+ *  
+ *  @details        Loop through checkbox list and build JSON with checked values
+ *  
+ *  @example   
+ *  
+ *    <input type="checkbox" id="vehicle3" name="vehicle" value="Boat">
+ *    <label for="vehicle3"> I have a boat</label><br><br>
+ *    <button onClick="document.getElementById('json').value = checkbox2json('vehicle');">Submit</button>
+ *  
+ *    <input type="text" id="json" name="json" size=100 value="?">
+
+ *  @todo      
+ *  @bug       
+ *  @warning   
+ *  
+ *  @see           https://
+ *  @since         2023-12-27T08:07:49 / Erik Bachmann
+ */
+function checkbox2json(elementName, selectAll = false){
+    var elementCollection 	= new Array();
+	var json				= false;
+    var allElements 		= document.getElementsByName(elementName);
+
+    for(i = 0; i < allElements.length; i++){
+		if ( selectAll ) {
+			json	+= "{ \"" + allElements[i].id + "\": { \"value\": \"" + allElements[i].value + "\", \"checked\": " + allElements[i].checked+ " }";
+		} else {
+			if ( allElements[i].checked ) {
+				if ( json ) 
+					json	+= ", ";	// Concatenate
+				else 
+					json 	= "";		// Remove false
+				json	+= " \"" + allElements[i].id + "\": \"" + allElements[i].value + "\" ";
+			}
+		}
+    }
+	json	= "{"+json+"}";	// Wrap in {}
+	console.log( json );
+
+    return json;
+}	// checkbox2json()
+
+</script>
+</header>
+
+<body>
+
+<h1>Checkboxes to JSON</h1>
+
+<!--form action="#"-->
+  <input type="checkbox" id="vehicle1" name="vehicle" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle" value="Boat">
+  <label for="vehicle3"> I have a boat</label><br><br>
+  <button onClick="document.getElementById('json').value = checkbox2json('vehicle');">Submit</button>
+
+  <input type="text" id="json" name="json" size=100 value="?">
+
+</form>
+
+</body>
+</html>
