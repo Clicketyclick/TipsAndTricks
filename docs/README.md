@@ -2,7 +2,6 @@
 
 ## Tips and Tricks
 
-
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - [DOS batch](/TipsAndTricks/batch/) 
    - [DoxyIT](/TipsAndTricks/DoxyIT) 
@@ -21,6 +20,9 @@
    - [TotalCmd](/TipsAndTricks/TotalCmd) 
    - [Unicode](/TipsAndTricks/unicode) Unicode, UTF-8 
 
+## Data
+
+- [Country.io](https://clicketyclick.github.io/country.io/) mapping ISO country names (**ISO 3166-1 alpha-2** and **ISO 3166-1 alpha-3**)
 
 ## External
 
