@@ -58,8 +58,9 @@ Select all
 
 <fieldset>
   <legend>Flags</legend>
-  Imbedded in this configuration are flags mapped to {IPTC:Country Code}. In this examples the flags are located in `C:\dev\flags\iso\png\xnview\iso3\`.
-  You may place them elsewhere.
+Imbedded in this configuration are flags mapped to {IPTC:Country Code}. In this examples the flags are located in `C:\dev\flags\iso\png\xnview\iso3\`.
 
-  Flags can be downloaded from [https://github.com/Clicketyclick/country.io/tree/master/flags](https://github.com/Clicketyclick/country.io/tree/master/flags)
+You may place them elsewhere.
+
+Flags can be downloaded from [https://github.com/Clicketyclick/country.io/tree/master/flags](https://github.com/Clicketyclick/country.io/tree/master/flags)
 </fieldset>
