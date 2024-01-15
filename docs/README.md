@@ -18,7 +18,8 @@
    - [Powershell](/TipsAndTricks/Powershell)
    - [SQLite](/TipsAndTricks/SQLite/) <!--(See also: [SQLite](/SQLite) doublet??)-->
    - [TotalCmd](/TipsAndTricks/TotalCmd) 
-   - [Unicode](/TipsAndTricks/unicode) Unicode, UTF-8 
+   - [Unicode](/TipsAndTricks/unicode) Unicode, UTF-8
+   - [Xnview](/TipsAndTricks/Xnview) default settings
 
 ## Data
 
