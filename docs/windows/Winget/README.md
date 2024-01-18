@@ -19,6 +19,11 @@ winget upgrade
 ' Do the upgrade
 winget upgrade --all
 ```
+or from CMD:
+
+```bat
+powershell -Command "winget upgrade --all"
+```
 
 ### Unknown packages
 Packages that do not have a version number available
