@@ -5,7 +5,8 @@
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - [DOS batch](/TipsAndTricks/batch/) 
    - [DoxyIT](/TipsAndTricks/DoxyIT) 
-   - [ExifTool](/TipsAndTricks/exiftool ) 
+   - [ExifTool](/TipsAndTricks/exiftool )
+   - [Ghostscript](/TipsAndTricks/Ghostscript)
    - [Hardware](/TipsAndTricks/hardware)
    - [Javascripts](/TipsAndTricks/Javascript) 
    - [KeePass](/TipsAndTricks/keepass) Password Manager
