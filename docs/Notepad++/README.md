@@ -18,3 +18,24 @@ Filter on `Date` and add shortcut [Alt]+[F5]
 ### NppMarkdownPanel
 
 - Styles.css - [Border in tables and fieldsets](NppMarkdownPanel.html)
+
+- ComparePlugin
+- ComparePlus
+- DarkTheme
+- DoxyIt
+- HexEditor
+- JSLintNpp
+- JsonTools
+- MarkdownViewerPlusPlus
+- mimeTools
+- NppConverter
+- NppExport
+- NPPJSONViewer
+- NppMarkdownPanel
+- NppSnippets
+- PlantUmlViewer
+- PoorMansTSqlFormatterNppPlugin
+- Python Indent
+- PythonScript
+- Tidy2
+- Translate
