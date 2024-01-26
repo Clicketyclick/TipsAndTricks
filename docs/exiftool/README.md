@@ -69,3 +69,10 @@ exiftool -tagsfromfile "/media/mint/K-1/DCIM/default.json" "-caption-abstract<De
 # Write all data from in.json to image
 exiftool -tagsfromfile in.json  ${IMG}
 ```
+
+
+### Descrtions to JSON
+
+[desc2Json.cmd](desc2Json.cmd) - Compile descriptions into JSON for ExifTool]
+
+
