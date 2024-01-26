@@ -9,5 +9,6 @@
   - [Stackoverflow 4 SNIP_Stackoverflow_icon_SNIP ](https://stackoverflow.com/a/52583931/7485823)
   - [Stackoverflow 5 /~Stackoverflow_icon~/ ](https://stackoverflow.com/a/52583931/7485823)
   - [Stackoverflow 6 _++Stackoverflow_icon++_ ](https://stackoverflow.com/a/52583931/7485823)
+  - [Stackoverflow 7 @@Stackoverflow_icon@@](https://stackoverflow.com/a/52583931/7485823)
 
-2024-01-26 17:32:00
+2024-01-26 17:35:00
