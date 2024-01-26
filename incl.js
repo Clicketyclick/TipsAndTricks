@@ -36,7 +36,7 @@ var HEAD =  TIME+ "<div align='right'>"
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
   + "</div>";
 
-var FOOTER = "<hr><span title'"+SITE+"/"+REPO+"/docs/incl.js'>&copy;"+year+" "+DOMAIN+"</span>";
+var FOOTER = "<hr><span title='"+SITE+"/"+REPO+"/docs/incl.js'>&copy;"+year+" "+DOMAIN+"</span>";
 document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML + FOOTER;
 
 console.log("Incl.js Header inserted");
