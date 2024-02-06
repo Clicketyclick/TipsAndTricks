@@ -1,7 +1,7 @@
 
 ## Tips and tricks on SQLite
- 
-  
+
+- [Default](select_default_value) value on SELECT: coalesce(x,y,..)
 - [Handle images](handle_images/)  
 Raw images or Base64 encoded images
 - [Handle newlines](handle_newlines/).  
