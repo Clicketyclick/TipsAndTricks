@@ -2,13 +2,14 @@
 
 Newlines (and other special characters) can be escaped using the `CHAR()` function or using the hex `X'0A'`
 
-Beaware that if you're operating in a mixed environment you should use the two level replacement. This can be used on both Windows and Linux.
+Beaware that if you're operating in a mixed environment you should use the two level replacement. This can be used on both Windows (`\r\n`) and Linux (`\n`)[^1].
+[^1]: On older MAC's newline *can* be `\r`.
 
 ### Example
 ```sql
 DROP TABLE IF EXISTS temp_config;
 CREATE TEMP TABLE temp_config (
-    key   		TEXT NOT NULL,
+    key         TEXT NOT NULL,
     value       TEXT NOT NULL
 );
 
