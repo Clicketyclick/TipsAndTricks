@@ -40,5 +40,6 @@
 - @@Totalcmd_logo@@
 - @@Unicode_logo@@
 - @@Windows_logo@@
+- @@Winget_logo@@
 - @@Xnvieqw_logo@@
 
