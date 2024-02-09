@@ -29,7 +29,7 @@
 - @@KeePass_logo@@
 - @@Marc_logo@@
 - @@Markdown_logo@@
-- @@Notepad++_logo@@
+- @@Notepadpp_logo@@
 - @@Php_logo@@
 - @@Plantuml_logo@@
 - @@Powershell_logo@@
