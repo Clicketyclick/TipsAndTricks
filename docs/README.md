@@ -3,23 +3,23 @@
 ## Tips and Tricks
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
-   - [DOS batch](/TipsAndTricks/batch/) 
+   - [DOS batch](/TipsAndTricks/Dosbatch/) 
    - [DoxyIT](/TipsAndTricks/DoxyIT) 
-   - [ExifTool](/TipsAndTricks/exiftool )
+   - [ExifTool](/TipsAndTricks/Exiftool )
    - [Ghostscript](/TipsAndTricks/Ghostscript)
-   - [Hardware](/TipsAndTricks/hardware)
+   - [Hardware](/TipsAndTricks/Hardware)
    - [Javascripts](/TipsAndTricks/Javascript) 
-   - [KeePass](/TipsAndTricks/keepass) Password Manager
-   - [Linux batch](/TipsAndTricks/shell) Shell, Bash, vi etc.
+   - [KeePass](/TipsAndTricks/Keepass) Password Manager
+   - [Linux batch](/TipsAndTricks/Shell) Shell, Bash, vi etc.
    - [Markdown](/TipsAndTricks/Markdown)
-   - [M$ Windows](/TipsAndTricks/windows)
+   - [M$ Windows](/TipsAndTricks/Windows)
    - [Notepad++](/TipsAndTricks/Notepad++/)
-   - [Plantuml](/TipsAndTricks/plantuml) 
+   - [Plantuml](/TipsAndTricks/Plantuml) 
    - [PHP](/TipsAndTricks/Php)
    - [Powershell](/TipsAndTricks/Powershell)
    - [SQLite](/TipsAndTricks/SQLite/) <!--(See also: [SQLite](/SQLite) doublet??)-->
    - [TotalCmd](/TipsAndTricks/TotalCmd) 
-   - [Unicode](/TipsAndTricks/unicode) Unicode, UTF-8
+   - [Unicode](/TipsAndTricks/Unicode) Unicode, UTF-8
    - [Xnview](/TipsAndTricks/Xnview) default settings
 
 ## Data
