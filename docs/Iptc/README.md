@@ -3,8 +3,6 @@
 
 # Image tagging
 
-
-
 ## Supplemental Categories
 
 Supplemental Categories can hold references to external structures like lists of people. 
