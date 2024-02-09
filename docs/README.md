@@ -4,24 +4,28 @@
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - @@Dosbatch_icon@@		[DOS batch](/TipsAndTricks/Dosbatch/) 
-   - @@Doxyit_icon@@ 		[DoxyIT](/TipsAndTricks/DoxyIT/) 
+   - @@Doxyit_icon@@ 		[DoxyIT](/TipsAndTricks/DoxyIT/)
    - @@Exiftools_icon@@ 	[ExifTool](/TipsAndTricks/Exiftools/) 
    - @@Ghostscript_icon@@	[Ghostscript](/TipsAndTricks/Ghostscript/) 
    - @@Hardware_icon@@ 		[Hardware](/TipsAndTricks/Hardware/)  
+   - @@Iptc_icon@@ 			[IPTC](/TipsAndTricks/Iptc/)  
    - @@Javascript_icon@@ 	[Javascripts](/TipsAndTricks/Javascript/)  
    - @@Keepass_icon@@ 		[KeePass](/TipsAndTricks/Keepass/) Password Manager  
-   - @@Shell_icon@@ 		[Linux batch](/TipsAndTricks/Shell/)   Shell, Bash, vi etc.
+   - @@Marc_icon@@ 			[MARC?](/TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc
    - @@Markdown_icon@@		[Markdown](/TipsAndTricks/Markdown/)  
-   - @@Windows_icon@@		[M$ Windows](/TipsAndTricks/Windows/)  
    - @@Notepadpp_icon@@		[Notepad++](/TipsAndTricks/Notepad++/)  
-   - @@Plantuml_icon@@		[Plantuml](/TipsAndTricks/Plantuml/)  
    - @@Php_icon@@			[PHP](/TipsAndTricks/Php/)	 
+   - @@Plantuml_icon@@		[Plantuml](/TipsAndTricks/Plantuml/)  
    - @@Powershell_icon@@	[Powershell](/TipsAndTricks/Powershell/)  
+   - @@Putty_icon@@			[PuTTY](/TipsAndTricks/Putty/)  
+   - @@Shell_icon@@ 		[Shell](/TipsAndTricks/Shell/)   Linux batch: Shell, Bash, vi etc.
    - @@Sqlite_icon@@		[SQLite](/TipsAndTricks/SQLite/)   <!--(See also: [SQLite](/SQLite) doublet??)-->
    - @@Totalcmd_icon@@		[TotalCmd](/TipsAndTricks/TotalCmd/)  
    - @@Unicode_icon@@		[Unicode](/TipsAndTricks/Unicode/)   Unicode, UTF-8
-   - @@Xnview_icon@@		[Xnview](/TipsAndTricks/Xnview/)  
+   - @@Windows_icon@@		M$ [Windows](/TipsAndTricks/Windows/)  
+   - @@Xnview_icon@@		[Xnview](/TipsAndTricks/Xnview/)
 
+   
 ## Data
 
 - [Country.io](https://clicketyclick.github.io/country.io/) mapping ISO country names (**ISO 3166-1 alpha-2** and **ISO 3166-1 alpha-3**)
