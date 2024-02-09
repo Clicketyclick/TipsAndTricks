@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<script>
+			caller='sub_stub'	// main_stub / action_stub - defined by page
+			root='../';
+	</script>
+
+	<script id='fig_js' src='../fig.js' onerror="this.src='../fig.js';"></script>
+	<script id='metadata_js' src='../metadata.js' onerror="this.src=root + this.src;"></script>
+
+</head>
+<body>
+
+<figure 
+	id='figure_001608687'
+	class="cover">
+	<img 
+		id='001608687'											comment='ID: Alt det lille Anna så'
+		class="cover" 
+		src='dummy' 
+		onerror="this.src = sessionCoverPath( this.id, caller);" 
+		onload="updateTitleImageInfo( this );updateCaption( this );" 
+	>
+	<figcaption id='caption_001608687'>??</figcaption>			<!-- caption_ID -->
+</figure>
+
+<img src="../images/001608687.jpg" width=300px height=auto>
+
+<script>
+//parent.document.getElementById('imbedded').innerHTML = "hello"; // CORS error
+</script>
+
+
