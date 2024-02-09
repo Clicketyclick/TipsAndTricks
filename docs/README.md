@@ -4,23 +4,23 @@
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - [DOS batch](/TipsAndTricks/Dosbatch/) 
-   - [DoxyIT](/TipsAndTricks/DoxyIT) 
-   - [ExifTool](/TipsAndTricks/Exiftool )
-   - [Ghostscript](/TipsAndTricks/Ghostscript)
-   - [Hardware](/TipsAndTricks/Hardware)
-   - [Javascripts](/TipsAndTricks/Javascript) 
-   - [KeePass](/TipsAndTricks/Keepass) Password Manager
-   - [Linux batch](/TipsAndTricks/Shell) Shell, Bash, vi etc.
-   - [Markdown](/TipsAndTricks/Markdown)
-   - [M$ Windows](/TipsAndTricks/Windows)
+   - [DoxyIT](/TipsAndTricks/DoxyIT/) 
+   - [ExifTool](/TipsAndTricks/Exiftools/)
+   - [Ghostscript](/TipsAndTricks/Ghostscript/)
+   - [Hardware](/TipsAndTricks/Hardware/)
+   - [Javascripts](/TipsAndTricks/Javascript/) 
+   - [KeePass](/TipsAndTricks/Keepass/) Password Manager
+   - [Linux batch](/TipsAndTricks/Shell/) Shell, Bash, vi etc.
+   - [Markdown](/TipsAndTricks/Markdown/)
+   - [M$ Windows](/TipsAndTricks/Windows/)
    - [Notepad++](/TipsAndTricks/Notepad++/)
-   - [Plantuml](/TipsAndTricks/Plantuml) 
-   - [PHP](/TipsAndTricks/Php)
-   - [Powershell](/TipsAndTricks/Powershell)
+   - [Plantuml](/TipsAndTricks/Plantuml/) 
+   - [PHP](/TipsAndTricks/Php/)
+   - [Powershell](/TipsAndTricks/Powershell/)
    - [SQLite](/TipsAndTricks/SQLite/) <!--(See also: [SQLite](/SQLite) doublet??)-->
-   - [TotalCmd](/TipsAndTricks/TotalCmd) 
-   - [Unicode](/TipsAndTricks/Unicode) Unicode, UTF-8
-   - [Xnview](/TipsAndTricks/Xnview) default settings
+   - [TotalCmd](/TipsAndTricks/TotalCmd/) 
+   - [Unicode](/TipsAndTricks/Unicode/) Unicode, UTF-8
+   - [Xnview](/TipsAndTricks/Xnview/) default settings
 
 ## Data
 
