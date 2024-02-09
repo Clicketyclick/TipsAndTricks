@@ -1,5 +1,6 @@
+@@Sqlite_logo@@
 
-## Tips and tricks on SQLite
+## SQLite
 
 - [Default](select_default_value) value on SELECT: coalesce(x,y,..)
 - [Handle images](handle_images/)  

@@ -1,4 +1,4 @@
-
+@@Tips2tricks_logo@@
 
 ## Tips and Tricks
 

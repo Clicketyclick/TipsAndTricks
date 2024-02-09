@@ -1,4 +1,7 @@
-# Exiftool
+
+@@Exiftool_logo@@
+
+## Exiftool
 
 Image processing
 
@@ -7,7 +10,7 @@ Image processing
 1. Add copyright information
 
 
-## Install
+### Install
 
 ```console
 sudo apt install libimage-exiftool-perl
@@ -20,7 +23,7 @@ export FILENAME_TEMPLATE=%Y-%m-%dT%H-%M-%S_%%f%%-c.%%le
 export IMG=2020-04-19T17-49-39_IMGP5520.jpg
 ```
 
-## Copy images to archive
+### Copy images to archive
 ```console
 #export TITLE="Copy ${SOURCE} to ${TARGET}"
 exiftool -progress:${TITLE} -v \
@@ -28,7 +31,7 @@ exiftool -progress:${TITLE} -v \
 ```
 
 
-## Rename images to date format
+### Rename images to date format
 
 ```console
 exiftool -progress:${TITLE} -v \
@@ -42,28 +45,28 @@ Option | Description
 `-ext jpg -ext dng`| only rename files with the "jpg" or "dngw" extension.
 `-r`|recursively
 
-### FILENAME_TEMPLATE
+#### FILENAME_TEMPLATE
 
 `%Y-%m-%dT%H-%M-%S_%%f%%-c.%%le` (YYYY-MM-DDThh-mm-ss_filename-copy.ext)
 
 
-## Extraction meta data
+### Extraction meta data
 
-### To JSON
+#### To JSON
 
 Read all IPTC data from image
 ```console
 exiftool -json -IPTC:all ${IMG}
 ```
 
-## Adding meta data
+### Adding meta data
 
-### Specific data
+#### Specific data
 ```console
 exiftool -tagsfromfile "/media/mint/K-1/DCIM/default.json" "-caption-abstract<Description" "-keywords<tags" 2020-04-19T17-49-39_IMGP5520.jpg
 ```
 
-### From JSON
+#### From JSON
 
 ```console
 # Write all data from in.json to image
@@ -71,7 +74,7 @@ exiftool -tagsfromfile in.json  ${IMG}
 ```
 
 
-### Descrtions to JSON
+#### Descrtions to JSON
 
 [desc2Json.cmd](desc2Json.cmd) - Compile descriptions into JSON for ExifTool]
 

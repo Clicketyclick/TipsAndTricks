@@ -1,4 +1,8 @@
-# DoxyIT Setup
+@@Doxyit_logo@@
+
+## DoxyIT
+
+### Setup
 
 T&T for NotePad++ and DoxyIT
 
@@ -274,6 +278,4 @@ SET $SOURCE=%~f0
 ::@(#)SOURCE
 ::@(-)  Where to find
 ```
-
-
 

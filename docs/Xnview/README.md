@@ -1,22 +1,23 @@
+@@Xnview_logo@@
 
-# XnView
+## XnView
 
-## Settings
+### Settings
 
-### Background
+#### Background
 
-#### Settings / View 
+##### Settings / View 
 	- Background: black
 
-#### Settings / View / Fullscreen
+##### Settings / View / Fullscreen
 	- Background: black
 	
 	
 	Custom 1: {EXIF:Focal Length}mm f/{EXIF:F-Number} {EXIF:Exposure Time}s {EXIF:ISO Value}iso
 
-### Meta data 
+#### Meta data 
 
-#### Settings / Thumbnail / Labels
+##### Settings / Thumbnail / Labels
 
 ```console
 Filename (with extension)
@@ -28,7 +29,7 @@ IPTC: Headline
 IPTC: Caption
 ```
 
-#### Settings / Browser / Tooltip
+##### Settings / Browser / Tooltip
 
 ```console
 <b>{Filename}</b><br>{Modified Date}<br>{EXIF:Date taken}<br>{Size KB} KiB
@@ -37,15 +38,15 @@ IPTC: Caption
 <img src="C:\dev\flags\iso\png\xnview\iso3\{IPTC:Country Code}.png"><img src="https://clicketyclick.github.io/country.io/flags/iso3/{IPTC:Country Code}.png">
 ```
 
-#### Settings / Metadata / Encode
+##### Settings / Metadata / Encode
 
 Use ***ONLY*** UTF-8 !!!!
 
-#### Settings / View / StatusBar
+##### Settings / View / StatusBar
 
 Select all
 
-#### Settings / View / Info
+##### Settings / View / Info
 
 ```console
 {File Index} - {Filename}

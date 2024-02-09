@@ -1,3 +1,4 @@
+@@Putty_logo@@
 
 ## Putty
 

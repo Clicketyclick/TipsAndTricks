@@ -1,3 +1,5 @@
+@@Php_logo@@
+
 ## PHP 
 
 - [CORS on PHP (Of CORse)](of-course.html)

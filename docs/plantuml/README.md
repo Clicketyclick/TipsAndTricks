@@ -1,3 +1,4 @@
+@@Plantuml_logo@@
 
 ## Embedding in MarkDown
 

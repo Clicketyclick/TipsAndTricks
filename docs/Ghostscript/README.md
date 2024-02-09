@@ -1,4 +1,6 @@
+@@Ghostscript_logo@@
 
+## Ghostscript
 
 ### Split a PDF into individual pages
 

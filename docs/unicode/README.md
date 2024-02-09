@@ -1,4 +1,6 @@
-# Unicode
+@@Unicode_logo@@
+
+## Unicode
 
 ... And UTF-8
 
@@ -9,7 +11,7 @@
     - You need to find a specific Unicode character? With Shapecatcher.com you can search through a database of characters by simply drawing your character.
 
 
-## Special keys
+### Special keys
 
 - <kbd>⊞ Windows</kbd> U+229E ⊞ SQUARED PLUS
 - <kbd>⌘ Command</kbd>

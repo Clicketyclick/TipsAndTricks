@@ -1,3 +1,5 @@
+@@Notepadpp_logo@@
+
 # Notepad++
 
 ## Insert Date (Customized)

@@ -1,3 +1,6 @@
+
+@@Iptc_logo@@
+
 # Image tagging
 
 
