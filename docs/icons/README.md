@@ -7,6 +7,7 @@
 - @@Wikipedia_icon@@
 - @@clicketyclick.github.io_icon@@
 - @@Github_icon@@
+- @@Winget_icon@@
 
 ## Logos
 
@@ -17,9 +18,9 @@
 - @@Clicketyclick.github.io_logo@@
 - @@Github_logo@@
 
-
 - @@Dosbatch_logo@@
 - @@Doxyit_logo@@
+- @@Doxygen_logo@@
 - @@Exif_logo@@
 - @@Exiftools_logo@@
 - @@Ghostscript_logo@@
