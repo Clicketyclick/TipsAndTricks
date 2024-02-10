@@ -2,19 +2,29 @@
 
 # Notepad++
 
-## Insert Date (Customized)
-
-Default function: Edit / Insert / Date and Time (Customized)
+<fileset>
+<legend>32Bit</legend>
+DoxyIT works ***ONLY*** on NotePad++ 32 bit!
+</fileset>
 
 ### Configuration
-> Settings / preferences / Multi-instand & Date
 
-Set Date to: `yyyy-MM-ddTHH:mm:ss` 
 
-> Settings / Shortcut mapper
-
-Filter on `Date` and add shortcut [Alt]+[F5]
-
+- Settings
+	- Preferences
+		- Dark Mode: Select darkmode
+	- Preferences
+		- Multi-Instance & Date
+			- Customize Insert Data Time
+				- Reverse default data time oder: Select
+				- Custom format: `yyyy-MM-ddTHH:mm:ss`
+    - Preferences
+        - Language
+            - Tab Settings
+                - Tab size: 4
+                - Replace by space
+    - Shortcut mapper
+        - Filter on `Date` and add shortcut [Alt]+[F5] to "Date Time (Customized)
 
 ## Plugins
 ### NppMarkdownPanel
