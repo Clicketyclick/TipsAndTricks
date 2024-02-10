@@ -8,7 +8,8 @@ T&T for NotePad++ and DoxyIT
 
 Modifications and implemtation in NotePad++
 
-Note! DoxyIT may only work in the 32bit version of Notepad++
+Note! DoxyIT may only work in the 32bit version of Notepad++.
+See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation)
 
 
 ## Php

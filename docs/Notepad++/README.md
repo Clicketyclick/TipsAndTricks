@@ -24,7 +24,7 @@ Filter on `Date` and add shortcut [Alt]+[F5]
 - ComparePlugin
 - ComparePlus
 - DarkTheme
-- DoxyIt
+- @@Doxyit_icon@@[DoxyIt](Doxyit) [^1]
 - HexEditor
 - JSLintNpp
 - JsonTools
@@ -41,3 +41,5 @@ Filter on `Date` and add shortcut [Alt]+[F5]
 - PythonScript
 - Tidy2
 - Translate
+
+[1]: DoxyIT works ***ONLY*** on NotePad++ 32 bit!

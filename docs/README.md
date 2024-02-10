@@ -4,7 +4,6 @@
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - @@Dosbatch_icon@@		[DOS batch](/TipsAndTricks/Dosbatch/) 
-   - @@Doxyit_icon@@ 		[DoxyIT](/TipsAndTricks/DoxyIT/)
    - @@Exiftools_icon@@ 	[ExifTool](/TipsAndTricks/Exiftools/) 
    - @@Ghostscript_icon@@	[Ghostscript](/TipsAndTricks/Ghostscript/) 
    - @@Hardware_icon@@ 		[Hardware](/TipsAndTricks/Hardware/)  
