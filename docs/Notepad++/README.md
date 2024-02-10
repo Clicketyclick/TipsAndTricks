@@ -4,7 +4,7 @@
 
 <fieldset>
 <legend>32Bit</legend>
-DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit![^1]
+DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 </fieldset>
 
 ### Configuration
