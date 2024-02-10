@@ -4,7 +4,7 @@
 
 <fieldset>
 <legend>32Bit</legend>
-DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
+DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit![^1]
 </fieldset>
 
 ### Configuration
@@ -52,4 +52,4 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 - Tidy2
 - Translate
 
-[1]: DoxyIT works ***ONLY*** on NotePad++ 32 bit!
+[^1]: DoxyIT works ***ONLY*** on NotePad++ 32 bit! See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation)
