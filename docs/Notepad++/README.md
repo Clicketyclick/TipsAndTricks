@@ -2,10 +2,10 @@
 
 # Notepad++
 
-<fileset>
+<fieldset>
 <legend>32Bit</legend>
 DoxyIT works ***ONLY*** on NotePad++ 32 bit!
-</fileset>
+</fieldset>
 
 ### Configuration
 
