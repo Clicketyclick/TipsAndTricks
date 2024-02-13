@@ -1,4 +1,4 @@
-
+@@marcedit_logo@@
 ## MarcEdit
 
 > MarcEdit has become one of the more complete metadata edit suites available to librarians.
