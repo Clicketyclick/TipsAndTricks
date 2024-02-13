@@ -12,7 +12,7 @@
    - @@Keepass_icon@@ 		[KeePass](/TipsAndTricks/Keepass/) Password Manager  
    - @@Marc_icon@@ 			[MARC?](/TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc
    - @@Markdown_icon@@		[Markdown](/TipsAndTricks/Markdown/)
-   - @@Markedit_icon@@     [Marcedit](/TipsAndTricks/Marcedit/)
+   - @@Marcedit_icon@@     [Marcedit](/TipsAndTricks/Marcedit/)
    - @@Notepadpp_icon@@		[Notepad++](/TipsAndTricks/Notepad++/)  
    - @@Php_icon@@			   [PHP](/TipsAndTricks/Php/)	 
    - @@Plantuml_icon@@		[Plantuml](/TipsAndTricks/Plantuml/)  
