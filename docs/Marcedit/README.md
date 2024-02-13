@@ -1,5 +1,5 @@
 @@Marcedit_logo@@
-## MarcEdit
+## [MarcEdit](https://clicketyclick.github.io/TipsAndTricks/Marcedit/)
 
 > MarcEdit has become one of the more complete metadata edit suites available to librarians.
 
