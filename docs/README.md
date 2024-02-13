@@ -11,18 +11,19 @@
    - @@Javascript_icon@@ 	[Javascripts](/TipsAndTricks/Javascript/)  
    - @@Keepass_icon@@ 		[KeePass](/TipsAndTricks/Keepass/) Password Manager  
    - @@Marc_icon@@ 			[MARC?](/TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc
-   - @@Markdown_icon@@		[Markdown](/TipsAndTricks/Markdown/)  
+   - @@Markdown_icon@@		[Markdown](/TipsAndTricks/Markdown/)
+   - @@Markedit_icon@@     [Markedit](/TipsAndTricks/Markedit/)
    - @@Notepadpp_icon@@		[Notepad++](/TipsAndTricks/Notepad++/)  
-   - @@Php_icon@@			[PHP](/TipsAndTricks/Php/)	 
+   - @@Php_icon@@			   [PHP](/TipsAndTricks/Php/)	 
    - @@Plantuml_icon@@		[Plantuml](/TipsAndTricks/Plantuml/)  
    - @@Powershell_icon@@	[Powershell](/TipsAndTricks/Powershell/)  
    - @@Putty_icon@@			[PuTTY](/TipsAndTricks/Putty/)  
-   - @@Shell_icon@@ 		[Shell](/TipsAndTricks/Shell/)   Linux batch: Shell, Bash, vi etc.
-   - @@Sqlite_icon@@		[SQLite](/TipsAndTricks/SQLite/)   <!--(See also: [SQLite](/SQLite) doublet??)-->
+   - @@Shell_icon@@ 		   [Shell](/TipsAndTricks/Shell/)   Linux batch: Shell, Bash, vi etc.
+   - @@Sqlite_icon@@		   [SQLite](/TipsAndTricks/SQLite/)   <!--(See also: [SQLite](/SQLite) doublet??)-->
    - @@Totalcmd_icon@@		[TotalCmd](/TipsAndTricks/TotalCmd/)  
    - @@Unicode_icon@@		[Unicode](/TipsAndTricks/Unicode/)   Unicode, UTF-8
    - @@Windows_icon@@		M$ [Windows](/TipsAndTricks/Windows/)  
-   - @@Xnview_icon@@		[Xnview](/TipsAndTricks/Xnview/)
+   - @@Xnview_icon@@		   [Xnview](/TipsAndTricks/Xnview/)
 
    
 ## Data
