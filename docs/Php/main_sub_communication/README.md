@@ -11,7 +11,6 @@ Real time update communication from child to parent through iframe
 
 ![Embedded (public) diagram](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/Clicketyclick/TipsAndTricks/master/docs/Php/main_sub_communication/main_sub_communication.puml)
 
-![Embedded (public) diagram](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/BIT-SDUB/bit-sdub.github.io/main/test.puml)
 
 ## Reference
 
