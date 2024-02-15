@@ -1,0 +1,20 @@
+@startuml
+
+title Flush output via iframe
+header Communication via iframe/javascript from Sub to Main
+footer 
+
+Main -> Sub : start
+
+Main <- Sub : Header: H4
+
+Sub -> Sub: Save output.json
+
+Main <- Sub : status: calling parent
+
+'Sub -> Sub:
+    loop 100 times
+        Sub -> Main: Data = duration
+        Sub -> Main: Progress = loop no
+    end
+@enduml
