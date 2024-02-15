@@ -2,7 +2,7 @@
 
 title Flush output via iframe
 header Communication via iframe/javascript from Sub to Main
-footer 
+footer Erik Bachmann
 
 Main -> Sub : start
 
