@@ -46,5 +46,5 @@ Totalcmd				|@@Totalcmd_logo@@
 Unicode					|@@Unicode_logo@@
 Windows					|@@Windows_logo@@
 Winget					|@@Winget_logo@@
-Xnvieqw					|@@Xnview_logo@@
+Xnview					|@@Xnview_logo@@
 
