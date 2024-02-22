@@ -23,6 +23,15 @@
 mv -- --remove-files remove-files
 ```
 
+### Archive and delete files
+
+```shell
+# Find file older than 90 sec and tar
+find . -type f -mtime +90 -name 'emailntc.ran.*' | xargs tar cvf emailntc.ran.tar 
+# Delete archived files
+find . -type f -mtime +90 -name 'emailntc.ran.*' | xargs rm
+```
+
 ### Zulu time
 ```shell
 date -u +%Y-%m-%dT%H:%M:%S%z
