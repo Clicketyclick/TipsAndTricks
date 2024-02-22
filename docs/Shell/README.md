@@ -13,9 +13,15 @@
 
 - [Print script header](print_header.md) looking for DoxyIt header
 - [Set window title](BashWindowTitle.md) in Bash
-- [Linux Shell Tip: Remove files with names that contains spaces, and special characters such as -, —](https://www.linux.com/training-tutorials/linux-shell-tip-remove-files-names-contains-spaces-and-special-characters-such/)  [<span title="CopyLeft &#x1F12F; Local copy">(&#x0254;)</span>](remove_files_w_special_chars/)
 - [Wrap commands with comments](wrap_cmd_w_comments.md)
 - [sprintf()](sprintf) - sprint() alias
+
+### Remove files with names that contains special characters
+- [@@Linux_com_logo@@ Linux Shell Tip: Remove files with names that contains spaces, and special characters such as -, —](https://www.linux.com/training-tutorials/linux-shell-tip-remove-files-names-contains-spaces-and-special-characters-such/)  [<span title="CopyLeft &#x1F12F; Local copy">(&#x0254;)</span>](remove_files_w_special_chars/)
+
+```shell
+mv -- --remove-files remove-files
+```
 
 ### Zulu time
 ```shell
