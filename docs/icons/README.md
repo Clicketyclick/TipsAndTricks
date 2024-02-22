@@ -32,6 +32,7 @@ Hardware				|@@Hardware_logo@@
 Iptc					|@@Iptc_logo@@
 Javascript				|@@Javascript_logo@@
 KeePass					|@@KeePass_logo@@
+Linux.com					|@@Linux_com_logo@@
 Marc					|@@Marc_logo@@
 Markdown				|@@Markdown_logo@@
 Notepadpp				|@@Notepadpp_logo@@
