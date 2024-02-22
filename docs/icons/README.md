@@ -7,7 +7,7 @@ Name | Icon
 Stackoverflow			|@@Stackoverflow_icon@@
 DosTips					|@@DosTips_icon@@
 Wikipedia				|@@Wikipedia_icon@@
-clicketyclick.github.io	|@@clicketyclick.github.io_icon@@
+clicketyclick.github.io	|@@Clicketyclick.github.io_icon@@
 Github					|@@Github_icon@@
 Winget					|@@Winget_icon@@
 
