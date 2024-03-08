@@ -19,4 +19,5 @@ Configuration / Options / Misc
 
 Mask: ISO8601
 - Filename: `[N].[Y]-[M]-[D]T[hms]`
+  - or `[N].[d]T[t]`
 - Extension: `[E]`
