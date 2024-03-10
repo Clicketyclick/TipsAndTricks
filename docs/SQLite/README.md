@@ -27,4 +27,5 @@ Convert Paradox data to SQLite
 Date to EPOCH and vice versa
 - [Copy one column at a time](Copy_one_column_at_a_time)
 
+- [Get the latest X rows of each action](latest X rows of each action)
 
