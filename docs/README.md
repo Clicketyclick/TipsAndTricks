@@ -22,6 +22,7 @@
    - @@Sqlite_icon@@		   [SQLite](/TipsAndTricks/SQLite/)   <!--(See also: [SQLite](/SQLite) doublet??)-->
    - @@Totalcmd_icon@@		[TotalCmd](/TipsAndTricks/TotalCmd/)  
    - @@Unicode_icon@@		[Unicode](/TipsAndTricks/Unicode/)   Unicode, UTF-8
+   - @@Vbscript_icon@@		[Vbscript](/TipsAndTricks/Vbscript/)
    - @@Windows_icon@@		M$ [Windows](/TipsAndTricks/Windows/)  
    - @@Xnview_icon@@		   [Xnview](/TipsAndTricks/Xnview/)
 
