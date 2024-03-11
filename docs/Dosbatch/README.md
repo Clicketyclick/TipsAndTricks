@@ -12,6 +12,7 @@ is a collection of generic, ready-to-use batch scripts - and has a life (and rep
 Download book covers by ISBN
 - [How to get piped input in windows batch file? @@Stackoverflow_icon@@](https://stackoverflow.com/a/52583931/7485823)
 - [Elevation, local and domain admin](Elevator/)
+- [Get Doxy header](get_doxy_header/)
 
 ## Usefull links
 
