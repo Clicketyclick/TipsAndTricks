@@ -1,5 +1,9 @@
 ## Tee
 
+> [!NOTE]
+> Output to STDOUT is **NOT** concurrent
+
+
 
 ```batch
 @ECHO OFF&setLocal
