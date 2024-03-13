@@ -17,7 +17,7 @@
 :: *  @see			https://stackoverflow.com/a/27772454
 :: * 
 :: *  @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
-:: *  @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
+:: *  @author     [Amazinate](https://stackoverflow.com/users/4418572/amazinate)
 :: *  @since      2024-03-13T11:31:50 / erba
 :: *  @version    2024-03-13T12:10:27
 :: */
