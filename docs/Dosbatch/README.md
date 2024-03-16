@@ -13,7 +13,9 @@ Download book covers by ISBN
 - [How to get piped input in windows batch file? @@Stackoverflow_icon@@](https://stackoverflow.com/a/52583931/7485823)
 - [Elevation, local and domain admin](Elevator/)
 - [Get Doxy header](get_doxy_header/)
+- [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
 
+  
 ## Usefull links
 
 - [DosTips - The DOS Batch Guide @@dostips_icon@@]](https://www.dostips.com).  
