@@ -15,7 +15,14 @@ Download book covers by ISBN
 - [Get Doxy header](get_doxy_header/)
 - [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
 
-  
+## ZIP
+
+On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser @@Superuser_icon@@](https://superuser.com/a/1473255) )
+```batch
+C:\> tar -xf archive.zip
+```
+
+
 ## Usefull links
 
 - [DosTips - The DOS Batch Guide @@dostips_icon@@]](https://www.dostips.com).  
