@@ -14,6 +14,8 @@ Download book covers by ISBN
 - [Elevation, local and domain admin](Elevator/)
 - [Get Doxy header](get_doxy_header/)
 - [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
+- [Tail](../Powershell/tail.bat) Print the last 30 lines of each FILE to standard output.
+
 
 ## ZIP
 
