@@ -24,6 +24,13 @@ or from CMD:
 ```bat
 powershell -Command "winget upgrade --all"
 ```
+or even simpler
+
+```bat
+winget upgrade
+winget upgrade --all
+winget upgrade --all  --include-unknown
+```
 
 ### Unknown packages
 Packages that do not have a version number available
