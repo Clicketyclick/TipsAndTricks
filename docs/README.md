@@ -5,7 +5,8 @@
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - @@Dosbatch_icon@@		[DOS batch](/TipsAndTricks/Dosbatch/) 
    - @@Exiftools_icon@@ 	[ExifTool](/TipsAndTricks/Exiftools/) 
-   - @@Ghostscript_icon@@	[Ghostscript](/TipsAndTricks/Ghostscript/) 
+   - @@Ghostscript_icon@@	[Ghostscript](/TipsAndTricks/Ghostscript/)
+   - @@Github_icon@@	      [Github](/TipsAndTricks/Github/) 
    - @@Hardware_icon@@ 		[Hardware](/TipsAndTricks/Hardware/)  
    - @@Iptc_icon@@ 			[IPTC](/TipsAndTricks/Iptc/)  
    - @@Javascript_icon@@ 	[Javascripts](/TipsAndTricks/Javascript/)  
