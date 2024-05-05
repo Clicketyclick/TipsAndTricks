@@ -165,3 +165,15 @@ function array_unset_value(&$array, $parents, $glue = '.')
     }
 }   // array_unset_value()
 ```
+
+### Modules
+
+PHP 8. which gives error with  `imagettfbbox`. it has to be replaced with `imageftbbox`
+
+```ini
+extension=gd
+;2024-03-13 19:11:05/ErBa ImageMagick
+extension=php_imagick.dll
+```
+
+
