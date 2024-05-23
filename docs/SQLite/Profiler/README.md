@@ -127,7 +127,7 @@ sqlite> .read profiler_list.sql
 ```
 
 
-¤¤¤ Source
+### Source
 
 - [`profiler_init.sql`](profiler_init.sql)
 - [`profiler_start.sql`](profiler_start.sql)
