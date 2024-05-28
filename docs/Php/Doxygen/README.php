@@ -19,7 +19,7 @@ Output
  * [version]   2024-05-28 08:36:24
 ```
 
-Requires these functions:
+Requires these functions (Source: `handleStrings.php`):
 
 ```php
 /** 
