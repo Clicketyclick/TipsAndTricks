@@ -23,6 +23,9 @@ Line	| *
 End	| */
 Prefix	|\
 
+#### Extract header
+
+See [PHP getDoxygenFileHeader()](../../Php/Doxygen/)
 
 ### Function
 ```
