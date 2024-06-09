@@ -33,15 +33,16 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 
 - ComparePlugin
 - ComparePlus
+- Converter [^1]
 - DarkTheme
-- @@Doxyit_icon@@[DoxyIt](Doxyit) [^1]
+- @@Doxyit_icon@@[DoxyIt](Doxyit) [^2]
 - HexEditor
 - JSLintNpp
 - JsonTools
 - MarkdownViewerPlusPlus
-- mimeTools
+- mimeTools [^1]
 - NppConverter
-- NppExport
+- NppExport [^1]
 - NPPJSONViewer
 - NppMarkdownPanel
 - NppSnippets
@@ -52,4 +53,5 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 - Tidy2
 - Translate
 
-[^1]: DoxyIT works ***ONLY*** on NotePad++ 32 bit! See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation)
+[^1]: Default
+[^2]: DoxyIT works ***ONLY*** on NotePad++ 32 bit! See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation)
