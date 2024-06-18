@@ -32,6 +32,13 @@ find . -type f -mtime +90 -name 'emailntc.ran.*' | xargs tar cvf emailntc.ran.ta
 find . -type f -mtime +90 -name 'emailntc.ran.*' | xargs rm
 ```
 
+### Get doxy header
+
+```shell
+# Print header
+grep -E '^#\s+@' $0 1>&2
+```
+
 ### Zulu time
 ```shell
 date -u +%Y-%m-%dT%H:%M:%S%z
