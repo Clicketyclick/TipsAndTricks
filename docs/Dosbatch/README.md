@@ -15,6 +15,7 @@ Download book covers by ISBN
 - [Get Doxy header](get_doxy_header/)
 - [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
 - [Tail](../Powershell/tail.bat) Print the last 30 lines of each FILE to standard output.
+- [ISO 86001](Iso86001_date/) - Current date in ISO 86001 (YYYY-MM-DDThh:mm:ss.000z)
 
 
 ## ZIP
