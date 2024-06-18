@@ -1,6 +1,7 @@
 # isodate.cmd
 
-Print current date and time in ISO 86001 (YYYY-MM-MM@hh:mm:ss)
+Print current date and time in ISO 86001 (YYYY-MM-MMThh:mm:ss.000z)
+
 ```bat
 @ECHO OFF
 setlocal
