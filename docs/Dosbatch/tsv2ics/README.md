@@ -3,6 +3,14 @@
 Convert a tab separated calendar to a valid ICS calendar file w. local timezone for Copenhagen.
 
 
+File | Function
+---|---
+README.md  | This file
+tsv2ics.cmd | Build script
+isodate.cmd  | Subscript building ISO date
+input.txt  | Test data
+
+
 ## Example
 
 ```
