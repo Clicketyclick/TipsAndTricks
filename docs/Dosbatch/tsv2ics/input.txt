@@ -1,0 +1,3 @@
+2024-06-17	10.00	10.30	Arrival	What to do\nAnd how	Location1
+2024-06-17	11:30	12:90	Lunch	Open lunchbox\nAnd eat	Cafeteria
+2024-06-17	1630	1700	Closing time	Go home	@home
