@@ -12,8 +12,8 @@
 - [Country Codes](/country.io/) - Country code lists bases on ISO2 and ISO3 combined into JSON structures.
 - [JsonDb](/jsondb/) - Rutines to read / write JSON and mixed data to SQL database
 - [Doxygen header](Doxygen/) - Dumping the Doxygen file header in current file
-- [parse_cli2request](parse_cli2request/) - Parse cli arguments and insert into $_REQUEST
-- [manipulate multi-dimensional array](Modify_structure/) - How to access and manipulate multi-dimensional array by key names / path
+- [Parse_cli2request](parse_cli2request/) - Parse cli arguments and insert into $_REQUEST
+- [Manipulate multi-dimensional array](Modify_structure/) - How to access and manipulate multi-dimensional array by key names / path
 
 ### Tips
 
