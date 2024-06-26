@@ -13,7 +13,7 @@
 - [JsonDb](/jsondb/) - Rutines to read / write JSON and mixed data to SQL database
 - [Doxygen header](Doxygen/) - Dumping the Doxygen file header in current file
 - [parse_cli2request](parse_cli2request/) - Parse cli arguments and insert into $_REQUEST
-- [Modify structure](Modify_structure/) - How to access and manipulate multi-dimensional array by key names / path
+- [manipulate multi-dimensional array](Modify_structure/) - How to access and manipulate multi-dimensional array by key names / path
 
 ### Tips
 
