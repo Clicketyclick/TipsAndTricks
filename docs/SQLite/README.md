@@ -31,3 +31,4 @@ Copy from one table to another - one column at a time
 Tail for SQLite
 - [Profiler](Profiler/)  
 Simple profiler for SQLite
+- [Performance tuning](Performance_tuning/) - Read, write
