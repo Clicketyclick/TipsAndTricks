@@ -19,6 +19,11 @@ SQLite - Generate GUID/UUID on SELECT INTO statement
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/66625212))
 - [sqlean](sqlean/)  
 All the Missing SQLite Functions (From [nalgeon / sqlean](https://github.com/nalgeon/sqlean))
+- [Database analytics](Database_analytics/)
+   - get the first 10 tables using the most disk space
+   - see how efficiently the content of a table is stored on disk
+   - average fan-out for a table
+   - fraction of the pages in a database are sequential
 - [Date and time](date-time/)  
 Date and time functions
 - [Paradox](paradox/)  
