@@ -11,6 +11,7 @@ Call directly from command line - or short cut:
 ```cmd
 "C:\Program Files\PuTTY\putty.exe" -load "Session Name" -ssh user@serverurl -pw password
 ```
+Short cut: Start in: `%HOMEDRIVE%%HOMEPATH%`
 
 ### Keep alive
    
