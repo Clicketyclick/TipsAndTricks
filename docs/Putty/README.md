@@ -2,6 +2,16 @@
 
 ## Putty
 
+### Load session from command line
+
+Configure and save a session (Color, keep alive etc.) in Putty
+
+Call directly from command line - or short cut:
+
+```cmd
+"C:\Program Files\PuTTY\putty.exe" -load "Session Name" -ssh user@serverurl -pw password
+```
+
 ### Keep alive
    
 - Open Putty
