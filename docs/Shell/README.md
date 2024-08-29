@@ -23,6 +23,26 @@
 mv -- --remove-files remove-files
 ```
 
+### Difference between the content of two files
+
+[@@Stackoverflow_com_logo@@ Stackoverflow: Difference between the content of two files](https://stackoverflow.com/a/3882349/7485823)
+
+1 Only one instance , in either
+
+```shell
+cat File1 File2 | sort | uniq -u
+```
+2 Only in first file
+```shell
+cat File1 File2 File2 | sort | uniq -u
+```
+
+3 Only in second file
+```shell
+cat File1 File1 File2 | sort | uniq -u
+```
+
+
 ### Archive and delete files
 
 ```shell
