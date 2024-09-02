@@ -42,6 +42,9 @@ cat File1 File2 File2 | sort | uniq -u
 cat File1 File1 File2 | sort | uniq -u
 ```
 
+### Record handling
+
+- [Get N'th record from file](get_nth_record.sh) Using awk to extract a specific record from dump file
 
 ### Archive and delete files
 
