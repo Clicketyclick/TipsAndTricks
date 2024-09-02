@@ -26,3 +26,18 @@ ProgramFiles(x86)=C:\Program Files (x86)
 ```
 Like:
 `"%ProgramFiles%\MarcEdit 7.6 (User)\MarcEdit.exe"`
+
+### Terminal / CLI commands
+
+#### Unpack
+```shell
+SET CMARC="C:\Program Files\MarcEdit 7.6 (User)\cmarcedit.exe"
+SET ISOFILE="O:\ALMA\Current data export\bib.indlaan.mrk"
+SET DUMPFILE="O:\ALMA\Current data export\bib.indlaan.2.txt"
+%CMARC% -s %ISOFILE% -d %DUMPFILE% -break -utf8
+```
+#### Pack
+
+```shell
+%CMARC% -s %DUMPFILE% -d %ISOFILE% -make -utf8
+```
