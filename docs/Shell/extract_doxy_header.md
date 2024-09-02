@@ -16,7 +16,8 @@
 #
 
 # Print header
-grep -E '^#  @' $0 | cut -f2 -d : 
+grep -E '^#  @' $0 
+# grep -E '^#  @' $0 | cut -f2 -d @ 
 #
 ```
 
