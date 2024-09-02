@@ -1,7 +1,7 @@
 #! /usr/bin/bash
 ## 
- #  @file      getnth.sh
- #  @brief     Get Nth occurence of a pattern from a fil
+ #  @file      get_nth_record.sh
+ #  @brief     Get Nth occurence of a pattern from a file
  #  
  #  @details   Using awk to extract a specific record from dump file
  #  
