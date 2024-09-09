@@ -20,6 +20,17 @@ Given the data:
 08
 ```
 
+```php
+$delimiter  = '###';
+$direction  = -1;    // Default: prefixed
+$fp = @fopen("readTextBlock.txt", "r");
+while( $record = get_text_block( $fp, $delimiter, $direction ) )  // Get each record
+{
+    echo "[$record]\n";
+}
+fclose($fp);
+```
+
 Output:
 
 #### Direction: -1   // Suffix
