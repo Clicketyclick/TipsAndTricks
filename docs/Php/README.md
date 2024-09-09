@@ -14,6 +14,8 @@
 - [Doxygen header](Doxygen/) - Dumping the Doxygen file header in current file
 - [Parse_cli2request](parse_cli2request/) - Parse cli arguments and insert into $_REQUEST
 - [Manipulate multi-dimensional array](Modify_structure/) - How to access and manipulate multi-dimensional array by key names / path
+- [Progressbar for CLI](Progressbar/) - Show a status bar in the console
+- [Read_text_block](Read_text_block/) - Read a block of text from file delimited by string as a record delimited
 
 ### Tips
 
