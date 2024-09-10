@@ -1,0 +1,14 @@
+{
+    "name": "clickeytyclick.dk/progressbar",
+    "description": "show a status bar in the console",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "ClicketyClick.dk",
+            "email": "Erik@Clicketyclick.dk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
