@@ -57,7 +57,7 @@ function getBetween($content,$start,$end){
  *  @details   More details
  *  
  *  
- *  @example   fputs( getDoxygenFileHeader( __FILE__ ) );
+ *  @example   fputs( STDERR, getDoxygenFileHeader( __FILE__ ) );
  *  
  *	* [file]      filename.php
  *	* [brief]     Brief description
