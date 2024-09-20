@@ -2,19 +2,21 @@
 
 Enabeling / disabeling **verbose**, **debug** and **logging** functionality in a batch script using environment variable.
 
-Verbose and debug is redirected to STDERR (&2). Log messages to logfile.
+**Verbose** and **debug** are redirected to STDERR (&2). Log messages are appened to logfile.
 
 All three functions can dynamically be switched on and off by setting the environment variables and calling `_debug.cmd`.
 
 Environment | Value | Target |Function | Prefix
 ---|---|---|---|---|
-verbose|0         | NUL                   | Verbose is off                    |
-verbose|1         | STDERR                | Verbose is on writting to STDERR  | `- `
-debug  |0         |  NUL                  | Debug is off                      |
-debug  |1         | STDERR                | Debug is on - and so is Verbose   | `DEBUG: `
-logging|          |  NUL                  | No logging                        |
-logging|filename  | Logging to `filename` | Logging is on                     | `LOG: `
+verbose|0 (or missing)    | NUL                   | Verbose is off                     |
+verbose|1                 | STDERR                | Verbose is on                      | `- `
+debug  |0 (or missing)    | NUL                   | Debug is off                       |
+debug  |1                 | STDERR                | Debug is on - and so is Verbose    | `DEBUG: `
+logging|                  | NUL                   | No logging                         |
+logging|filename          | Logging to `filename` | Logging is on                      | `LOG: `
 
+> [!NOTE]  
+> Activating debug will also activate verbose.
 
 Set the environment variables:
 ```cmd
@@ -53,6 +55,18 @@ The test script `_debug_test` demonstrates the functionallity.
 
 Set the environment variables and run the script
 
+The status field indicates which flags are set and where outout is redirected:
+
+```console
+State:     v:[]/d:[]/l:[mylog] [::][::]
+```
+No verbose or debug - but logging active
+
+```console
+State:     v:[]/d:[1]/l:[mylog] [1 ECHO:-][1 ECHO:DEBUG:]
+```
+Debugging (and verbose) + logging
+
 ```console
 > _debug_test
 
@@ -63,7 +77,6 @@ Set the environment variables and run the script
 └────────────────────────────────────────────────────────────────────────┘
 Full name: [c:\dev\getGithub\_debug_test.cmd]
 Full path: [c:\dev\getGithub\]
-State:     v:[]/d:[]/l:[mylog] [::][::]
 
 State:     v:[]/d:[1]/l:[mylog] [1 ECHO:-][1 ECHO:DEBUG:]
 
