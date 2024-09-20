@@ -3,7 +3,7 @@
 :: * @file      getGithub.cmd
 :: * @brief     Download a repository and unpack specific directory - or entire repo
 :: * 
-:: * @details   $(More details)
+:: * @details   Download a public repository from Github
 :: * 
 :: * @examples
 :: *    getGithub Clicketyclick progressbar main docs
