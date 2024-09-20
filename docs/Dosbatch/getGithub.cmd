@@ -1,4 +1,5 @@
 @ECHO OFF
+SETLOCAL enabledelayedexpansion
 ::** 
 :: * @file      getGithub.cmd
 :: * @brief     Download a repository and unpack specific directory - or entire repo
@@ -13,14 +14,15 @@
 :: * @copyright http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 :: * @author    Erik Bachmann <ErikBachmann@ClicketyClick.dk>
 :: * @since     2024-09-20T13:39:59 / erba
-:: * @version   2024-09-20T14:24:17
+:: * @version   2024-09-21T00:40:32
 :: **
 
 :: Header
-ECHO: 1>&2
-FOR /F "delims=@ tokens=2*" %%a IN ('findstr /r "^::.\*.*@" "%~f0" ^| findstr "@file @brief @version"') DO ECHO * %%a 1>&2
-ECHO: 1>&2
+::ECHO: 1>&2
+::FOR /F "delims=@ tokens=2*" %%a IN ('findstr /r "^::.\*.*@" "%~f0" ^| findstr "@file @brief @version"') DO ECHO * %%a 1>&2
+::ECHO: 1>&2
 
+::GOTO :EOF
 ::----------------------------------------------------------------------
 
 :main
@@ -32,7 +34,8 @@ GOTO :EOF   :: :Main
 ::----------------------------------------------------------------------
 
 :init
-    IF DEFINED DEBUG SET VERBOSE=1
+    CALL %~dp0_debug
+    CALL %~dp0_header %~f0
     
     SET OWNER=%~1
     IF NOT DEFINED OWNER SET OWNER=Clicketyclick
@@ -45,26 +48,25 @@ GOTO :EOF   :: :Main
 
     SET MASTER=%OWNER%_%REPO%.master.zip
     
-    IF DEFINED VERBOSE (
-        ECHO Owner	[%OWNER%]
-        ECHO Repo	[%REPO%]
-        ECHO Master	{%MASTER%]
-        ECHO:
-    )
+    %__VERBOSE__% Owner	[%OWNER%]
+    %__VERBOSE__% Repo	[%REPO%]
+    %__VERBOSE__% Master	{%MASTER%]
+    %__VERBOSE__% :
+
 GOTO :EOF   :: init
 
 ::----------------------------------------------------------------------
 
 :download
     SET URL=https://github.com/%OWNER%/%REPO%/archive/refs/heads/master.zip
-    IF DEFINED VERBOSE ECHO Get repro: "%URL%"
+    %__VERBOSE__% Get repro: "%URL%"
     curl -L -o "%MASTER%" "%URL%"
 GOTO :EOF   :: download
 
 ::----------------------------------------------------------------------
 
 :unpack
-    IF DEFINED VERBOSE ECHO:
+    %__VERBOSE__%
     SET BRANCH=_
     tar -tf "%MASTER%" > %MASTER%.lst
     
@@ -72,10 +74,10 @@ GOTO :EOF   :: download
     
     SET BRANCH=!REPOBRANCH:%REPO%-=!
     SET BRANCH=!BRANCH:/=!
-    IF DEFINED VERBOSE ECHO Branch	[!BRANCH!]
+    %__VERBOSE__% Branch	[!BRANCH!]
 
-    IF DEFINED DEBUG ECHO List subdir: [%REPO%-%BRANCH%] [%SUBDIR%]
-    IF DEFINED DEBUG tar -tf "%MASTER%" "%REPO%-%BRANCH%/%SUBDIR%"
+    %__DEBUG__% List subdir:	[%REPO%-%BRANCH%] [%SUBDIR%]
+    IF DEFINED debug tar -tf "%MASTER%" "%REPO%-%BRANCH%/%SUBDIR%"
     tar -xf "%MASTER%" "%REPO%-%BRANCH%/%SUBDIR%"
 GOTO :EOF   :: unpack
 
@@ -83,7 +85,7 @@ GOTO :EOF   :: unpack
 :head1  var filename
 SETLOCAL
 	FOR /f "tokens=1* delims=:" %%a IN ('findstr /n /r "^" "%~2" ^| findstr /r "^1:"') DO (
-		IF DEFINED VERBOSE ECHO:%~1	[%%b]
+		%__VERBOSE__% %~1	[%%b]
         ENDLOCAL&SET "%~1=%%b"
         GOTO :EOF
 	)
