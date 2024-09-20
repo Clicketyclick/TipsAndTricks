@@ -15,8 +15,9 @@ debug  |1                 | STDERR                | Debug is on - and so is Verb
 logging|                  | NUL                   | No logging                         |
 logging|filename          | Logging to `filename` | Logging is on                      | `LOG: `
 
-> [!NOTE]  
+> [!NOTE]
 > Activating debug will also activate verbose.
+> Activating verbose will not affect debug
 
 Set the environment variables:
 ```cmd
