@@ -13,8 +13,12 @@
  *  @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *  @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *  @since      2024-08-28T16:15:20 / erba
- *  @version    2024-08-29T13:54:32
+ *  @version    2024-09-20T19:13:11
  */
+
+// Get DoxyIT header
+fputs( STDERR, "\n".preg_replace( '/^\s+\*\s*@(.)/m', ':: \1', implode( '', preg_grep( '/^\s+\*\s*@/', file( __FILE__ ) ) ) ) ."\n" );
+
 
 // Not included - at all!
 if ( 1 == count( get_included_files() ) &&  __FILE__ == get_included_files()[0] )
@@ -24,10 +28,11 @@ if ( 1 == count( get_included_files() ) &&  __FILE__ == get_included_files()[0] 
 
 function test_bed()
 {
-    include_once( 'readTextBlock.php' );
+    include_once( __DIR__.'/readTextBlock.php' );
 
-    $GLOBALS['testbed']['tests']   = 0;
-    $GLOBALS['testbed']['ok']      = 0;
+    $GLOBALS['testbed']['tests']    = 0;
+    $GLOBALS['testbed']['ok']       = 0;
+    $GLOBALS['testbed']['fail']     = 0;
     fprintf( STDERR, '# Testing '.__FILE__.PHP_EOL );
 
     // Loop through each user function to find tests
@@ -37,14 +42,9 @@ function test_bed()
             call_user_func( $def_user_func );
     }
 
-    fprintf(
-        STDERR
-    ,   "Tests:\t%s\nOK:\t%s\nFailed:\t%s\n"
-    ,   $GLOBALS['testbed']['tests']
-    ,   $GLOBALS['testbed']['ok']
-    ,   $GLOBALS['testbed']['tests'] - $GLOBALS['testbed']['ok']
-    );
-    
+    //$GLOBALS['testbed']['fail'] = 1;
+    //$GLOBALS['testbed']['fail']++;
+    status();
 }   // test_bed()
 
 //----------------------------------------------------------------------
@@ -62,7 +62,7 @@ function get_text_block__test( )
 
     $delimiter  = "###";
 
-    $fp = @fopen("readTextBlock.txt", "r");
+    $fp = @fopen( __DIR__.'/readTextBlock.txt', 'r');
 
     foreach( [-1, 0, 1] as $direction )
     {
@@ -98,6 +98,22 @@ function sign__test( )
 
 //----------------------------------------------------------------------
 
+// SUCCESS: If tests run == no of OK and 0 == no of fail
+// FAILURE: Else
+function status()
+{
+    fprintf(
+        STDERR
+    ,   "\nTests:\t%s\nOK:\t%s\nFailed:\t%s\nStatus:\t%s\n"
+    ,   $GLOBALS['testbed']['tests']
+    ,   $GLOBALS['testbed']['ok']
+    ,   $GLOBALS['testbed']['fail']   //$GLOBALS['testbed']['tests'] - $GLOBALS['testbed']['ok']
+    ,   (( $GLOBALS['testbed']['tests'] == $GLOBALS['testbed']['ok'] && 0 == $GLOBALS['testbed']['fail'] ) ? 'SUCCESS' : 'FAILURE' ) 
+    );
+
+}
+//----------------------------------------------------------------------
+
 function ok( $got, $exp, $note = "")
 {
     $GLOBALS['testbed']['tests']    += 1;
@@ -110,6 +126,7 @@ function ok( $got, $exp, $note = "")
         :   "$note\n<[" . str_replace( ["\t","\n"], ['\t','\n'], $exp) . "]\n>[".str_replace( ["\t","\n"], ['\t','\n'], $got)."]\n"
     );
     $GLOBALS['testbed']['ok']    += $exp == $got ? 1 : 0;
+    $GLOBALS['testbed']['fail']  += $exp == $got ? 0 : 1;
     
     return( $exp == $got );
 }
