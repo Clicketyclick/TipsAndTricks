@@ -3,6 +3,44 @@
 Dumping the Doxygen file header in current file:
 
 ```php
+<?php
+/**
+ *  @file       blabla.php
+ *  @brief      Some file
+ *  
+ *  @details    More details
+ *  
+ *  @example    php blabla.php
+ *  
+ *  @requires   blobla.php   Module to test
+ *  
+ *  @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+ *  @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
+ *  @since      2024-08-28T16:15:20 / erba
+ *  @version    2024-08-29T13:54:32
+ */
+// Get DoxyIT header
+fputs( STDERR, "\n".preg_replace( '/^\s+\*\s*@(.)/m', ':: \1', implode( '', preg_grep( '/^\s+\*\s*@/', file( __FILE__ ) ) ) ) ."\n" );
+```
+
+Gives the header:
+
+```console
+
+ :: file       blabla.php
+ :: brief      Some file
+ :: details    More details
+ :: example    php blabla.php
+ :: requires   blobla.php   Module to test
+ :: copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+ :: author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
+ :: since      2024-08-28T16:15:20 / erba
+ :: version    2024-08-29T13:54:32
+
+```
+
+<!--
+```php
 fwrite( STDERR, getDoxygenFileHeader( __FILE__ ) );
 ```
 Output
@@ -83,3 +121,4 @@ function getDoxygenFileHeader( $file )
     return( var_export( preg_replace( "/\n \*\s*\@(\w*)/", "\n * [$1]", $header ), true ) );
 }	// getDoxygenFileHeader()
 ```
+--> 
