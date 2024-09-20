@@ -8,7 +8,7 @@
 :: * @copyright http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 :: * @author    Erik Bachmann <ErikBachmann@ClicketyClick.dk>
 :: * @since     2024-09-20T20:18:26 / erba
-:: * @version   2024-09-20T20:18:26
+:: * @version   2024-09-21T00:22:39
 :: **
 
 :init
@@ -18,7 +18,7 @@
         REM :: run main
         goto main
     )
-    CALL _header %~f0           &:: Display DoxIT header from caller
+    CALL %~dp0_header %~f0      &:: Display DoxIT header from caller
     CMD /d /c "%~f0" :main %*   &:: Process main
 
     CALL :cleanup   &:: Calling cleanup on the way out
