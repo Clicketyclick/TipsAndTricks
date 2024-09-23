@@ -1,0 +1,25 @@
+{
+	"title": "Data for Doxyit formatting",
+	"file": "${START}\n${LINE} ${PREFIX}file       $(FILE)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     $(author) $(email)\n${LINE} ${PREFIX}since      $(ISO8601) / $(user)\n${LINE} ${PREFIX}version    $(ISO8601)\n${END}\n",
+	"function": "${START}\n${LINE} ${PREFIX}fn         $(FUNCTION)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${LINE} ${PREFIX}param [in] $abc    $(Description for $abc)\n${LINE} ${PREFIX}param [in] $defg   $(Description for $defg)\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}example    \n${LINE} \n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} \n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      $(ISO8601)\n${END}",
+	"types": {
+		"php": {
+			"start": "/**",
+			"line": " *  ",
+			"prefix": "@",
+			"end": " */"
+		},
+		"cmd": {
+			"start": "::**",
+			"line": ":: *  ",
+			"prefix": "@",
+			"end": " ::**"
+		},
+		"py": {
+			"start": "#::**",
+			"line": "#:: *  ",
+			"prefix": "@",
+			"end": "#:: **"
+		}
+	}
+}
