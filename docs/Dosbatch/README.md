@@ -17,7 +17,7 @@ Download book covers by ISBN
 - [Tail](../Powershell/tail.bat) Print the last 30 lines of each FILE to standard output.
 - [ISO 86001](Iso86001_date/) - Current date in ISO 86001 (YYYY-MM-DDThh:mm:ss.000z)
 - [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
-
+- [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
 
 ## ZIP
 
