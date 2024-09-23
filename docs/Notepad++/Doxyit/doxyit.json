@@ -1,23 +1,52 @@
 {
 	"title": "Data for Doxyit formatting",
-	"file": "${START}\n${LINE} ${PREFIX}file       $(FILE)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     $(author) $(email)\n${LINE} ${PREFIX}since      $(ISO8601) / $(user)\n${LINE} ${PREFIX}version    $(ISO8601)\n${END}\n",
-	"function": "${START}\n${LINE} ${PREFIX}fn         $(FUNCTION)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${LINE} ${PREFIX}param [in] $abc    $(Description for $abc)\n${LINE} ${PREFIX}param [in] $defg   $(Description for $defg)\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}example    \n${LINE} \n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} \n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      $(ISO8601)\n${END}",
+	"date": "2024-09-24T00:48:41",
+	"author": "Erik Bachmann <Erik@ClicketyClick.dk>",
+	"templates": {
+		"file": "${START}\n${LINE} ${PREFIX}file       $(FILE)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     $(AUTHOR) <$(EMAIL)>\n${LINE} ${PREFIX}since      $(ISO8601) / $(USER)\n${LINE} ${PREFIX}version    $(ISO8601)\n${END}\n",
+		"function": "${START}\n${LINE} ${PREFIX}fn         $(FUNCTION)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n$(param)\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}example    \n${LINE} \n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} \n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      $(ISO8601)\n${END}"
+	},
+	"users": {
+		"erba": {
+			"name": "erba",
+			"fullname": "Erik Bachmann",
+			"email": "Erik@ClicketyClick.dk",
+			"phone": "+45",
+			"address": "Odense, Denmark"
+		},
+		"Bruger": {
+			"name": "Bruger",
+			"fullname": "User Name",
+			"email": "SomeOne@ClicketyClick.dk",
+			"phone": "+45",
+			"address": "Thierd Stone from the Sun"
+		}
+	},
 	"types": {
 		"php": {
+			"function": "function",
 			"start": "/**",
 			"line": " *  ",
 			"prefix": "@",
+			"param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+			"param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
 			"end": " */"
 		},
 		"cmd": {
+			"function": ":",
 			"start": "::**",
 			"line": ":: *  ",
 			"prefix": "@",
-			"end": " ::**"
+			"param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+			"param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
+			"end": "::**"
 		},
 		"py": {
-			"start": "#::**",
+			"function": "def",
+			"start": "\n#::**",
 			"line": "#:: *  ",
+			"param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+			"param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
 			"prefix": "@",
 			"end": "#:: **"
 		}
