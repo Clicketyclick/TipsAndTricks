@@ -19,6 +19,25 @@ Download book covers by ISBN
 - [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
 - [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
 
+## Get first/last line from file
+
+Source: [Fetch only first line from text file using Windows Batch File @@Stackoverflow_icon@@](https://stackoverflow.com/a/46134683)
+
+```cmd
+
+(ECHO:A a&ECHO:B b&ECHO:C c)>file.txt
+
+:: Fetch only first line from text file using Windows Batch File - https://stackoverflow.com/a/46134683
+ECHO Get first line from file:
+SET first_line=
+SET /P first_line=<file.txt&CALL ECHO %first_line%
+
+ECHO Get last line from file:
+SET last_line=
+FOR /F "UseBackQ Delims==" %%A In ("file.txt") DO SET "last_line=%%A" 
+ECHO %last_line%
+```
+
 ## ZIP
 
 On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser @@Superuser_icon@@](https://superuser.com/a/1473255) )
