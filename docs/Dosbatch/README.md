@@ -45,6 +45,18 @@ On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser @@S
 C:\> tar -xf archive.zip
 ```
 
+## ls -l
+
+```cmd
+@echo off&SETLOCAL enabledelayedexpansion
+# ls -l
+for /f "tokens=*" %%i in ('dir /a /b /-p /o:gen') do ( 
+    SET "_FILE=%%i                                       ."
+    SET "_ATTRIB=%%~ai ."
+    SET "_SIZE=           %%~zi"
+    ECHO !_FILE:~0,40!	%%~ti !_SIZE:~-11!  !_ATTRIB:~0,11!.
+)
+```
 
 ## Usefull links
 
