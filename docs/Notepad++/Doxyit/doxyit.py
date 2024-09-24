@@ -6,10 +6,13 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2024-09-24T01:17:38
+#:: *   @version    2024-09-24T08:50:35
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
+import re
+
+
 #debug = os.environ.get('DEBUG', False )
 verbose = False
 debug = False
@@ -149,36 +152,58 @@ if 5 > current_line_number:
     if debug: print( "Current line number: %d\n%s\n" % (current_line_number, file_header) )
     editor.addText( file_header )
 else:
+    #editor.lineFromPosition(pos) 
+    #SCI_LINEFROMPOSITION(scn.position+scn.length-1)
+    #next_line   = editor.getLine( current_line_number )
+    # Catch if last line of file!
+    #
+    # save current position
+    currentPos  = editor.getCurrentPos() 
+    # Go to document end
+    editor.documentEnd()
+    last_line_number = editor.lineFromPosition(editor.getCurrentPos()) + 1
+    editor.gotoPos( currentPos )
+    #max_line = editor.getMaxLineState() 
+    #editor.documentEnd()
+    print "next: %d of %d " % (current_line_number, last_line_number)
+    if current_line_number == last_line_number:
+        current_line_number -= 2
+
     next_line   = editor.getLine( current_line_number )
-    import re
     
+    #import re
     #g = re.findall(r'def\s+(.*)\((.*)\)', next_line)
     g = re.findall(r'{0}\s*(.*)\((.*)\)'.format(config['types'][file_type]['function']), next_line)
 
     if g: 
         if debug: print "has function: func name( a, b ) "
     
-    if not g: 
+    if not g:
         if debug: print "has NO function: :name"
         g = re.findall(r'{0}\s*(.*)\s+(.*)'.format(config['types'][file_type]['function']), next_line)
 
-    if debug: print( repr(g))
+    if not g:
+        print "DELIMITER"
+        editor.addText( config['types'][file_type]['delimiter'] )
 
-    function    = g[0][0]
-    if verbose: print "function: " + function
-    elements = g[0][1].replace(' ','').split(',')
-    #if verbose: print elements
-    #  *  @param [in] $abc    $(Description for $abc)
-    config['types'][file_type]['line']
+    else:
+        if debug: print( repr(g))
 
-    #param = "${LINE} ${PREFIX}param [in]\t%s\t$(description)" % "\t$(description)\n${LINE} ${PREFIX}param [in]\t".join(elements)
-    param           = config['types'][file_type]['param_outer'] % config['types'][file_type]['param_inner'].join(elements)
-    param           = param.replace("${LINE}", config['types'][file_type]['line'])
-    param           = param.replace("${PREFIX}", config['types'][file_type]['prefix'])
-    function_header = function_header.replace('$(FUNCTION)',function)
-    function_header = function_header.replace('$(param)',param)
-    if debug: print( function_header )
+        function    = g[0][0]
+        if verbose: print "function: " + function
+        elements = g[0][1].replace(' ','').split(',')
+        #if verbose: print elements
+        #  *  @param [in] $abc    $(Description for $abc)
+        config['types'][file_type]['line']
 
-    editor.addText( function_header )
+        #param = "${LINE} ${PREFIX}param [in]\t%s\t$(description)" % "\t$(description)\n${LINE} ${PREFIX}param [in]\t".join(elements)
+        param           = config['types'][file_type]['param_outer'] % config['types'][file_type]['param_inner'].join(elements)
+        param           = param.replace("${LINE}", config['types'][file_type]['line'])
+        param           = param.replace("${PREFIX}", config['types'][file_type]['prefix'])
+        function_header = function_header.replace('$(FUNCTION)',function)
+        function_header = function_header.replace('$(param)',param)
+        if debug: print( function_header )
+
+        editor.addText( function_header )
 
 #*** End of File ***
