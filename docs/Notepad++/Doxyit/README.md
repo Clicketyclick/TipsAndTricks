@@ -8,8 +8,7 @@ which had the simple ablillity to insert file and function headers by hotkey for
 
 > "This also provides helpful features for creating and editing comment blocks, even if Doxygen isn't desired."
 
-The setup has the folloing elements:
-
+The setup has the following elements:
 - [doxyit.py](doxyit.py) - The script it self
 - [doxyit.json](doxyit.json) - Configuration
 
