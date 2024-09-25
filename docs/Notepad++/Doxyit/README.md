@@ -10,12 +10,13 @@ which had the simple ablillity to insert file and function headers by hotkey for
 
 The setup has the folloing elements:
 
-- [doxyit.py](doxyit.py)
-- [doxyit.json](doxyit.json)
+- [doxyit.py](doxyit.py) - The script it self
+- [doxyit.json](doxyit.json) - Configuration
 
-- [test.cmd](test.cmd)
-- [test.py](test.py)
-- [test.php](test.php)
+Test files:
+- [test.cmd](test.cmd) - DOS batch
+- [test.py](test.py) - Python
+- [test.php](test.php) - PHP
 
 ## A Word of Advice
 
@@ -212,15 +213,14 @@ param_outer | Outer parameter[^1]:
 param_inner | Inner parameter[^1]:
 
 
-[^1]:
-    The parameter block is build by inserting the argument to the function as entries in the function header:
-    ```php
-    *   @param [in]	$abc	$(description)
-    *   @param [in]	$defg	$(description)
-    *   @return     $(Return description)
-    ```
+[^1]: `param_outer` is the basic line and `param_inner` is the delimiter inserted between multiple values
 
-`param_outer` is the basic line and `param_inner` is the delimiter inserted between multiple values
+The parameter block is build by inserting the argument to the function as entries in the function header:
+```php
+*   @param [in]	$abc	$(description)
+*   @param [in]	$defg	$(description)
+*   @return     $(Return description)
+```
 
 Given:
 ```php
