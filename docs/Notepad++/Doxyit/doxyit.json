@@ -1,6 +1,6 @@
 {
 	"title": "Data for Doxyit formatting",
-	"date": "2024-09-25T07:54:57",
+	"date": "2024-09-25T10:04:31",
 	"author": "Erik Bachmann <Erik@ClicketyClick.dk>",
 	"templates": {
 		"file": "${START}\n${LINE} ${PREFIX}file       $(FILE)\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     $(AUTHOR) <$(EMAIL)>\n${LINE} ${PREFIX}since      $(ISO8601) / $(USER)\n${LINE} ${PREFIX}version    $(ISO8601)\n${END}\n",
@@ -37,6 +37,9 @@
 		"php": {
 			"name": "PHP",
 			"function": "function",
+			"function_prefix": "<?php\n",
+			"function_suffix": "\n//",
+			"comment_prefix": "//",
 			"start": "/**",
 			"line": " *  ",
 			"delimiter": "//----------------------------------------------------------------------",
