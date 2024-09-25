@@ -6,19 +6,19 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2024-09-25T08:17:40
+#:: *   @version    2024-09-25T10:39:39
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
 import re
 
+# Debugging and verbose
 debug = os.environ.get('DEBUG', False )
 verbose = os.environ.get('VERBOSE', False )
-#verbose = True
-#debug = True
+verbose = True
+debug = True
 if verbose: print "Verbose ON"
 if debug: print "Debugging ON"
-#if not debug: print "debugging OFF"
 
 # Gettin cursor line no
 current_line_number = editor.lineFromPosition(editor.getCurrentPos()) + 1
@@ -28,12 +28,16 @@ if debug: print( "Cursors current_line_number:" + str(current_line_number ) )
 currentFilename = notepad.getCurrentFilename()
 
 #import os
+script_file_name, script_file_extension = os.path.splitext(__file__);
 file_name, file_extension = os.path.splitext(currentFilename);
+file_type = file_extension[1:]
+
 if debug: print( "currentFilename:"+currentFilename )
 if debug: print( "file_name:"+file_name )
 if debug: print( "file_extension:"+file_extension )
 
-#----------------------------------------------------------------------
+#>>> Functions --------------------------------------------------------
+
 #::**
 #:: *   @fn         getConfig
 #:: *   @brief      Read configuration from JSON
@@ -69,7 +73,7 @@ def getUserInfo():
     
     #user = os. getlogin()
     # Get USER or USERNAME from env
-    users = os.environ.get('USER', os.environ.get('USERNAME'))
+    user = os.environ.get('USER', os.environ.get('USERNAME'))
     userdata = config['users'][user]
     # Users email
     return userdata
@@ -77,63 +81,33 @@ def getUserInfo():
 #----------------------------------------------------------------------
 
 def expandVars( template ):
-    template     = template.replace("${START}", config['types'][file_type]['start'])
-    template     = template.replace("${END}", config['types'][file_type]['end'])
-    template     = template.replace("${LINE}", config['types'][file_type]['line'])
-    template     = template.replace("${PREFIX}", config['types'][file_type]['prefix'])
-    template     = template.replace("$(ISO8601)", iso)
-    template     = template.replace("$(USER)", user)
-    template     = template.replace("$(AUTHOR)", userdata['fullname'])
-    template     = template.replace("$(EMAIL)", useremail)
-    template     = template.replace("$(FILE)", os.path.basename(currentFilename))
+    template     = template.replace("${START}",     config['types'][file_type]['start'] or "" )
+    template     = template.replace("${END}",       config['types'][file_type]['end'] or "" )
+    template     = template.replace("${LINE}",      config['types'][file_type]['line'] or "" )
+    template     = template.replace("${PREFIX}",    config['types'][file_type]['prefix'] or "" )
+
+    template     = template.replace("${FILE_PREFIX}", (config['types'][file_type]['file_prefix'] or "" ) )
+    template     = template.replace("${FILE_SUFFIX}", config['types'][file_type]['file_suffix'] or "" )
+    
+    template     = template.replace("${FUNCTION_PREFIX}", config['types'][file_type]['function_prefix'] or "" )
+    template     = template.replace("${FUNCTION_SUFFIX}", config['types'][file_type]['function_suffix'] or "" )
+    template     = template.replace("${COMMENT_PREFIX}", config['types'][file_type]['comment_prefix'] or "" )
+
+    template     = template.replace("${ISO8601}",   iso)
+
+    template     = template.replace("${USER}",      userdata['name'] or "unknown" or "" )
+    template     = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
+    template     = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
+
+    template     = template.replace("${FILE}",  os.path.basename(currentFilename))
     return template
 
 #----------------------------------------------------------------------
 
-# json_file
-json_file   = os.path.dirname(__file__) + '/doxyit.json'
-config      = getConfig(json_file)
-
-#type_list = ['.py','php']
-#result = [ ff for ff in type_list if ff == file_extension]
-#if debug: print( "Result:" +repr(result) )
-
-file_type = file_extension[1:]
-if debug: print("file_type:"+file_type)
-
-# if file_type == "php":
-  # if debug: print("A php script")
-  # #doxy = {"start":"/**", "line":" *  ", "prefix":"@", "end":" */"}
-# elif file_type == "cmd":
-  # if debug: print("A DOS batch")
-  # #doxy = {"start":"::**", "line":":: *  ", "prefix":"@", "end":" ::**"}
-# elif file_type == "py":
-  # if debug: print("Python")
-  # #doxy = {"start":"#::**", "line":"#:: *  ", "prefix":"@", "end":"#:: **"}
-# else:
-  # print("I dont know the file type: ["+file_type+"] from file extention ["+file_extension+"]")
-
-
-
-# Get now in ISO 8601 format: YYYY-MM-DDThh:mm:ss
-import datetime 
-iso = datetime.datetime.now().isoformat()[:19]
-
-userdata = getUserInfo()
-
-
-if debug: print( "USER:" + userdata['user'] + " email:" + userdata['email']);
-if debug: print( "user_full_name:["+userdata['fullname']+"]" )
-
-file_header = expandVars( config['templates']['file'] )
-function_header = expandVars( config['templates']['function'] )
-
-
-if 5 > current_line_number:
-    editor.gotoLine(0)
-    if debug: print( "Current line number: %d\n%s\n" % (current_line_number, file_header) )
-    editor.addText( file_header )
-else:
+def getNextLine():
+    ## At end of file?
+    # Gettin cursor line no
+    current_line_number = editor.lineFromPosition(editor.getCurrentPos()) + 1
     # save current position
     currentPos  = editor.getCurrentPos() 
     # Go to document end
@@ -145,38 +119,67 @@ else:
     if debug: print "next: %d of %d " % (current_line_number, last_line_number)
     if current_line_number == last_line_number:
         current_line_number -= 2
+    ## At end of file?
 
     next_line   = editor.getLine( current_line_number )
+    return next_line
+
+#----------------------------------------------------------------------
+#<<< Functions --------------------------------------------------------
+
+config  = getConfig( script_file_name + ".json" )
+
+print "File_type: "+file_type
+print "file.config: "
+print config['types'][file_type]
+print "----"
+header_zone = config['types'][file_type]['header_zone'] or 3
+print "header_zone: " + str(header_zone)
+
+userdata    = getUserInfo()
+if debug: print( userdata );
+if debug: print( "USER:" + userdata['name'] + " email:" + userdata['email']);
+if debug: print( "user_full_name:["+userdata['fullname']+"]" )
+
+# Expand headers
+file_header     = expandVars( config['templates']['file'] )
+function_header = expandVars( config['templates']['function'] )
+
+if header_zone > current_line_number:
+    # At top of file insert header
+    editor.gotoLine(0)
+    if debug: print( "Current line number: %d\n%s\n" % (current_line_number, file_header) )
+    editor.addText( file_header )
+else:
+    next_line = getNextLine()
     
     #import re
     g = re.findall(r'{0}\s*(.*)\((.*)\)'.format(config['types'][file_type]['function']), next_line)
 
-    if g: 
-        if debug: print "has function: func name( a, b ) "
     
     if not g:
         if debug: print "has NO function: :name"
         g = re.findall(r'{0}\s*(.*)\s+(.*)'.format(config['types'][file_type]['function']), next_line)
 
-    if not g:
+    if not g:   # Insert delimiter
         if debug: "DELIMITER"
-        editor.addText( config['types'][file_type]['delimiter'].replace("${LINE}", config['types'][file_type]['line']) )
-
-    else:
+        editor.addText( expandVars( config['types'][file_type]['delimiter'] ) )
+    else:       # Insert function header
+        if debug: print "has function: func name( a, b ) "
         if debug: print( repr(g))
 
         function    = g[0][0]
         if verbose: print "function: " + function
         elements = g[0][1].replace(' ','').split(',')
-        #if verbose: print elements
+
         #  *  @param [in] $abc    $(Description for $abc)
         config['types'][file_type]['line']
 
         param           = config['types'][file_type]['param_outer'] % config['types'][file_type]['param_inner'].join(elements)
         param           = param.replace("${LINE}", config['types'][file_type]['line'])
         param           = param.replace("${PREFIX}", config['types'][file_type]['prefix'])
-        function_header = function_header.replace('$(FUNCTION)',function)
-        function_header = function_header.replace('$(param)',param)
+        function_header = function_header.replace('${FUNCTION}',function)
+        function_header = function_header.replace('${PARAM}',param)
         if debug: print( function_header )
 
         editor.addText( function_header )
