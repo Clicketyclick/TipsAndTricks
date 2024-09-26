@@ -6,28 +6,23 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2024-09-25T10:39:39
+#:: *   @version    2024-09-26T15:08:20
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
 import re
+import datetime # Get now in ISO 8601 format: YYYY-MM-DDThh:mm:ss
+import doxyit_lib
 
-# Debugging and verbose
-debug = os.environ.get('DEBUG', False )
-verbose = os.environ.get('VERBOSE', False )
-verbose = True
-debug = True
-if verbose: print "Verbose ON"
-if debug: print "Debugging ON"
+debug   = doxyit_lib.setDebug( 0 )
+verbose = doxyit_lib.setVerbose( 0 )
 
+# Get name of current file
+currentFilename = notepad.getCurrentFilename()
 # Gettin cursor line no
 current_line_number = editor.lineFromPosition(editor.getCurrentPos()) + 1
 if debug: print( "Cursors current_line_number:" + str(current_line_number ) )
 
-# Get name of current file
-currentFilename = notepad.getCurrentFilename()
-
-#import os
 script_file_name, script_file_extension = os.path.splitext(__file__);
 file_name, file_extension = os.path.splitext(currentFilename);
 file_type = file_extension[1:]
@@ -36,73 +31,36 @@ if debug: print( "currentFilename:"+currentFilename )
 if debug: print( "file_name:"+file_name )
 if debug: print( "file_extension:"+file_extension )
 
+# Read configuration
+config  = doxyit_lib.getConfig( script_file_name + ".json" )
+
+# Set global variables
+config['globals']   = {}
+config['globals']['iso'] = doxyit_lib.getIsoDate()
+config['globals']['currentFilename'] = currentFilename
+config['globals']['file_type'] = file_type
+user        = doxyit_lib.getUserInfo()
+userdata    = config['users'][user]
+config['globals']['user'] = doxyit_lib.getUserInfo()
+
+if debug: print "isodate: "+config['globals']['iso']
+
+if debug: print "File_type: "+file_type
+if debug: print "file.config: "
+if debug: print config['types'][file_type]
+if debug: print "----"
+header_zone = config['types'][file_type]['header_zone'] or 3
+if debug: print "header_zone: " + str(header_zone)
+
+if debug: print( userdata );
+if debug: print( "USER:" + userdata['name'] + " email:" + userdata['email']);
+if debug: print( "user_full_name:["+userdata['fullname']+"]" )
+
+# Expand headers
+file_header     = doxyit_lib.expandVars( config['templates']['file'], config )
+function_header = doxyit_lib.expandVars( config['templates']['function'], config )
+
 #>>> Functions --------------------------------------------------------
-
-#::**
-#:: *   @fn         getConfig
-#:: *   @brief      Read configuration from JSON
-#:: *   
-#:: *   @param [in]	json_file	File name
-#:: *   @return     Configuration as struct
-#:: *   
-#:: *   @details    
-#:: *   
-#:: *   @example    
-#:: *   
-#:: *   @todo       
-#:: *   @bug        
-#:: *   @warning    
-#:: *   
-#:: *   @see        https://
-#:: *   @since      2024-09-25T07:57:44
-#:: **
-def getConfig(json_file):
-    if debug: print( "json_file: " + json_file )
-
-    import json
-    # load JSON
-    json_data   = open (json_file).read()
-    # Parse JSON
-    config      = json.loads( json_data )
-    if debug: print( config['title'] )
-    return( config )
-
-#----------------------------------------------------------------------
-def getUserInfo():
-    # Get user info
-    
-    #user = os. getlogin()
-    # Get USER or USERNAME from env
-    user = os.environ.get('USER', os.environ.get('USERNAME'))
-    userdata = config['users'][user]
-    # Users email
-    return userdata
-
-#----------------------------------------------------------------------
-
-def expandVars( template ):
-    template     = template.replace("${START}",     config['types'][file_type]['start'] or "" )
-    template     = template.replace("${END}",       config['types'][file_type]['end'] or "" )
-    template     = template.replace("${LINE}",      config['types'][file_type]['line'] or "" )
-    template     = template.replace("${PREFIX}",    config['types'][file_type]['prefix'] or "" )
-
-    template     = template.replace("${FILE_PREFIX}", (config['types'][file_type]['file_prefix'] or "" ) )
-    template     = template.replace("${FILE_SUFFIX}", config['types'][file_type]['file_suffix'] or "" )
-    
-    template     = template.replace("${FUNCTION_PREFIX}", config['types'][file_type]['function_prefix'] or "" )
-    template     = template.replace("${FUNCTION_SUFFIX}", config['types'][file_type]['function_suffix'] or "" )
-    template     = template.replace("${COMMENT_PREFIX}", config['types'][file_type]['comment_prefix'] or "" )
-
-    template     = template.replace("${ISO8601}",   iso)
-
-    template     = template.replace("${USER}",      userdata['name'] or "unknown" or "" )
-    template     = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
-    template     = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
-
-    template     = template.replace("${FILE}",  os.path.basename(currentFilename))
-    return template
-
-#----------------------------------------------------------------------
 
 def getNextLine():
     ## At end of file?
@@ -124,26 +82,8 @@ def getNextLine():
     next_line   = editor.getLine( current_line_number )
     return next_line
 
-#----------------------------------------------------------------------
 #<<< Functions --------------------------------------------------------
 
-config  = getConfig( script_file_name + ".json" )
-
-print "File_type: "+file_type
-print "file.config: "
-print config['types'][file_type]
-print "----"
-header_zone = config['types'][file_type]['header_zone'] or 3
-print "header_zone: " + str(header_zone)
-
-userdata    = getUserInfo()
-if debug: print( userdata );
-if debug: print( "USER:" + userdata['name'] + " email:" + userdata['email']);
-if debug: print( "user_full_name:["+userdata['fullname']+"]" )
-
-# Expand headers
-file_header     = expandVars( config['templates']['file'] )
-function_header = expandVars( config['templates']['function'] )
 
 if header_zone > current_line_number:
     # At top of file insert header
@@ -151,6 +91,7 @@ if header_zone > current_line_number:
     if debug: print( "Current line number: %d\n%s\n" % (current_line_number, file_header) )
     editor.addText( file_header )
 else:
+    #next_line = doxyit_lib.getNextLine()
     next_line = getNextLine()
     
     #import re
@@ -163,7 +104,7 @@ else:
 
     if not g:   # Insert delimiter
         if debug: "DELIMITER"
-        editor.addText( expandVars( config['types'][file_type]['delimiter'] ) )
+        editor.addText( doxyit_lib.expandVars( config['types'][file_type]['delimiter'], config ) )
     else:       # Insert function header
         if debug: print "has function: func name( a, b ) "
         if debug: print( repr(g))
