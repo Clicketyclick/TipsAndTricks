@@ -32,7 +32,7 @@ File| Function
 > I did NOT read the documentation (who does??!) but build this script entirely out of my head and using intense searches on the web. 
 > So suggestions are wellcome!
 >
-> Many thanks to [Stackoverflow @@Stackoverflow_logo@@](https://stackoverflow.com)
+> Many thanks to [Stackoverflow @@Stackoverflow_icon@@](https://stackoverflow.com)
 
 
 ## Installing DoxyIT
