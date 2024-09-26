@@ -140,10 +140,86 @@ Script and configuration
 A php script could look like this:
 
 ```php
+<?php
 
-
+function test( $one, $two ){
+	
+}
 
 ```
+
+Place the cursor at the top of the file and press the hotkey:
+
+```php
+<?php
+/**
+ *   @file       test.php
+ *   @brief      $(Brief description)
+ *   @details    $(More details)
+ *   
+ *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+ *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
+ *   @since      2024-09-26T15:23:32 / erba
+ *   @version    2024-09-26T15:23:32
+ */
+//<?php
+
+function test( $one, $two ){
+	
+}
+
+```
+
+A file header is inserted at the top of the file. 
+Note that the original `<?php` is now trailing the header.
+
+You may now update the header (especially the tokens `$(Brief description)` and `$(More details)`
+
+Move your cursor to the line just above the function `test`. 
+
+Press hotkey again:
+```php
+//<?php
+
+/**
+ *   @fn         test
+ *   @brief      $(Brief description)
+ *   
+ *   @param [in]	$one	$(description)
+ *   @param [in]	$two	$(description)
+ *   @return     $(Return description)
+ *   
+ *   @details    $(More details)
+ *   
+ *   @example    
+ *   
+ *   @todo       
+ *   @bug        
+ *   @warning    
+ *   
+ *   @see        https://
+ *   @since      2024-09-26T15:25:08
+ */
+
+function test( $one, $two ){
+```
+
+And a function header for test() is inserted with parameters.
+
+You may want to update the header ( `$(description)`, `$(Return description)` and `$(More details)`)
+
+
+Move your cursor to the end of file and pres hotkey again:
+
+
+```php
+function test( $one, $two ){
+	
+}
+//----------------------------------------------------------------------
+```
+
+And a delimiter line is inserted.
 
 ## Configuration
 
