@@ -65,7 +65,9 @@ In Notpad++ select in menu:
 1. `Plugins` / `Plugins Admin...`
 2. Search for "PythonScript" and you'll find:
     > Python Script plugin.
+    > 
     > Author: Dave Brotherstone + Jocelyn Legault
+    > 
     > Homepage: https://github.com/bruderstein/PythonScript
 3. Select the pachage and press <kbd>Install</kbd>
 4. Answer <kbd>Yes</kbd> the the question on restarting Notepad++
