@@ -6,7 +6,7 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 #:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2024-09-26T14:51:29
+#:: *   @version    2024-09-26T15:30:17
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -117,7 +117,9 @@ def expandVars( template, config ):
     template     = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
     template     = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
 
-    template     = template.replace("${FILE}",  config['globals']['currentFilename'] ) #os.path.basename(currentFilename))
+    #template     = template.replace("${FILE}",  config['globals']['currentFilename'] ) #os.path.basename(currentFilename))
+    file_name, file_extension = config['globals']['currentFilename'] );
+    template     = template.replace("${FILE}", file_name )  #os.path.basename(currentFilename))
     return template
 
 #----------------------------------------------------------------------
