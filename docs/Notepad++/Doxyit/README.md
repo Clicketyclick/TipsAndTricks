@@ -9,14 +9,20 @@ which had the simple ablillity to insert file and function headers by hotkey for
 > "This also provides helpful features for creating and editing comment blocks, even if Doxygen isn't desired."
 
 The setup has the following elements:
-- [doxyit.py](doxyit.py) - The script it self
-- [doxyit.json](doxyit.json) - Configuration
-- [doxyit_lib.py](doxyit_lib.py) - A function library for the script
+
+File| Function
+--|--
+[doxyit.py](doxyit.py) 		| The script it self
+[doxyit.json](doxyit.json)	| Configuration
+[doxyit_lib.py](doxyit_lib.py)	| A function library for the script
 
 Test files:
-- [test.cmd](test.cmd) - DOS batch
-- [test.py](test.py) - Python
-- [test.php](test.php) - PHP
+
+File| Function
+---|---
+[test.cmd](test.cmd)	| DOS batch
+[test.php](test.php)	| PHP
+[test.py](test.py)	| Python
 
 ## A Word of Advice
 
@@ -26,14 +32,14 @@ Test files:
 > I did NOT read the documentation (who does??!) but build this script entirely out of my head and using intense searches on the web. 
 > So suggestions are wellcome!
 >
-> Many thanks to [Stackoverflow @@stackoverflow.icon@@](https://stackoverflow.com)
+> Many thanks to [Stackoverflow @@Stackoverflow_logo@@](https://stackoverflow.com)
 
 
 ## Installing DoxyIT
 
 0. Install **Notepad++** and fire up ;-)
 1. Install **Python Script** for NotePad++
-2. Download the script and configuration JSON and place them in the script directory
+2. Download the scripts and configuration JSON - and place them in the script directory
 3. Restart NotePad++
 4. Add a hotkey for DoxyIt.
 
@@ -51,15 +57,16 @@ And you're good to go.
 > IF you're dazed and confused at this point - don't go any further!
 
 #### Install **Python Script** for NotePad++
+
 In Notpad++ select in menu:
 
-1. Plugins / Plugins Admin...
-2. Search for "PythonScript"
+1. `Plugins` / `Plugins Admin...`
+2. Search for "PythonScript" and you'll find:
     > Python Script plugin.
     > Author: Dave Brotherstone + Jocelyn Legault
     > Homepage: https://github.com/bruderstein/PythonScript
-3. Select the pachage and press <keyb>Install</keyb>
-4. Answer <keyb>Yes</keyb> the the question on restarting Notepad++
+3. Select the pachage and press <kbd>Install</kbd>
+4. Answer <kbd>Yes</kbd> the the question on restarting Notepad++
 5. Notepad Plugin Admin will now download and install the plugin.
 
 Ready to Rock'n'Roll!
@@ -69,21 +76,20 @@ Ready to Rock'n'Roll!
 Run as Admin!
 
 1. Select in menu:
-    1. Plugins / Python Script / Show console (You'll like this for debugging)
-    1. Plugins / Python Script / New script - to creat your first script 
+    1. `Plugins` / `Python Script` / `Show console` (You'll like this for debugging)
+    2. `Plugins` / `Python Script` / `New script` - to create your first script 
 2. Go to https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/
     1. Copy the content of [doxyit.json](https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/doxyit.json)
-    
-    C:\Users\erba\AppData\Roaming\Notepad++\plugins\Config\PythonScript\scripts
 
-Download the script and configuration  JSON and place them in the script directory
+Download the scripts and configuration JSON and place them in the script directory
 
-    1. Plugins / Python Script / Configuration
-    2. The script doxyit.py will be visible in the top window
-    3. Select the script and press <keyb>Add</keyb> at the left window named "Menu Items"
-    4. Finish by pressing <keyb>OK</keyb>
-    5. Restart NotePad++
-    The script Doxyit now appearce directly in the Python Script menu (Plugins / Python Script)
+1. Go to `Plugins` / `Python Script` / `Configuration`
+2. The script `doxyit.py` will be visible in the top window
+3. Select the script and press <kbd>Add</kbd> at the left window named "Menu Items"
+4. Finish by pressing <kbd>OK</kbd>
+5. Restart NotePad++
+
+The script Doxyit now appearce directly in the Python Script menu (`Plugins` / `Python Script`)
 
 #### Add a hotkey for DoxyIt.
 
@@ -98,15 +104,15 @@ In general: [How do I run specific script with a keyboard shortcut?](https://com
 >
 > Once you click OK to dismiss the Python Script Shortcut Configuration window, you should be able to go into Plugins (menu) -> Python Script (just point to that and let the menu cascade open) and then see your script at this level of the menu (between the Scripts-> and Configuration entries). Seeing your script appear here is key to being able to tie it to a shortcut keycombo.
 >
-> Restart Notepad++. This allows the “Shortcut Mapper” to see that you’ve changed the Plugins (menu) -> Python Script menu contents.
+> Restart Notepad++.
+> This allows the “Shortcut Mapper” to see that you’ve changed the Plugins (menu) -> Python Script menu contents.
 >
 > Now go to Settings (menu) -> Shortcut Mapper… and select the Plugin commands tab. Scrolling down somewhat you should see your script in the Name column (along with “Pythonscript” in the Plugin column). Go ahead and select your script and assign a keycombo to it just like you would for any other command.
 
 1. In "Filter": type "doxyit" and the matching entries will be presented
-2. Select "doxyit" and press <keyb>Modify</keyb>
-3. Personally I select <keyb>Ctrl</keyb> + <keyb>Shift</keyb> + <keyb>D</keyb>
+2. Select "doxyit" and press <kbd>Modify</kbd>
+3. Personally I select <kbd>⇧ Shift</kbd><kbd>⌃ Control</kbd><kbd>D</kbd>
 4. Make sure that there are no conflicting sequenses
-
 
 <!--
 
@@ -136,6 +142,8 @@ Script and configuration
 3. Start your happy scripting - and when you create a subfunction 
 4. place the cursor at the end of the line ABOVE the function definition - and press the hotkey again and a function header template is inserted.
 5. As code pile up you can insert a separator line anywhere in you code (Except from the line above a function definition - and the first 5 lines of the script). Pres the hotkey and a separator line is inserted.
+
+### Or in more detail
 
 A php script could look like this:
 
@@ -207,7 +215,6 @@ function test( $one, $two ){
 And a function header for test() is inserted with parameters.
 
 You may want to update the header ( `$(description)`, `$(Return description)` and `$(More details)`)
-
 
 Move your cursor to the end of file and pres hotkey again:
 
@@ -284,10 +291,11 @@ function    | Patterne used for identifying function definition
 start       | Start comment
 line        | New line START
 end         | End comment
+delimiter   | Delimiter line
+header_zone | The zone at the top of file where file header is located (Defaule: 0-5)
 prefix      | Prefix for Doxygen terms
 param_outer | Outer parameter[^1]:
 param_inner | Inner parameter[^1]:
-
 
 [^1]: `param_outer` is the basic line and `param_inner` is the delimiter inserted between multiple values
 
