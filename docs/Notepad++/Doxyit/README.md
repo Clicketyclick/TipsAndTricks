@@ -26,7 +26,7 @@ File| Function
 
 ## A Word of Advice
 
-> :warning:WARNING
+> ⚠️ WARNING
 > 
 > This IS my first Python 2 script and I'm not familiar with Python scripting.
 >
@@ -54,7 +54,7 @@ And you're good to go.
 2. Install the package
 3. And fire up ;-)
 
-> :rotating_light: CAUTION
+> 🚨 CAUTION
 > 
 > IF you're dazed and confused at this point - don't go any further!
 
