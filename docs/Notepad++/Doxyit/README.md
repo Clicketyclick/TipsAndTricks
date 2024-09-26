@@ -26,7 +26,8 @@ File| Function
 
 ## A Word of Advice
 
-> [!WARNING]  
+> :warning:WARNING
+> 
 > This IS my first Python 2 script and I'm not familiar with Python scripting.
 >
 > I did NOT read the documentation (who does??!) but build this script entirely out of my head and using intense searches on the web. 
@@ -53,7 +54,8 @@ And you're good to go.
 2. Install the package
 3. And fire up ;-)
 
-> [!CAUTION]
+> :rotating_light: CAUTION
+> 
 > IF you're dazed and confused at this point - don't go any further!
 
 #### Install **Python Script** for NotePad++
