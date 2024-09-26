@@ -11,6 +11,7 @@ which had the simple ablillity to insert file and function headers by hotkey for
 The setup has the following elements:
 - [doxyit.py](doxyit.py) - The script it self
 - [doxyit.json](doxyit.json) - Configuration
+- [doxyit_lib.py](doxyit_lib.py) - A function library for the script
 
 Test files:
 - [test.cmd](test.cmd) - DOS batch
