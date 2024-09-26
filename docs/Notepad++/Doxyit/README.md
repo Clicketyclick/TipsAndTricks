@@ -245,7 +245,7 @@ Header description
 	"templates": {
 		"file": "${START}\n${LINE} ${PREFIX}....\n",
 		"delimiter": "${START}-----------------....\n",
-		"function": "${START}\n${LINE} ${PREFIX}fn         $(FUNCTION)\n.....\n${END}"
+		"function": "${START}\n${LINE} ${PREFIX}fn         ${FUNCTION}\n.....\n${END}"
 	},
 ```
 
@@ -318,4 +318,4 @@ ${LINE} ${PREFIX}param [in]\t%s\t$(description)
       X\t$(description)\n${LINE} ${PREFIX}param [in]\tY
 ```
 
-and inserting in the function template at `$(PARAM)`
+and inserting in the function template at `${PARAM}`
