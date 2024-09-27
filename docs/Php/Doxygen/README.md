@@ -52,7 +52,7 @@ Output
  * [details]   Detailed description
  *
  * [copyright] http://www.gnu.org/licenses/lgpl.txt LGPL version 3
- * [author]    Erik Bachmann <e_bachmann@hotmail.com>
+ * [author]    Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  * [since]     2024-01-04T11:05:06 / ErBa
  * [version]   2024-05-28 08:36:24
 ```
