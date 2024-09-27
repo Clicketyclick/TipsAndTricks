@@ -1,6 +1,6 @@
 # DoxyIT - Script for insert Doxygen headers
 
-A Python Script for Notepad++ Python Script (v.2) that provides you with the abillity to insert a:
+A Python Script for Notepad++ Python Script (v.2) that provides you with the abillity to insert:
 - File header
 - Function header
 - Delimiter
