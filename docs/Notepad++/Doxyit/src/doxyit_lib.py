@@ -6,7 +6,7 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 #:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2024-09-26T15:30:17
+#:: *   @version    2024-09-27T20:33:23
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -95,31 +95,31 @@ def getUserInfo():
 #:: *   @since      2024-09-26T13:58:50
 #:: **
 def expandVars( template, config ):
-    file_type   = config['globals']['file_type']
-    user        = config['globals']['user']
-    userdata    = config['users'][user]
+    file_type       = config['globals']['file_type']
+    user            = config['globals']['user']
+    userdata        = config['users'][user]
 
-    template     = template.replace("${START}",     config['types'][file_type]['start'] or "" )
-    template     = template.replace("${END}",       config['types'][file_type]['end'] or "" )
-    template     = template.replace("${LINE}",      config['types'][file_type]['line'] or "" )
-    template     = template.replace("${PREFIX}",    config['types'][file_type]['prefix'] or "" )
+    template        = template.replace("${START}",     config['types'][file_type]['start'] or "" )
+    template        = template.replace("${END}",       config['types'][file_type]['end'] or "" )
+    template        = template.replace("${LINE}",      config['types'][file_type]['line'] or "" )
+    template        = template.replace("${PREFIX}",    config['types'][file_type]['prefix'] or "" )
 
-    template     = template.replace("${FILE_PREFIX}", (config['types'][file_type]['file_prefix'] or "" ) )
-    template     = template.replace("${FILE_SUFFIX}", config['types'][file_type]['file_suffix'] or "" )
+    template        = template.replace("${FILE_PREFIX}", (config['types'][file_type]['file_prefix'] or "" ) )
+    template        = template.replace("${FILE_SUFFIX}", config['types'][file_type]['file_suffix'] or "" )
     
-    template     = template.replace("${FUNCTION_PREFIX}", config['types'][file_type]['function_prefix'] or "" )
-    template     = template.replace("${FUNCTION_SUFFIX}", config['types'][file_type]['function_suffix'] or "" )
-    template     = template.replace("${COMMENT_PREFIX}", config['types'][file_type]['comment_prefix'] or "" )
+    template        = template.replace("${FUNCTION_PREFIX}", config['types'][file_type]['function_prefix'] or "" )
+    template        = template.replace("${FUNCTION_SUFFIX}", config['types'][file_type]['function_suffix'] or "" )
+    template        = template.replace("${COMMENT_PREFIX}", config['types'][file_type]['comment_prefix'] or "" )
 
-    template     = template.replace("${ISO8601}",   config['globals']['iso'] or "No date")
+    template        = template.replace("${ISO8601}",   config['globals']['iso'] or "No date")
 
-    template     = template.replace("${USER}",      userdata['name'] or "unknown" or "" )
-    template     = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
-    template     = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
+    template        = template.replace("${USER}",      userdata['name'] or "unknown" or "" )
+    template        = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
+    template        = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
 
-    #template     = template.replace("${FILE}",  config['globals']['currentFilename'] ) #os.path.basename(currentFilename))
-    file_name, file_extension = config['globals']['currentFilename'] );
-    template     = template.replace("${FILE}", file_name )  #os.path.basename(currentFilename))
+    path, file_name = os.path.split( config['globals']['currentFilename'] );
+    template        = template.replace("${FILE}", file_name )  #os.path.basename(currentFilename))
+                                                                                           
     return template
 
 #----------------------------------------------------------------------
