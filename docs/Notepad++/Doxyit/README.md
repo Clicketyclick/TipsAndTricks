@@ -324,5 +324,3 @@ ${LINE} ${PREFIX}param [in]\t%s\t$(description)
 ```
 
 and inserting in the function template at `${PARAM}`
-
----
