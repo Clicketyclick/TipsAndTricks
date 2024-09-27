@@ -8,11 +8,12 @@ pre-filled with _file name_, _function name_, _parameters_, _author name_ and _e
 
 Changing:
 
-![Start](docs/doxyit_php_start.jpg)
+<img src="docs/doxyit_php_start.jpg" width="50%" height=auto>
 
 to:
 
-![Start](docs/doxyit_php_marked.jpg)
+<img src="docs/doxyit_php_marked.jpg" width="50%" height=auto>
+
 (Red=File header, purple=Function header, orange=Delimiter)
 
 
