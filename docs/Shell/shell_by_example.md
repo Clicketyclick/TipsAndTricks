@@ -42,7 +42,7 @@ shell.txt - a tips & tricks list for UNIX shell scripting
 #
 #
 #**********************************************************************
-#@(#)2001-05-30/Erik Bachmann	Mailto:e_bachmann@hotmail.com
+#@(#)2001-05-30/Erik Bachmann	Mailto:ErikBachmann@ClicketyClick.dk
 #**********************************************************************
 #@(#)
 #@(#) IN GENERAL ...
@@ -139,7 +139,7 @@ shell.txt - a tips & tricks list for UNIX shell scripting
 #	#2001-05-30/Erik Bachman: Brief update
 #	#
 #	#**************************************************************
-#	#@ (#)2001-05-30/Erik Bachmann	Mailto:e_bachmann@hotmail.com
+#	#@ (#)2001-05-30/Erik Bachmann	Mailto:ErikBachmann@ClicketyClick.dk
 #	#**************************************************************
 #
 #-^- Example of a header -^--------------------------------------------
@@ -149,7 +149,7 @@ shell.txt - a tips & tricks list for UNIX shell scripting
 # -	WHERE am I		(current directory or in command path ;-)
 # -	WHAT am I doing		a tips & tricks list for shell scripting
 # -	HOW do I run		more shell.txt
-# -	WHO's to blame ;-)	Erik Bachmann	Mailto:e_bachmann@hotmail.com
+# -	WHO's to blame ;-)	Erik Bachmann	Mailto:ErikBachmann@ClicketyClick.dk
 # -	WHEN were I made/modifyed
 #				2001-05-30/Erik Bachmann
 #				2001-05-30/Erik Bachman: Brief update
@@ -182,7 +182,7 @@ shell.txt - a tips & tricks list for UNIX shell scripting
 #	             shell.txt - a tips & tricks list for shell scripting
 #	        SYNOPSIS
 #	             more shell.txt
-#	        2001-05-30/Erik Bachmann  Mailto:e_bachmann@hotmail.com
+#	        2001-05-30/Erik Bachmann  Mailto:ErikBachmann@ClicketyClick.dk
 #
 #-^- File identification -^--------------------------------------------
 ```
@@ -1116,7 +1116,7 @@ EOF
 # @ (#)
 # @ (#) Source: %P%
 #**********************************************************************
-#@ (#)%E%-%U%/Erik Bachmann (e_bachmann@hotmail.com
+#@ (#)%E%-%U%/Erik Bachmann (ErikBachmann@ClicketyClick.dk
 #**********************************************************************
 # sccs create O.sh
 #
