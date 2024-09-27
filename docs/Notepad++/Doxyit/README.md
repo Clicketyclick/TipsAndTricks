@@ -1,7 +1,15 @@
 # DoxyIT - Script for insert Doxygen headers
 
-A Python Script for inserting commenting blocks for file header, 
-function header and delimiter using Python Script 2.0 for Notepad++.
+A Python Script for Notepad++ Python Script (v.2) that provides you with the abillity to insert a:
+- File header
+- Function header
+- Delimiter
+pre-filled with _file name_, _function name_, _parameters_, _author name_ and _email_, _date stamps_
+
+Changing:
+![Start](docs/doxyit_php_start.jpg)
+to:
+![Start](docs/doxyit_php_marked.jpg)
 
 It's inspired by [dail8859](https://github.com/dail8859)'s [DoxyIt @@Doxyit_logo@@](https://github.com/dail8859/DoxyIt)
 which had the simple ablillity to insert file and function headers by hotkey formatted by file extention.
@@ -12,17 +20,17 @@ The setup has the following elements:
 
 File| Function
 --|--
-[doxyit.py](doxyit.py) 		| The script it self
-[doxyit.json](doxyit.json)	| Configuration
-[doxyit_lib.py](doxyit_lib.py)	| A function library for the script
+[doxyit.py](src/doxyit.py) 		| The script it self
+[doxyit.json](src/doxyit.json)		| Configuration
+[doxyit_lib.py](src/doxyit_lib.py)	| A function library for the script
 
 Test files:
 
 File| Function
 ---|---
-[test.cmd](test.cmd)	| DOS batch
-[test.php](test.php)	| PHP
-[test.py](test.py)	| Python
+[test.cmd](test/test.cmd)	| DOS batch
+[test.php](test/test.php)	| PHP
+[test.py](test/test.py)		| Python
 
 ## A Word of Advice
 
@@ -70,7 +78,7 @@ In Notpad++ select in menu:
     > 
     > Homepage: https://github.com/bruderstein/PythonScript
 3. Select the pachage and press <kbd>Install</kbd>
-4. Answer <kbd>Yes</kbd> the the question on restarting Notepad++
+4. Answer <kbd>Yes</kbd> to the question on restarting Notepad++
 5. Notepad Plugin Admin will now download and install the plugin.
 
 Ready to Rock'n'Roll!
@@ -85,7 +93,7 @@ Run as Admin!
 2. Go to https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/
     1. Copy the content of [doxyit.json](https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/doxyit.json)
 
-Download the scripts and configuration JSON and place them in the script directory
+Download the scripts and configuration JSON and place them in the script directory: `"%APPDATA%\Notepad++\plugins\Config\PythonScript\scripts\doxyit.py"`
 
 1. Go to `Plugins` / `Python Script` / `Configuration`
 2. The script `doxyit.py` will be visible in the top window
@@ -93,7 +101,7 @@ Download the scripts and configuration JSON and place them in the script directo
 4. Finish by pressing <kbd>OK</kbd>
 5. Restart NotePad++
 
-The script Doxyit now appearce directly in the Python Script menu (`Plugins` / `Python Script`)
+The script Doxyit now appears directly in the Python Script menu (`Plugins` / `Python Script`)
 
 #### Add a hotkey for DoxyIt.
 
@@ -138,14 +146,16 @@ Script and configuration
 ## Using DoxyIT
 
 1. Open a new file in NotePad++ and save it with the prefix, that tell DoxyIT which format to use:
-    - `.c`      C
-    - `.php`    PHP
-    - `.cmd`    WinDo$ Batch
-    - `.py`     Python
-2. Press the hotkey at the top of the file and DoxyIT inserts a file header template.
-3. Start your happy scripting - and when you create a subfunction 
-4. place the cursor at the end of the line ABOVE the function definition - and press the hotkey again and a function header template is inserted.
-5. As code pile up you can insert a separator line anywhere in you code (Except from the line above a function definition - and the first 5 lines of the script). Pres the hotkey and a separator line is inserted.
+Extension | Type
+---|---
+`.c`	| C
+`.php`	| PHP
+`.cmd`	| Win/DOS Batch
+`.py`	| Python
+3. Pplace the curser at the top of the file and press the hotkey. A file header is inserted.
+4. Start your happy scripting - and when you create a subfunction 
+5. place the cursor at the end of the line ABOVE the function definition - and press the hotkey again and a function header template is inserted.
+6. As code pile up you can insert a separator line anywhere in you code (Except from the line above a function definition - and the first 5 lines of the script). Pres the hotkey and a separator line is inserted.
 
 ### Or in more detail
 
@@ -183,7 +193,9 @@ function test( $one, $two ){
 ```
 
 A file header is inserted at the top of the file. 
-Note that the original `<?php` is now trailing the header.
+> Note
+>
+> The original `<?php` is now trailing the header.
 
 You may now update the header (especially the tokens `$(Brief description)` and `$(More details)`
 
@@ -216,7 +228,7 @@ Press hotkey again:
 function test( $one, $two ){
 ```
 
-And a function header for test() is inserted with parameters.
+And a function header for `test()` is inserted with parameters.
 
 You may want to update the header ( `$(description)`, `$(Return description)` and `$(More details)`)
 
@@ -290,18 +302,18 @@ Extension specific data:
 
 Key|Descripion
 ---|---
-name        | Descriptive name = programming language 
-function    | Patterne used for identifying function definition
-start       | Start comment
-line        | New line START
-end         | End comment
-delimiter   | Delimiter line
-header_zone | The zone at the top of file where file header is located (Defaule: 0-5)
-prefix      | Prefix for Doxygen terms
-param_outer | Outer parameter[^1]:
-param_inner | Inner parameter[^1]:
+name		| Descriptive name = programming language 
+function	| Patterne used for identifying function definition
+start		| Start comment
+line		| New line START
+end		| End comment
+delimiter	| Delimiter line
+header_zone	| The zone at the top of file where file header is located (Defaule: 0-5)
+prefix		| Prefix for Doxygen terms
+param_outer	| Outer parameter<sup>1</sup>
+param_inner	| Inner parameter<sup>1</sup>
 
-[^1]: `param_outer` is the basic line and `param_inner` is the delimiter inserted between multiple values
+<sup>1</sup>: `param_outer` is the basic line and `param_inner` is the delimiter inserted between multiple values
 
 The parameter block is build by inserting the argument to the function as entries in the function header:
 ```php
