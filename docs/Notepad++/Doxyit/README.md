@@ -8,7 +8,7 @@ pre-filled with _file name_, _function name_, _parameters_, _author name_ and _e
 
 Changing:
 
-<img src="docs/doxyit_php_start.jpg" width="50%" height=auto>
+<img src="docs/doxyit_php_start.jpg" width="40%" height=auto>
 
 to:
 
@@ -134,6 +134,7 @@ In general: [How do I run specific script with a keyboard shortcut?](https://com
 ## Using DoxyIT
 
 1. Open a new file in NotePad++ and save it with the prefix, that tell DoxyIT which format to use:
+2. 
 Extension | Type
 ---|---
 `.c`	| C
@@ -236,7 +237,7 @@ And a delimiter line is inserted.
 
 The entire configuration is stored in `doxyit.json`.
 
-You can modify the templates to your own purpuses - and add new file extensions.
+You can modify the templates to your own purposes - and add new file extensions.
 
 ```json
 	"title": "Data for Doxyit formatting",
@@ -268,7 +269,7 @@ The three templates used for building file header, function header and delimiter
 	},
 ```
 
-Expaded user information. You can add your personal setup by duplicating one of the existing user blocks and insert your own data.
+Expanded user information. You can add your personal setup by duplicating one of the existing user blocks and insert your own data.
 
 
 ```json
