@@ -7,9 +7,14 @@ A Python Script for Notepad++ Python Script (v.2) that provides you with the abi
 pre-filled with _file name_, _function name_, _parameters_, _author name_ and _email_, _date stamps_
 
 Changing:
+
 ![Start](docs/doxyit_php_start.jpg)
+
 to:
+
 ![Start](docs/doxyit_php_marked.jpg)
+(Red=File header, purple=Function header, orange=Delimiter)
+
 
 It's inspired by [dail8859](https://github.com/dail8859)'s [DoxyIt @@Doxyit_logo@@](https://github.com/dail8859/DoxyIt)
 which had the simple ablillity to insert file and function headers by hotkey formatted by file extention.
@@ -20,17 +25,17 @@ The setup has the following elements:
 
 File| Function
 --|--
-[doxyit.py](src/doxyit.py) 		| The script it self
-[doxyit.json](src/doxyit.json)		| Configuration
-[doxyit_lib.py](src/doxyit_lib.py)	| A function library for the script
+[`src/doxyit.py`](src/doxyit.py) 		| The script it self
+[`src/doxyit.json`](src/doxyit.json)		| Configuration
+[`src/doxyit_lib.py`](src/doxyit_lib.py)	| A function library for the script
 
 Test files:
 
 File| Function
 ---|---
-[test.cmd](test/test.cmd)	| DOS batch
-[test.php](test/test.php)	| PHP
-[test.py](test/test.py)		| Python
+[`test/test.cmd`](test/test.cmd)	| DOS batch
+[`test/test.php`](test/test.php)	| PHP
+[`test/test.py`](test/test.py)		| Python
 
 ## A Word of Advice
 
@@ -91,7 +96,7 @@ Run as Admin!
     1. `Plugins` / `Python Script` / `Show console` (You'll like this for debugging)
     2. `Plugins` / `Python Script` / `New script` - to create your first script 
 2. Go to https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/
-    1. Copy the content of [doxyit.json](https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/doxyit.json)
+    1. Copy the content of [`src/doxyit.json`](https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/doxyit.json)
 
 Download the scripts and configuration JSON and place them in the script directory: `"%APPDATA%\Notepad++\plugins\Config\PythonScript\scripts\doxyit.py"`
 
@@ -106,7 +111,6 @@ The script Doxyit now appears directly in the Python Script menu (`Plugins` / `P
 #### Add a hotkey for DoxyIt.
 
 In general: [How do I run specific script with a keyboard shortcut?](https://community.notepad-plus-plus.org/post/28150) / Scott Sumner
-
 
 > Go to Plugins (menu) -> Python Script -> Configuration. The Python Script Shortcut Configuration window will appear.
 >
@@ -126,23 +130,6 @@ In general: [How do I run specific script with a keyboard shortcut?](https://com
 3. Personally I select <kbd>⇧ Shift</kbd><kbd>⌃ Control</kbd><kbd>D</kbd>
 4. Make sure that there are no conflicting sequenses
 
-<!--
-
-### Paths and files
-
-- 64bit version:
-`"%ProgramFiles%\Notepad++\plugins\PythonScript\scripts"
-
-- 32bit version:
-"%ProgramFiles(x86)%\Notepad++\plugins\PythonScript\scripts"`
-
-Script and configuration
-- `"%APPDATA%\Notepad++\plugins\Config\PythonScript\scripts\doxyit.json"`
-- `"%APPDATA%\Notepad++\plugins\Config\PythonScript\scripts\doxyit.py"`
-
--->
-
-
 ## Using DoxyIT
 
 1. Open a new file in NotePad++ and save it with the prefix, that tell DoxyIT which format to use:
@@ -152,9 +139,9 @@ Extension | Type
 `.php`	| PHP
 `.cmd`	| Win/DOS Batch
 `.py`	| Python
-3. Pplace the curser at the top of the file and press the hotkey. A file header is inserted.
+3. Place the curser at the top of the file and press the hotkey. A file header is inserted.
 4. Start your happy scripting - and when you create a subfunction 
-5. place the cursor at the end of the line ABOVE the function definition - and press the hotkey again and a function header template is inserted.
+5. Place the cursor at the end of the line ABOVE the function definition - and press the hotkey again and a function header template is inserted.
 6. As code pile up you can insert a separator line anywhere in you code (Except from the line above a function definition - and the first 5 lines of the script). Pres the hotkey and a separator line is inserted.
 
 ### Or in more detail
@@ -280,7 +267,7 @@ The three templates used for building file header, function header and delimiter
 	},
 ```
 
-Expaded user information. You can add your personal setup by dublicating one of the existing user blocks and insert your own data.
+Expaded user information. You can add your personal setup by duplicating one of the existing user blocks and insert your own data.
 
 
 ```json
@@ -335,3 +322,5 @@ ${LINE} ${PREFIX}param [in]\t%s\t$(description)
 ```
 
 and inserting in the function template at `${PARAM}`
+
+---
