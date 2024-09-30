@@ -243,6 +243,47 @@ def setVerbose( flag ):
 
 #----------------------------------------------------------------------
 
+#::**
+#:: *   @fn         in_array
+#:: *   @brief      Checks if a value exists in an array
+#:: *   
+#:: *   in_array(mixed $needle, array $haystack, bool $strict = false): bool
+#:: *   
+#:: *   @param [in]	needle	$(description)
+#:: *   @param [in]	haystack	$(description)
+#:: *   @return     $(Return description)
+#:: *   
+#:: *   @details    Mimicks the PHP function
+#:: *   
+#:: *   @example    
+#:: *       lst = ['123hello123', 'aasdasdasd123hello123', '123123hello']
+#:: *       type = '123123hello'
+#:: *       print "OK\t" + type + ":\t" 
+#:: *       print checkFunctionType( lst, type )
+#:: *       
+#:: *       type = 'world'
+#:: *       print "FAIL\t" + type + ":\t" 
+#:: *       print checkFunctionType( lst, type )
+#:: *       
+#:: *   
+#:: *   @todo       
+#:: *   @bug        
+#:: *   @warning    
+#:: *   
+#:: *   @see        https://
+#:: *   @since      2024-09-30T16:43:25
+#:: **
+def in_array( needle, haystack ):
+    status = False
+
+    if any( needle in x for x in haystack):
+        status = True
+
+    return( status )
+
+#----------------------------------------------------------------------
+
+
 # https://stackoverflow.com/a/18853493
 
 # Getting parameters for functions in current library
@@ -260,4 +301,6 @@ if __name__ == '__setDebug__':
 
 if __name__ == '__setVerbose__':
     expandVars(sys.argv[0])
-
+    
+if __name__ == '__in_array__':
+    in_array( sys.argv[0], sys.argv[1] )
