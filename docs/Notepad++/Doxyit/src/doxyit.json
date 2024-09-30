@@ -1,9 +1,9 @@
 {
     "title": "Data for Doxyit formatting",
-    "date": "2024-09-26T14:49:48",
+    "date": "2024-09-30T14:34:45",
     "author": "Erik Bachmann <Erik@ClicketyClick.dk>",
     "templates": {
-        "file": "${FILE_PREFIX}${START}\n${LINE} ${PREFIX}file       ${FILE}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE} ${PREFIX}since      $(ISO8601) / $(USER)\n${LINE} ${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
+        "file": "${FILE_PREFIX}${START}\n${LINE} ${PREFIX}file       ${FILE}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE} ${PREFIX}since      ${ISO8601} / ${USER}\n${LINE} ${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
         "function": "${FUNCTION_PREFIX}${START}\n${LINE} ${PREFIX}fn         ${FUNCTION}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${PARAM}\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}example    \n${LINE} \n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} \n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
     },
     "users": {
@@ -25,70 +25,72 @@
     "types": {
         "c": {
             "name": "C",
-            "function": "function",
-            "start": "/**",
-            "line": " *  ",
-            "delimiter": "//----------------------------------------------------------------------",
+            "comment_prefix": "//",
+            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
+            "end": " */",
+            "file_prefix": "\n",
+            "file_suffix": "\n",
+            "function": "int",
+            "function_prefix": "\n",
+            "function_suffix": "\n",
             "header_zone": 5,
-            "prefix": "\\",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " *  ",
             "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "end": " */"
+            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "prefix": "\\",
+            "start": "/**"
         },
         "php": {
             "name": "PHP",
+            "comment_prefix": "//",
+            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
+            "end": " */",
+            "file_prefix": "<?php\n",
+            "file_suffix": "\n//",
             "function": "function",
             "function_prefix": "\n",
             "function_suffix": "\n",
-            "file_prefix": "<?php\n",
-            "file_suffix": "\n//",
             "header_zone": 5,
-            "comment_prefix": "//",
-            "start": "/**",
             "line": " *  ",
-            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
-            "prefix": "@",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
             "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "end": " */"
+            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "prefix": "@",
+            "start": "/**"
         },
         "cmd": {
             "name": "DOS/Windows batch",
+            "comment_prefix": "REM ",
+            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
+            "end": "::**",
+            "file_prefix": "@ECHO OFF&SetLocal EnableDelayedExpansion\n",
+            "file_suffix": "\n:: ",
             "function": ":",
             "function_prefix": "\n",
             "function_suffix": "",
-            "file_prefix": "@ECHO OFF&SetLocal EnableDelayedExpansion\n",
-            "file_suffix": "\n//",
             "header_zone": 5,
-            "comment_prefix": "//",
-            "start": "::**",
             "line": ":: *  ",
-            "delimiter": "::----------------------------------------------------------------------",
-            "prefix": "@",
-            "header_zone": 5,
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
             "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "end": "::**"
+            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "prefix": "@",
+            "start": "::**"
         },
         "py": {
-            "header_zone": 5,
             "name": "Python",
+            "comment_prefix": "//",
+            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
+            "end": "#:: **",
+            "file_prefix": "",
+            "file_suffix": "\n//",
             "function": "def",
             "function_prefix": "\n",
             "function_suffix": "\n",
-            "file_prefix": "",
-            "file_suffix": "\n//",
             "header_zone": 5,
-            "comment_prefix": "//",
-            "start": "\n#::**",
+            "header_zone": 5,
             "line": "#:: *  ",
-            "delimiter": "#----------------------------------------------------------------------",
-            "prefix": "@",
-            
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
             "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
+            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
-            "end": "#:: **"
+            "start": "\n#::**"
         }
     }
 }
