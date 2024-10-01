@@ -6,11 +6,12 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 #:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2024-09-27T20:33:23
+#:: *   @version    2024-10-01T10:48:43
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
 import re
+import datetime 
 
 debug=False
 verbose=False
@@ -172,7 +173,7 @@ def getNextLine():
 #:: *   @details    
 #:: *   
 #:: *   @example    
-#:: *   
+#:: *       
 #:: *   @todo       
 #:: *   @bug        
 #:: *   @warning    
@@ -181,7 +182,6 @@ def getNextLine():
 #:: *   @since      2024-09-26T13:59:03
 #:: **
 def getIsoDate():
-    import datetime 
     return datetime.datetime.now().isoformat()[:19]
 
 #----------------------------------------------------------------------
@@ -241,6 +241,7 @@ def setVerbose( flag ):
     if verbose: print "Verbose ON"
     return verbose
 
+
 #----------------------------------------------------------------------
 
 #::**
@@ -256,14 +257,26 @@ def setVerbose( flag ):
 #:: *   @details    Mimicks the PHP function
 #:: *   
 #:: *   @example    
-#:: *       lst = ['123hello123', 'aasdasdasd123hello123', '123123hello']
-#:: *       type = '123123hello'
-#:: *       print "OK\t" + type + ":\t" 
-#:: *       print checkFunctionType( lst, type )
+#:: *       import doxyit_lib
 #:: *       
-#:: *       type = 'world'
-#:: *       print "FAIL\t" + type + ":\t" 
-#:: *       print checkFunctionType( lst, type )
+#:: *       def in_array_test():
+#:: *           lst = ['123hello123', 'aasdasdasd123hello123', '123123hello']
+#:: *           type = '123123hello'
+#:: *           print "OK\t" + type + ":\t",
+#:: *           print doxyit_lib.inArray( type, lst )
+#:: *           
+#:: *           type = 'world'
+#:: *           print "FAIL\t" + type + ":\t\t",
+#:: *           print doxyit_lib.inArray( type, lst )
+#:: *       
+#:: *       print doxyit_lib.getIsoDate()
+#:: *       
+#:: *       in_array_test()
+#:: *       
+#:: *   Gives:
+#:: *       OK	123123hello:	True
+#:: *       FAIL	world:		False
+#:: *       
 #:: *       
 #:: *   
 #:: *   @todo       
@@ -271,9 +284,9 @@ def setVerbose( flag ):
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-30T16:43:25
+#:: *   @since      2024-10-01T10:49:15
 #:: **
-def in_array( needle, haystack ):
+def inArray( needle, haystack ):
     status = False
 
     if any( needle in x for x in haystack):
@@ -282,7 +295,6 @@ def in_array( needle, haystack ):
     return( status )
 
 #----------------------------------------------------------------------
-
 
 # https://stackoverflow.com/a/18853493
 
@@ -301,6 +313,8 @@ if __name__ == '__setDebug__':
 
 if __name__ == '__setVerbose__':
     expandVars(sys.argv[0])
-    
-if __name__ == '__in_array__':
-    in_array( sys.argv[0], sys.argv[1] )
+
+if __name__ == '__inArray__':
+    inArray( sys.argv[0], sys.argv[1] )
+
+### End of File ###
