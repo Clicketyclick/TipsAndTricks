@@ -2,11 +2,20 @@
 #:: *   @file       doxyit_lib.py
 #:: *   @brief      Subfunction for doxyit
 #:: *   @details    
+#:: *       getConfig()     Read configuration from JSON
+#:: *       getUserInfo()   Get logged in user name
+#:: *       expandVars()    Expand variables in string
+#:: *       getNextLine()   Get the next line from current window
+#:: *       getIsoDate()    Get current date and time in ISO-8601
+#:: *       setDebug()      Set debug flag
+#:: *       setVerbose()    Set verbose flag
+#:: *       in_array()      Checks if a value exists in an array
+#:: *   
 #:: *   
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 #:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2024-10-01T10:48:43
+#:: *   @version    2024-10-01T10:54:37
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
