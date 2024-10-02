@@ -8,7 +8,7 @@
  *  @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *  @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *  @since      2024-08-28T16:15:20 / erba
- *  @version    2024-08-29T13:58:39
+ *  @version    2024-10-02T21:20:52
  */
 
 /**
@@ -41,6 +41,7 @@
  *  
  *  Given the data:
  *  
+ *      ###
  *      01
  *      02
  *      ###
@@ -49,19 +50,23 @@
  *      ###
  *      07
  *      08
+ *      ###
+ *
  *  Output:
  *      Direction: -1   // Suffix
+ *      [###     ]
  *      [01     02      ###     ]
  *      [04     05      ###     ]
- *      [07     08      ]
+ *      [07     08      ###     ]
  *       Direction: 0   // None
  *      [01     02      ]
  *      [04     05      ]
  *      [07     08      ]
  *       Direction: 1   // Prefix
- *      [01     02      ]
+ *      [###    01     02      ]
  *      [###    04      05      ]
  *      [###    07      08      ]
+ *      [###    ]
  *  
  *  @todo      
  *  @bug       
@@ -71,34 +76,40 @@
  *  @since     2024-08-28T16:30:31 / erba
  *  
  */
-function get_text_block( $fp, $delimiter, $direction = -1 )
+function get_text_block( &$fp, $delimiter, $direction = -1 )
 {
     static $buffer;
-    //static $dir;
 
     $dir = sign( $direction );  // Used for determining how to treat delimiter
     $block  = $buffer;
+
     if ($fp) {
-        while (($buffer = fgets($fp, 4096)) !== false) {
+        while ( ( $buffer = fgets( $fp, 4096 ) ) !== false ) {
             if ( str_starts_with( $buffer, $delimiter ) )
             {
-                if ( 0 > $dir )
+                if ( 0 < $dir )     // Prefix
+                {
+                    if ( ! empty( $block ))
+                        return( $block );
+                }
+                if ( 0 > $dir )     // Suffix
                 {
                     $block  .= $buffer;
                     $buffer = '';
+                    return( $block );
                 }
-                if ( 0 == $dir )
+                if ( 0 == $dir )    // Skip
                 {
-                    //$block  .= $buffer;
                     $buffer = '';
+                    if ( ! empty( $block ))
+                        return( $block );
                 }
-                return( $block );
             }
             $block  .= $buffer;
         }
 
         if (!feof($fp)) {
-            echo "Error: unexpected fgets() fail\n";
+            trigger_error( "Error: unexpected fgets() fail\n", E_USER_WARNING );
         }
     }
     return( $block );
