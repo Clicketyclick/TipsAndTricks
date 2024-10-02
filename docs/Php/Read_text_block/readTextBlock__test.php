@@ -13,7 +13,7 @@
  *  @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *  @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *  @since      2024-08-28T16:15:20 / erba
- *  @version    2024-09-20T19:13:11
+ *  @version    2024-10-02T21:18:32
  */
 
 // Get DoxyIT header
@@ -54,9 +54,9 @@ function get_text_block__test( )
     //fprintf( STDERR, __FUNCTION__ . PHP_EOL );
 
     $exp = [
-        -1  => "[01\t02\t###\t]\n[04\t05\t###\t]\n[07\t08\t]\n"
+        -1  => "[###\t]\n[01\t02\t###\t]\n[04\t05\t###\t]\n[07\t08\t###]\n"
     ,   0   => "[01\t02\t]\n[04\t05\t]\n[07\t08\t]\n"
-    ,   1   => "[01\t02\t]\n[###\t04\t05\t]\n[###\t07\t08\t]\n"
+    ,   1   => "[###\t01\t02\t]\n[###\t04\t05\t]\n[###\t07\t08\t]\n[###]\n"
     ];
     $got        = "";
 
@@ -123,7 +123,7 @@ function ok( $got, $exp, $note = "")
     ,   debug_backtrace()[1]['function']
     ,   $exp == $got 
         ?  $note
-        :   "$note\n<[" . str_replace( ["\t","\n"], ['\t','\n'], $exp) . "]\n>[".str_replace( ["\t","\n"], ['\t','\n'], $got)."]\n"
+        :   "$note\nexp<[" . str_replace( ["\t","\n"], ['\t','\n'], $exp) . "]\ngot>[".str_replace( ["\t","\n"], ['\t','\n'], $got)."]\n"
     );
     $GLOBALS['testbed']['ok']    += $exp == $got ? 1 : 0;
     $GLOBALS['testbed']['fail']  += $exp == $got ? 0 : 1;
