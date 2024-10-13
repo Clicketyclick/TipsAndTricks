@@ -11,4 +11,4 @@
 
 1. [Custom Icon Dashboarder 2.x](https://keepass.info/plugins.html#icondashb) - Statistics and management features for custom icons.
 2. [Yet Another Favicon Downloader 2.x](https://keepass.info/plugins.html#yafd) - Download and store website favicons.
-3. 
+3. [WebAutoType](https://keepass.info/plugins.html#webautotype) - This plugin allows to execute auto-type based on the current web browser URL instead of the window title.
