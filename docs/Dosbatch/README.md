@@ -58,6 +58,18 @@ for /f "tokens=*" %%i in ('dir /a /b /-p /o:gen') do (
 )
 ```
 
+## Get last token
+
+```cmd
+:: https://stackoverflow.com/a/26493855
+:getLastToken
+SETLOCAL
+    for %%a in ("%~2\.") do set "lastPart=%%~nxa"
+    ENDLOCAL&SET "%~1=%lastPart%"
+GOTO :EOF
+```
+
+
 ## Usefull links
 
 - [DosTips - The DOS Batch Guide @@dostips_icon@@]](https://www.dostips.com).  
