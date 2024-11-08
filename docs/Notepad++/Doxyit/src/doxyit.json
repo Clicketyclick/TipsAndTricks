@@ -1,6 +1,6 @@
 {
     "title": "Data for Doxyit formatting",
-    "date": "2024-09-30T14:34:45",
+    "date": "2024-11-08T12:05:38",
     "author": "Erik Bachmann <Erik@ClicketyClick.dk>",
     "templates": {
         "file": "${FILE_PREFIX}${START}\n${LINE} ${PREFIX}file       ${FILE}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE} ${PREFIX}since      ${ISO8601} / ${USER}\n${LINE} ${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
