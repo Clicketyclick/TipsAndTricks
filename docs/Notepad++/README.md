@@ -2,11 +2,12 @@
 
 # Notepad++
 
+<!--
 <fieldset>
 <legend>32Bit</legend>
 DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 </fieldset>
-
+-->
 ### Configuration
 
 
@@ -54,4 +55,4 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 - Translate
 
 [^1]: Default
-[^2]: DoxyIT works ***ONLY*** on NotePad++ 32 bit! See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation)
+[^2]: DoxyIT plugin works ***ONLY*** on NotePad++ 32 bit! See [Notepad++ Community](https://community.notepad-plus-plus.org/topic/25465/doxyit-on-64bit-access-violation). Use the Python script instead: [DoxyIT](Doxyit/)
