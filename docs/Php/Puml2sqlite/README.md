@@ -7,10 +7,10 @@ Converting a database description from UML Class Scheme:
 class dummy {
   Sample table.
   ==
-  #id int(10) -- A comment
-  field1 int(10)
+  #id : int(10) -- A comment
+  field1 : int(10)
   .. Comment line, ignored ..
-  +field2 varchar(128)
+  +field2 : varchar(128)
 }
 
 @enduml
@@ -19,8 +19,8 @@ class dummy {
 to SQLite database schema:
 
 ```sql
--- # Database created on 2024-11-08T16:45:40+00:00 from default
--- # Created by: Bruger Navn.
+-- # Database created on 2024-11-08T16:58:40+00:00 from default
+-- # Created by: User Name.
 
 /**************************************************
 * Table: dummy
@@ -28,10 +28,10 @@ to SQLite database schema:
 **************************************************/
 CREATE TABLE IF NOT EXISTS 'dummy'
 (
-   id                   , -- A comment,
-   field1               ,
+   id                   int(10) , -- A comment,
+   field1               int(10),
 -- .. Comment line, ignored ..
-   field2               ,
+   field2               varchar(128),
   PRIMARY KEY (id)
 );
 CREATE UNIQUE INDEX 'index_field2' ON 'dummy' ( field2 );
@@ -46,4 +46,3 @@ Test with [basic.puml](basic.puml) or [test.puml](test.puml):
 
 > [!TIP]
 > If the environment variable DEBUG is set and not 0 simple debug info will be written to STDERR
-
