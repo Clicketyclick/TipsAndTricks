@@ -14,7 +14,7 @@
  *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *   @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *   @since      2024-11-08T12:16:24 / ErBa
- *   @version    2024-11-08T17:41:31
+ *   @version    2024-11-08T18:00:21
  */
 
 $cfg	= [
@@ -25,10 +25,10 @@ $cfg	= [
 class dummy {
   Sample table.
   ==
-  #id int(10) -- A comment
-  field1 int(10)
+  #id : int(10) -- A comment
+  field1 : int(10)
   .. Comment line, ignored ..
-  +field2 varchar(128)
+  +field2 : varchar(128)
 }
 
 @enduml
