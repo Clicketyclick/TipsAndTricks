@@ -52,9 +52,8 @@ Mimimum changes to php.ini (from php.ini-development)
 ---
 > extension=gd
 934a949,954
-> ;2024-03-13 19:11:05/ErBa ImageMagick
-> ;2024-07-19T08:31:58
-> ;;extension=php_imagick.dll
+> ;2024-03-13 19:11:05/ErBa ImageMagick: From http://pecl.php.net/package/imagick
+> extension=php_imagick.dll
 > ;2024-03-02 16:07:58/erBa numberformatter
 > ;2024-07-19T08:31:58
 > ;;extension=intl
