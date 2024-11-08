@@ -38,3 +38,9 @@ CREATE UNIQUE INDEX 'index_field2' ON 'dummy' ( field2 );
 ```
 
 using [puml2sqlite.php](puml2sqlite.php)
+
+Test with [basic.puml](basic.puml) or [test.puml](test.puml):
+- `php puml2sqlite.php`
+- `php puml2sqlite.php basic.pump`
+- `php puml2sqlite.php test.puml`
+
