@@ -44,3 +44,6 @@ Test with [basic.puml](basic.puml) or [test.puml](test.puml):
 - `php puml2sqlite.php basic.pump`
 - `php puml2sqlite.php test.puml`
 
+> [!NOTE]
+> If the environment variable DEBUG is set and not 0 simple debug info will be written to STDERR
+
