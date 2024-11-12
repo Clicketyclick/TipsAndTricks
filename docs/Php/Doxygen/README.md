@@ -55,5 +55,5 @@ Gives the output:
 ```
 
 > [!NOTE]
-> match[0] has the patterns `/''` and ` */` included
-> match[1] has **not** the patterns `/''` and ` */` included
+> - `match[0]` has the patterns `/''` and ` */` included
+> - `match[1]` has **not** the patterns `/''` and ` */` included
