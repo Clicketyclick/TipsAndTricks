@@ -15,6 +15,9 @@ reduced excecution time from aprox. 2 MINUTES to 2 seconds!!!
 
 > [!NOTE]
 > This DOES requre and index on images.path !
+> ```sql
+> CREATE INDEX idx_images_path ON images (path COLLATE NOCASE);
+> ```
 
 The [Documentation](https://www.sqlite.org/lang_expr.html#glob) states:
 
