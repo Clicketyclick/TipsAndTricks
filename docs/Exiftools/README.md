@@ -74,8 +74,16 @@ exiftool -tagsfromfile in.json  ${IMG}
 ```
 
 
-#### Descrtions to JSON
+#### Descriptions to JSON
 
 [desc2Json.cmd](desc2Json.cmd) - Compile descriptions into JSON for ExifTool]
 
+#### Convert IPTC from *Latin 1* to *UTF-8*
+
+:Latin1_UTF8
+:: [How does ExifTool handle coded character sets?](https://exiftool.org/faq.html#Q10)
+:: The following command changes the internal IPTC encoding to UTF‑8 (from Windows Latin1 unless CodedCharacterSet was already "UTF8"):
+```
+exiftool -tagsfromfile @ -iptc:all -codedcharacterset=utf8 *.jpg
+```
 
