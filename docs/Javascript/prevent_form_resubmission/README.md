@@ -1,3 +1,4 @@
+## How to prevent form resubmission when page is refreshed (F5 / CTRL+R)
 
 Reloading a page with <kbd>F5</kbd> in browsers can give some nasty sideeffects - if say last action was deleting...
 
