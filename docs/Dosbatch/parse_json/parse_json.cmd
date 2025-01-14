@@ -4,7 +4,7 @@
 :: *   @file       parse_json.cmd
 :: *   @brief      Parsing a simple single level compressed JSON into env vars
 :: *   @details    
-:: *   
+:: *   @see        https://stackoverflow.com/a/36375415
 :: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 :: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 :: *   @since      2025-01-14T13:54:19 / erba
