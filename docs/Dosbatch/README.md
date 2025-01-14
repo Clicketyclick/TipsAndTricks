@@ -69,6 +69,28 @@ SETLOCAL
 GOTO :EOF
 ```
 
+## Loops
+
+> [!WARNING]
+> You cannot break out of an infinite loop
+
+```cmd
+for /L %%L in ( ) do  (
+```
+Will hang!
+
+Instead use huge values in loop - and bail out:
+```cmd
+set cnt=0
+
+for /L %%L in (0 1 9999) do  (
+    set /a cnt+=1
+    echo Loop !cnt!
+    if /I !cnt! GTR  10 goto :break
+)
+:break
+```
+Works nicely
 
 ## Usefull links
 
