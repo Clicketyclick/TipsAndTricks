@@ -1,6 +1,3 @@
-## 
-
-
 
 ### Files not removed from `.gitignore`
 
@@ -9,3 +6,16 @@ they will continue to be tracked. You need to untrack them. You can do this by r
 ```console
 git rm --cached FILENAME
 ```
+
+
+### Semantic Versioning
+
+```console
+:: Add tag
+git tag -a "v0.1.0-beta" -m "version v0.1.0-beta"
+git show v0.1.0-beta
+:: Get latest tag
+git describe --abbrev=0 --tags
+```
+
+https://stackoverflow.com/a/46434732
