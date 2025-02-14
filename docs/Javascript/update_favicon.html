@@ -9,12 +9,14 @@
  *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *   @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *   @since      2025-02-14T10:10:58 / ErBa
- *   @version    2025-02-14T10:29:27
+ *   @version    2025-02-14T10:53:58
  */
 -->
+
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
-  <script>
+<script>
+
 // Icon set to loop through
 var favs = [
     'https://bibit.dk/ByteMARC/flag-dk.png',
@@ -51,7 +53,7 @@ function set_image( id, url ) {
 // https://stackoverflow.com/a/39914235 - What is the JavaScript version of sleep()?
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-}  // sleep()
+}   // sleep()
 
 //------------------------------------------------------------------------
 
@@ -74,13 +76,31 @@ async function demo( favs ) {
 //------------------------------------------------------------------------
 </script>
 
-  <!-- script src="update_favicon.js"></script-->
 </head>
+
 <body onload="demo( favs );">
     <h1>
         Changing website favicon dynamically
         <img id="demoimg" width=32px height=auto>
     </h1>
     <div id='img_name'></div>
+    <hr>
+
+    You can simply:
+    <ol>
+    <li>Include the script `update_favicon.js`</li>
+    <li>Call function set_favicon with a plain URL</li>
+    </ol>    
+
+    Example in head:    
+<pre>
+        &lt;link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+        &lt;script src="update_favicon.js">&lt;/script>
+        &lt;script>
+            set_favicon( 'https://stackoverflow.com/favicon.ico' ); // Using URL
+        &lt;/script>
+</pre>
+
 </body>
 </html>
