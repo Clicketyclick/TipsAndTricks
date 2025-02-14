@@ -9,3 +9,4 @@
 - [Associative array](associative) - Create, reference and loop through
 - [JavaScript image dropdown](https://www.marghoobsuleman.com/image-dropdown)
 - [Prevent form resubmission](prevent_form_resubmission) - How to prevent form resubmission when page is refreshed (F5 / CTRL+R)
+- [Update favicon](update_favicon.html) dynamically
