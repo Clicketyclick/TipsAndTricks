@@ -1,0 +1,86 @@
+<html>
+<head>
+<!-- 
+/**
+ *   @file       update_favicon.html
+ *   @brief      Changing website favicon dynamically using JavaScript
+ *   @details    Note! Requres a `<link rel="icon" ` favicon link.
+ *   
+ *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+ *   @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
+ *   @since      2025-02-14T10:10:58 / ErBa
+ *   @version    2025-02-14T10:29:27
+ */
+-->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <script>
+// Icon set to loop through
+var favs = [
+    'https://bibit.dk/ByteMARC/flag-dk.png',
+    'https://bibit.dk/ByteMARC/bytemarc.640x640.png',
+    'https://bibit.dk/ByteMARC/bytemarc.640x640.jpg',
+    'https://bibit.dk/ByteMARC/favicon.ico',
+    'https://devhints.io//assets/favicon.png',
+    'https://bibit.dk/ByteMARC/favicon.ico',
+    'https://stackoverflow.com/favicon.ico',
+    'https://bibit.dk/ByteMARC/DALL·E_The_Thinker.jpg',
+];
+
+// https://stackoverflow.com/a/260876 - Changing website favicon dynamically
+function set_favicon( url ) {
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement('link');
+        link.rel = 'icon';
+        document.head.appendChild(link);
+    }
+    //link.href = 'https://stackoverflow.com/favicon.ico';
+    link.href = url;
+}   // set_favicon()
+
+//------------------------------------------------------------------------
+
+// Set source of image tag
+function set_image( id, url ) {
+    document.getElementById( id ).src = url;
+}   // set_image()
+
+//------------------------------------------------------------------------
+
+// https://stackoverflow.com/a/39914235 - What is the JavaScript version of sleep()?
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}  // sleep()
+
+//------------------------------------------------------------------------
+
+// Loop through array of icons
+async function demo( favs ) {
+    for (let i = 0; i < favs.length; i++) {
+        console.log(`Waiting ${i} seconds...`+favs[i] );
+        // Update favicon
+        set_favicon( favs[i] );
+        
+        // These two are only for updating header and img field
+        set_image( 'demoimg', favs[i] );
+        document.getElementById( 'img_name' ).innerHTML = favs[i];
+        
+        await sleep(i * 1000);
+    }
+    console.log('Done');
+}   // demo()
+
+//------------------------------------------------------------------------
+</script>
+
+  <!-- script src="update_favicon.js"></script-->
+</head>
+<body onload="demo( favs );">
+    <h1>
+        Changing website favicon dynamically
+        <img id="demoimg" width=32px height=auto>
+    </h1>
+    <div id='img_name'></div>
+</body>
+</html>
