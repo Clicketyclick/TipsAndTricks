@@ -1,0 +1,30 @@
+<!--
+/**
+ *   @file       frame_grabber.php
+ *   @brief      Demo how to grap content from iframe and copy to div
+ *   @details    
+ *   
+ *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+ *   @author     Erik Bachmann <ErikBachmann@ClicketyClick.dk>
+ *   @since      2025-02-15T07:46:31 / ErBa
+ *   @version    2025-02-15T07:46:31
+ */
+-->
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>frame_grabber</title>
+    <script src="frame_grabber.js"></script>
+   
+</head>
+<body onload='copyFrame("myFrame", "myDiv");'>
+    <h1>frame_grabber</h1>
+
+    This is the dir to update:
+    <div id='myDiv' style='border:1px solid black;'>Placeholder text</div>
+
+    This is the source iframe:<br>
+    <iframe id='myFrame' src="dummy.html"></iframe>
+</body>
+</html>
