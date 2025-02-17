@@ -34,3 +34,10 @@ Copy content from dummy.html to `myDiv`:
 </body>
 </html>
 ```
+See the result: [frame_grabber.html](frame_grabber.html)
+
+Source:
+- [frame_grabber.js](frame_grabber.js) - JavaScript library
+- [frame_grabber.html](frame_grabber.html) - Example
+- [dummy.html](dummy.html) - Dummy to include
+
