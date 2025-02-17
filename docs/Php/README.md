@@ -37,15 +37,7 @@ Source: [@@Stackoverflow_logo@@ Can you make a PHP function recursive without re
 
 #### Duration
 See [Timing](Timing/)
-<!--
-```php
-$starttime  = microtime( TRUE );  // Initiate star
-:
-list($sec, $usec) = explode('.', microtime( TRUE ) - $starttime ); //split the microtime on .
-print date('H:i:s.', $sec) . $usec;       //appends the decimal portion of seconds
-```
-Source: [@@Stackoverflow_icon@@ How to convert microtime() to HH:MM:SS:UU](https://stackoverflow.com/questions/16825240/how-to-convert-microtime-to-hhmmssuu)
--->
+
 ### Modules
 
 PHP 8. which gives error with  `imagettfbbox`. it has to be replaced with `imageftbbox`
