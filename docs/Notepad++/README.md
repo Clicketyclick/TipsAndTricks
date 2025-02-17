@@ -27,6 +27,9 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
     - Shortcut mapper
         - Filter on `Date` and add shortcut [Alt]+[F5] to "Date Time (Customized)
 
+> [!NOTE]
+> Tab Setting has moved to Settings / Preferences / Indentation
+
 ## Plugins
 ### NppMarkdownPanel
 
