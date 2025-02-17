@@ -36,7 +36,7 @@ function test($i) {
 Source: [@@Stackoverflow_logo@@ Can you make a PHP function recursive without repeating its name?](https://stackoverflow.com/a/2719016)
 
 #### Duration
-
+See [Timing](Timing/)
 <!--
 ```php
 $starttime  = microtime( TRUE );  // Initiate star
