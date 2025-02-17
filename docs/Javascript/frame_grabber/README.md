@@ -26,7 +26,7 @@ Copy content from dummy.html to `myDiv`:
 <body onload='copyFrame("myFrame", "myDiv");'>
     <h1>frame_grabber</h1>
 
-    This is the dir to update:
+    This is the div to update:
     <div id='myDiv' style='border:1px solid black;'>Placeholder text</div>
 
     This is the source iframe:<br>
