@@ -17,6 +17,7 @@
 - [Progressbar for CLI](Progressbar/) - Show a status bar in the console
 - [Read_text_block](Read_text_block/) - Read a block of text from file delimited by string as a record delimited
 - [Get users full name](netuser) from windows
+- [Timing](Timing/) - timing and duration using `microtime()` - and **beware** of float math!
 
 ### Tips
 
@@ -36,6 +37,7 @@ Source: [@@Stackoverflow_logo@@ Can you make a PHP function recursive without re
 
 #### Duration
 
+<!--
 ```php
 $starttime  = microtime( TRUE );  // Initiate star
 :
@@ -43,7 +45,7 @@ list($sec, $usec) = explode('.', microtime( TRUE ) - $starttime ); //split the m
 print date('H:i:s.', $sec) . $usec;       //appends the decimal portion of seconds
 ```
 Source: [@@Stackoverflow_icon@@ How to convert microtime() to HH:MM:SS:UU](https://stackoverflow.com/questions/16825240/how-to-convert-microtime-to-hhmmssuu)
-
+-->
 ### Modules
 
 PHP 8. which gives error with  `imagettfbbox`. it has to be replaced with `imageftbbox`
