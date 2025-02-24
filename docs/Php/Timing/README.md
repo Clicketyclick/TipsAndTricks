@@ -30,7 +30,7 @@ can save you face.
 Combining this with `microtime2human( $microtime )` you can do this:
 
 ```php
-$starttime  = microtime( TRUE );  // Initiate star
+$time_start = microtime( TRUE );  // Initiate star
 // do something
 $time_end   = microtime(true);
 $duration   = microtime_diff($time_end, $time_start);
