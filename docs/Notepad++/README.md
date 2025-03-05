@@ -39,7 +39,7 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 - ComparePlus
 - Converter [^1]
 - DarkTheme
-- @@Doxyit_icon@@[DoxyIt](Doxyit) [^2]
+- ~~@@Doxyit_icon@@[DoxyIt](Doxyit)~~ [^2]
 - HexEditor
 - JSLintNpp
 - JsonTools
