@@ -4,7 +4,7 @@
     "author": "Erik Bachmann <Erik@ClicketyClick.dk>",
     "templates": {
 		"file": "${FILE_PREFIX}${START}\n${LINE} ${PREFIX}file       ${FILE}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    \n${LINE} \n${LINE} Functions|Brief\n${LINE} ---|---\n${LINE} .|.\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE} ${PREFIX}since      ${ISO8601} / ${USER}\n${LINE} ${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
-		"function": "${FUNCTION_PREFIX}${START}\n${LINE} ${PREFIX}fn         ${FUNCTION}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${PARAM}\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} @code\n${LINE} @endcode\n@verbatim\n@endverbatim\n${LINE} <!--\n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} -->\n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
+		"function": "${FUNCTION_PREFIX}${START}\n${LINE} ${PREFIX}fn         ${FUNCTION}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${PARAM}\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} @code\n${LINE} @endcode\n@verbatim\n@endverbatim\n${LINE} <!--\n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} ${PREFIX}note    \n${LINE} -->\n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
     },
     "users": {
         "erba": {
