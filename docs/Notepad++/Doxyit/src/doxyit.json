@@ -1,10 +1,10 @@
 {
     "title": "Data for Doxyit formatting",
-    "date": "2025-03-05T08:16:58",
+    "date": "2025-03-05T09:09:55",
     "author": "Erik Bachmann <Erik@ClicketyClick.dk>",
     "templates": {
-		"file": "${FILE_PREFIX}${START}\n${LINE} ${PREFIX}file       ${FILE}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} ${PREFIX}details    \n${LINE} \n${LINE} Functions|Brief\n${LINE} ---|---\n${LINE} .|.\n${LINE} \n${LINE} ${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE} ${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE} ${PREFIX}since      ${ISO8601} / ${USER}\n${LINE} ${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
-		"function": "${FUNCTION_PREFIX}${START}\n${LINE} ${PREFIX}fn         ${FUNCTION}\n${LINE} ${PREFIX}brief      $(Brief description)\n${LINE} \n${PARAM}\n${LINE} ${PREFIX}return     $(Return description)\n${LINE} \n${LINE} ${PREFIX}details    $(More details)\n${LINE} \n${LINE} @code\n${LINE} @endcode\n@verbatim\n@endverbatim\n${LINE} <!--\n${LINE} ${PREFIX}todo       \n${LINE} ${PREFIX}bug        \n${LINE} ${PREFIX}warning    \n${LINE} ${PREFIX}note    \n${LINE} -->\n${LINE} ${PREFIX}see        https://\n${LINE} ${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
+		"file": "${FILE_PREFIX}${START}\n${LINE}${PREFIX}file       ${FILE}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}${PREFIX}details    \n${LINE}\n${LINE}Functions|Brief\n${LINE}---|---\n${LINE}.|.\n${LINE}\n${LINE}${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE}${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE}${PREFIX}since      ${ISO8601} / ${USER}\n${LINE}${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
+		"function": "${FUNCTION_PREFIX}${START}\n${LINE}${PREFIX}fn         ${FUNCTION}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}\n${PARAM}\n${LINE}${PREFIX}return     $(Return description)\n${LINE}\n${LINE}${PREFIX}details    $(More details)\n${LINE}\n${LINE}@code\n${LINE}@endcode\n@verbatim\n@endverbatim\n${LINE}<!--\n${LINE}${PREFIX}todo       \n${LINE}${PREFIX}bug        \n${LINE}${PREFIX}warning    \n${LINE}${PREFIX}note    \n${LINE}-->\n${LINE}${PREFIX}see        https://\n${LINE}${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
     },
     "users": {
         "erba": {
@@ -34,9 +34,9 @@
             "function_prefix": "\n",
             "function_suffix": "\n",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "\\",
             "start": "/**"
         },
@@ -51,9 +51,9 @@
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "/**"
         },
@@ -68,9 +68,9 @@
             "function_prefix": "\n",
             "function_suffix": "\n",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "/**"
         },
@@ -85,9 +85,9 @@
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "<!-- /**"
         },
@@ -102,9 +102,9 @@
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "/**"
         },
@@ -119,9 +119,9 @@
             "function_prefix": "\n",
             "function_suffix": "\n",
             "header_zone": 5,
-            "line": " *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "<!--/**"
         },
@@ -137,8 +137,8 @@
             "function_suffix": "",
             "header_zone": 5,
             "line": ":: *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "::**"
         },
@@ -153,9 +153,9 @@
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": ":: *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": ":: * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "::**"
         },
@@ -171,9 +171,9 @@
             "function_suffix": "\n",
             "header_zone": 5,
             "header_zone": 5,
-            "line": "#:: *  ",
-            "param_inner": "\t$(description)\n${LINE} ${PREFIX}param [in]\t",
-            "param_outer": "${LINE} ${PREFIX}param [in]\t%s\t$(description)",
+            "line": "#:: * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "\n#::**"
         }
