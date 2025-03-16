@@ -35,6 +35,12 @@ function test($i) {
 ```
 Source: [@@Stackoverflow_logo@@ Can you make a PHP function recursive without repeating its name?](https://stackoverflow.com/a/2719016)
 
+
+## [@@Stackoverflow_logo@@ Can I make a PHP function "private" in a script?](https://stackoverflow.com/q/59420923/7485823)
+
+`$func = function () { ... }`. Then you can use it as `$func();`.
+
+
 #### Duration
 See [Timing](Timing/)
 
