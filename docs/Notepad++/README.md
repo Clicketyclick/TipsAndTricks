@@ -21,7 +21,7 @@ DoxyIT works <strong>ONLY</strong> on NotePad++ 32 bit!
 				- Custom format: `yyyy-MM-ddTHH:mm:ss`
 	- Preferences
  		- style Configurator
-   			-  <details><summary>Global Styles + White space symbol</summary>To change the color of the arrow sign/dot sign go to Settings -> style Configurator and in Language section select Global Styles & in Style section select White space symbol and change the Foreground Color as your wish.</details>
+   			-  <details><summary>Global Styles + White space symbol</summary>To change the color of the arrow sign/dot sign go to Settings -> style Configurator and in Language section select Global Styles & in Style section select White space symbol and change the Foreground Color as your wish. [Notepad++ background color for tabs (tabulations)?](https://superuser.com/questions/1193558/notepad-background-color-for-tabs-tabulations)</details>
         - Language
             - Tab Settings
                 - Tab size: 4
