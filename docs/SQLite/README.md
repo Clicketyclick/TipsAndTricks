@@ -4,10 +4,12 @@
 
 - [`glob` vs. `like`](glob_like) - wildcard on index.
 - [Default](select_default_value) value on SELECT: coalesce(x,y,..)
-- [Handle images](handle_images/)  
+- [Handle images](handle_images/)
+- [Diff on two tables](diff_on_two_tables)
+
 Raw images or Base64 encoded images
 - [Handle newlines](handle_newlines/).  
- Newlines (and other special characters) can be escaped using the CHAR() function or using the hex X'0A'.
+Newlines (and other special characters) can be escaped using the CHAR() function or using the hex X'0A'.
 - [Delete rows with duplicate values](delete_rows_with_duplicate_values)  
 How to delete all rows with duplicate values in 2 columns but keep the last inserted row?
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/74994082/7485823))
