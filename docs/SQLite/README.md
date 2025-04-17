@@ -6,6 +6,7 @@
 - [Default](select_default_value) value on SELECT: coalesce(x,y,..)
 - [Handle images](handle_images/)
 - [Diff on two tables](diff_on_two_tables)
+- [List unique indexes](List_unique_indexes/)
 
 Raw images or Base64 encoded images
 - [Handle newlines](handle_newlines/).  
