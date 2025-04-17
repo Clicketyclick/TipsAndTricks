@@ -1,6 +1,6 @@
 ## Diff on two tables
 
-Source: [Stackoverflow](https://stackoverflow.com/a/25302498/7485823)
+Source: [Stackoverflow@@stackoverflowicon@@](https://stackoverflow.com/a/25302498/7485823)
 
 ```sql
 SELECT "-",* FROM (SELECT * FROM A
