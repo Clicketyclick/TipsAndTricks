@@ -1,3 +1,8 @@
+### Mapping
+
+```console
+mklink /J "\program files\php" "\bin\php\php-8.4.7.Win32-vs17-x64"
+```
 
 ### INI config
 
