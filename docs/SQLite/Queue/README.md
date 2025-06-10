@@ -30,7 +30,7 @@ Creating the queue
 DROP TABLE IF EXISTS queue;
 CREATE TABLE queue (
     uuid TEXT PRIMARY KEY,
-    created DATETIME DEFAULT(STRFTIME('%Y-%m-%d %H:%M:%f', 'NOW')),
+    created DATETIME DEFAULT(datetime('subsec')),
     content TEXT NOT NULL,
     CONSTRAINT check_queue_uuid CHECK (uuid REGEXP '[a-f0-9]{8}-([a-f0-9]{4}-){3}[a-f0-9]{12}')
 );
