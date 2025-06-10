@@ -3,6 +3,29 @@
 ### Creating a queue system in SQLite
 Source: https://stackoverflow.com/a/79315986
 
+generate UUIDv7 using a view:
+```sql
+-- DROP VIEW IF EXISTS uuid7;
+CREATE VIEW uuid7 AS
+WITH unixtime AS (
+    SELECT CAST((STRFTIME('%s') * 1000) + ((STRFTIME('%f') * 1000) % 1000) AS INTEGER) AS time
+    -- SELECT CAST((UNIXEPOCH('subsec') * 1000) AS INTEGER) AS time -- for SQLite v3.38.0 (2022)
+)
+SELECT PRINTF('%08x-%04x-%04x-%04x-%012x', 
+       (select time from unixtime) >> 16,
+       (select time from unixtime) & 0xffff,
+       ABS(RANDOM()) % 0x0fff + 0x7000,
+       ABS(RANDOM()) % 0x3fff + 0x8000,
+       ABS(RANDOM()) >> 16) AS next;
+```
+Usage:
+```console
+sqlite> SELECT next FROM uuid7;
+01901973-f202-71ca-9a22-14e7146dab85
+```
+
+Creating the queue
+
 ```sql
 DROP TABLE IF EXISTS queue;
 CREATE TABLE queue (
