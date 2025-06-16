@@ -77,6 +77,11 @@ sqlite>
 > NOTE!
 > The `DELETE ... returning` will delete the entries and return content (as a `SELECT` followed by `DELETE` would)
 
+Select the first 5 rows from queue:
+```sql
+DELETE FROM queue WHERE rowid IN (SELECT ROWID FROM queue limit 5) returning * ;
+```
+
 ## Sources
 
 - [https://www.w3schools.com/xml/ajax_database.asp](https://www.w3schools.com/xml/ajax_database.asp)
