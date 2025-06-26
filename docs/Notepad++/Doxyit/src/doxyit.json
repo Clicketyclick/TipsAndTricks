@@ -6,7 +6,7 @@
         "@copyright": "http://www.gnu.org/licenses/lgpl.txt LGPL version 3",
         "@author": "Erik Bachmann <Erik@ClicketyClick.dk>",
         "@since": "2025-06-26T10:19:43 / erba",
-        "@version": "2025-06-26T10:19:43"
+        "@version": "2025-06-26T10:56:55"
     },
     "system": {
         "name": "doxyit",
@@ -105,6 +105,23 @@
             "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
             "start": "<!-- /**"
+        },
+        "css": {
+            "name": "Cascading Style Sheets",
+            "comment_prefix": "/*",
+            "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------${END}",
+            "end": " */",
+            "file_prefix": "\n",
+            "file_suffix": "\n",
+            "function": "function",
+            "function_prefix": "\n",
+            "function_suffix": "",
+            "header_zone": 5,
+            "line": " * ",
+            "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
+            "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
+            "prefix": "@",
+            "start": "/**"
         },
         "js": {
             "name": "JavaScript",
