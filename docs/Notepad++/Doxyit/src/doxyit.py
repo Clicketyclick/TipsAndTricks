@@ -59,6 +59,10 @@ if debug: print( "user_full_name:["+userdata['fullname']+"]" )
 # Expand headers
 file_header     = doxyit_lib.expandVars( config['templates']['file'], config )
 function_header = doxyit_lib.expandVars( config['templates']['function'], config )
+# special type: JSON
+specTypeList = ["json"]
+if (file_type in specTypeList): file_header     = doxyit_lib.expandVars( config['types'][ file_type ]['file'], config )
+if (file_type in specTypeList): function_header = doxyit_lib.expandVars( config['types'][ file_type ]['function'], config )
 
 #>>> Functions --------------------------------------------------------
 
@@ -111,9 +115,11 @@ else:
 
         function    = g[0][0]
         if verbose: print "function: " + function
-        elements = g[0][1].replace(' ','').split(',')
+        #elements = g[0][1].replace(' ','').split(',')
+        # Use Type Hints
+        elements = g[0][1].replace(' ',"\t").split(',')
 
-        #  *  @param [in] $abc    $(Description for $abc)
+        #  *  @param [in] type $abc    $(Description for $abc)
         config['types'][file_type]['line']
 
         param           = config['types'][file_type]['param_outer'] % config['types'][file_type]['param_inner'].join(elements)
