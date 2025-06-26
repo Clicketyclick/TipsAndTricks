@@ -6,7 +6,7 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2024-09-26T15:08:20
+#:: *   @version    2025-06-26T10:18:28
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
