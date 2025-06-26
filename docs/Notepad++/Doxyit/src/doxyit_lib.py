@@ -15,7 +15,7 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
 #:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2024-10-01T10:54:37
+#:: *   @version    2025-06-26T10:38:02
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -51,7 +51,8 @@ def getConfig(json_file):
     json_data   = open (json_file).read()
     # Parse JSON
     config      = json.loads( json_data )
-    if debug: print( "debug Title from config" + config['title'] )
+    #if debug: print( "debug Title from config" + config['title'] )
+    if debug: print( "debug Title from config" + config['_DOXYGEN']['@brief'] )
     
     return( config )
 
