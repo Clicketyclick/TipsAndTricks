@@ -73,6 +73,17 @@ date -u +%Y-%m-%dT%H:%M:%S%z
 ### crontab guru
 The quick and simple editor for cron schedule expressions by Cronitor: https://crontab.guru/#*/10_7-17_*_*_*
 
+### Archive and remove old files
+
+```sh
+# List old files
+find ./ -maxdepth 1 -type f -mtime +365 -print >remove
+# Archive old files
+tar -cvf remove.2023-07-20.tar -T remove
+# Remove
+xargs rm < remove
+```
+
 ## External
 
 - [Bash scripting cheatsheet](https://devhints.io/bash)
