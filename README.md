@@ -14,3 +14,4 @@ Misc tips and tricks
                  XXX
 ```
 - [Index](docs/) for various tips and tricks. Index is subdevided by platform
+<!-- See main site for reformatting info -->
