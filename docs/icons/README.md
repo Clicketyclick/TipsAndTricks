@@ -21,7 +21,9 @@ DosTips					|@@DosTips_logo@@
 Wikipedia				|@@Wikipedia_logo@@
 Clicketyclick.github.io	|@@Clicketyclick.github.io_logo@@
 Github					|@@Github_logo@@
+CSS					    |@@CSS_logo@@
 --|--
+CSS					    |@@CSS_icon@@
 Dosbatch				|@@Dosbatch_logo@@
 Doxyit					|@@Doxyit_logo@@
 Doxygen					|@@Doxygen_logo@@
