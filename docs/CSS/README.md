@@ -5,7 +5,7 @@
   <details><summary>Style</summary>
 ```
     <pre>
-<style>
+&lt;style&gt;
 kbd {   /* keyboard keys */
     all: revert;    /* https://stackoverflow.com/a/36256886 */
     border:                 1px solid #c6cbd1;
@@ -34,7 +34,7 @@ kbd_gray { /* Keyboard keys gray */
     white-space: nowrap;
    }
 
-</style>
+&lt;/style&gt;
       </pre>
 ```
 </details>
