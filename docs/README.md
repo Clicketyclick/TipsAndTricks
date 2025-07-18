@@ -3,6 +3,7 @@
 ## Tips and Tricks
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
+   - @@CSS_logo@@		      [CSS](/TipsAndTricks/CSS/)
    - @@Dosbatch_icon@@		[DOS batch](/TipsAndTricks/Dosbatch/) 
    - @@Exiftools_icon@@ 	[ExifTool](/TipsAndTricks/Exiftools/) 
    - @@Ghostscript_icon@@	[Ghostscript](/TipsAndTricks/Ghostscript/)
