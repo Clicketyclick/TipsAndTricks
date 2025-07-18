@@ -3,7 +3,6 @@
 <details><summary>Keyboard formatting (white/gray)</summary>
 
   <details><summary>Style</summary>
-```
     <pre>
 &lt;style&gt;
 kbd {   /* keyboard keys */
@@ -36,7 +35,6 @@ kbd_gray { /* Keyboard keys gray */
 
 &lt;/style&gt;
       </pre>
-```
 </details>
 <kbd>Ctrl</kbd>+<kbd>A</kbd>
 <kbd>Ctrl</kbd>+<kbd>C</kbd>
