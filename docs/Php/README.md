@@ -21,6 +21,14 @@
 
 ### Tips
 
+#### Date format
+
+Format character | Example
+---|---
+`c`                | 2004-02-12T15:19:21+00:00
+`Y-m-d\Th-i-s.e`   | 2025-07-29T11:57:22.Europe/Copenhagen
+`Y-m-d\Th-i-s.P`   | 2025-07-29T11:57:22.+02:00
+
 #### Recursive functions
 Do not use "call to self" by name inside recursive functions. Use variable functions instead:
 
