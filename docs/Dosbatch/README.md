@@ -19,6 +19,12 @@ Download book covers by ISBN
 - [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
 - [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
 
+## Findstr w. OR
+
+```cmd
+findstr /I /R "@fn @brief" handleStrings.php
+```
+
 ## Get first/last line from file
 
 Source: [Fetch only first line from text file using Windows Batch File @@Stackoverflow_icon@@](https://stackoverflow.com/a/46134683)
