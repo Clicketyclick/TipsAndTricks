@@ -97,7 +97,7 @@ Run as Admin!
     1. `Plugins` / `Python Script` / `Show console` (You'll like this for debugging)
     2. `Plugins` / `Python Script` / `New script` - to create your first script 
 2. Go to https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/
-    1. Copy the content of [`src/doxyit.json`](https://clicketyclick.github.io/TipsAndTricks/Notepad++/Doxyit/doxyit.json)
+    1. Copy the content of [`src/doxyit.json`](src/doxyit.json)
 
 Download the scripts and configuration JSON and place them in the script directory: `"%APPDATA%\Notepad++\plugins\Config\PythonScript\scripts\doxyit.py"`
 
