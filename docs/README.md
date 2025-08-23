@@ -22,6 +22,7 @@
    - @@Putty_icon@@			[PuTTY](/TipsAndTricks/Putty/)  
    - @@Shell_icon@@ 		   [Shell](/TipsAndTricks/Shell/)   Linux batch: Shell, Bash, vi etc.
    - @@Sqlite_icon@@		   [SQLite](/TipsAndTricks/SQLite/)   <!--(See also: [SQLite](/SQLite) doublet??)-->
+   - @@Synology_icon@@		[Synology](/TipsAndTricks/Synology/)
    - @@Totalcmd_icon@@		[TotalCmd](/TipsAndTricks/TotalCmd/)  
    - @@Unicode_icon@@		[Unicode](/TipsAndTricks/Unicode/)   Unicode, UTF-8
    - @@Vbscript_icon@@		[Vbscript](/TipsAndTricks/Vbscript/)
