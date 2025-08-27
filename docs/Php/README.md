@@ -63,3 +63,42 @@ extension=php_imagick.dll
 ```
 
 
+### Ini
+
+#### CA certificates for SSL
+
+Certificates are available from: https://curl.se/docs/caextract.html
+
+Run this script in elevated state (CMD - not you)
+
+```console
+:getCacert
+    CD "%ProgramFiles%\php"
+    SET CACERTDIR="%ProgramFiles%\php\cacert"
+    :: Create dir if not exist
+
+    CD %CACERTDIR% 2>NUL || (ECHO %CACERTDIR% & MKDIR %CACERTDIR% & CD %CACERTDIR%)
+    curl --etag-compare etag.txt --etag-save etag.txt --remote-name https://curl.se/ca/cacert.pem
+    DIR
+GOTO :EOF
+```
+
+Modify `php.ini` to enable the SSL:
+
+```diff
+- ;extension=openssl
+---
++ ;2024-11-06T22:25:48/ErBa
++ extension=openssl
++ ;2023-10-11/ErBa Enable https requests https://stackoverflow.com/a/12587073
++ ;2024-07-19T08:31:58
++ ;;extension=openssl
+```
+
+```diff
++ ;2024-11-06T23:58:54/Erba curl: https://curl.se/docs/caextract.html
++ curl.cainfo ="C:\Program Files\php\cacert\cacert.pem"
+1944a1988,1989
++ ;2024-11-06T23:59:20/ErBo curl: https://curl.se/docs/caextract.html
++ openssl.cafile="C:\Program Files\php\cacert\cacert.pem"
+```
