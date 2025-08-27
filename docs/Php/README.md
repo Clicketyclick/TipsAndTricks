@@ -96,9 +96,24 @@ Modify `php.ini` to enable the SSL:
 ```
 
 ```diff
+[curl]
+; A default value for the CURLOPT_CAINFO option. This is required to be an
+; absolute path.
+- ;curl.cainfo =
 + ;2024-11-06T23:58:54/Erba curl: https://curl.se/docs/caextract.html
 + curl.cainfo ="C:\Program Files\php\cacert\cacert.pem"
-1944a1988,1989
+```
+
+
+```diff
+[openssl]
+; The location of a Certificate Authority (CA) file on the local filesystem
+; to use when verifying the identity of SSL/TLS peers. Most users should
+; not specify a value for this directive as PHP will attempt to use the
+; OS-managed cert stores in its absence. If specified, this value may still
+; be overridden on a per-stream basis via the "cafile" SSL stream context
+; option.
+- ;openssl.cafile=
 + ;2024-11-06T23:59:20/ErBo curl: https://curl.se/docs/caextract.html
 + openssl.cafile="C:\Program Files\php\cacert\cacert.pem"
 ```
