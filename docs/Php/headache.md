@@ -1,4 +1,4 @@
 
 Headache
 
-![Headache](./parse_cli2request/poloroid.jpg)
+![Headache](./poloroid.jpg)
