@@ -12,7 +12,7 @@ elevate "command"
 elevate rocknroll.cmd all "over the" world
 ```
 
-`elevate.cmd`
+[`elevate.cmd`](elevate.cmd)
 ```batch
 @ECHO OFF&SetLocal EnableDelayedExpansion
 GOTO :Init
