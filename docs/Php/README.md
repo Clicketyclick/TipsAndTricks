@@ -69,7 +69,8 @@ extension=php_imagick.dll
 
 Certificates are available from: https://curl.se/docs/caextract.html
 
-Run this script in elevated state (CMD - not you)
+Run this script in elevated state (CMD - not you).
+The script uses CURL @@Curl_icon@@ to download the certificates.
 
 ```console
 :getCacert
