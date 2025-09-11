@@ -39,3 +39,11 @@ PreserveDates=1
 SpecialFlags=4096
 ```
 
+### INI tricks
+
+"F2 Queue"
+```ini
+[Configuration]
+AlwaysCopyInBackground=2
+```
+
