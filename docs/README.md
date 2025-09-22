@@ -15,6 +15,8 @@
    - @@Marc_icon@@ 			[MARC?](/TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc
    - @@Markdown_icon@@		[Markdown](/TipsAndTricks/Markdown/)
    - @@Marcedit_icon@@     [Marcedit](/TipsAndTricks/Marcedit/)
+   - Microsoft
+      - Excel               [Microsoft/Excel](/TipsAndTricks/Microsoft/Excel/)
    - @@Notepadpp_icon@@		[Notepad++](/TipsAndTricks/Notepad++/)  
    - @@Php_icon@@			   [PHP](/TipsAndTricks/Php/)	 
    - @@Plantuml_icon@@		[Plantuml](/TipsAndTricks/Plantuml/)  
