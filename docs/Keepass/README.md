@@ -2,9 +2,38 @@
 
 # Keepass
 
-## Sync with Dropbox
+## Sync with pCloud (WebDav)
 
-- [Synchronizing with Dropbox / other PC synchronization software](https://keepass.info/help/kb/trigger_examples.html#dbsync)
+> [!IMPORTANT]
+> This is only posible for Business/Family accounts
+
+Place your database in the directory `/Applications/Keepass2Android (Crocoapps)/` on pCloud.
+
+### KeePass Password Safe
+
+1. Open app
+2. Select "File" / "Open URL"
+3. Enter the WebDav URL: "https://ewebdav.pcloud.com/Applications/Keepass2Android (Crocoapps)/{yourdatabasename}.kdbx"
+4. Add your credentials
+
+#### Autosave
+
+Tools / Options / Advanced
+- [x] Automatically save after modifying an entry using the entry editing dialog
+
+### KeePass2Android
+
+1. Open app
+2. Choose whether you want to open an existing database or create a new one.
+3. Select "HTTPS (WebDAV)" from the provider list[!](KeePass2Android_select_kp2a.jpg). 
+4. Enter the WebDav URL: "https://ewebdav.pcloud.com/Applications/Keepass2Android (Crocoapps)/{yourdatabasename}.kdbx"
+4. Add your credentials
+
+
+
+## ~~Sync with Dropbox~~
+
+- ~~[Synchronizing with Dropbox / other PC synchronization software](https://keepass.info/help/kb/trigger_examples.html#dbsync)~~
 
 
 ## Add-ons
