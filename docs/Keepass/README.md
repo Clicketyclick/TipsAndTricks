@@ -25,11 +25,9 @@ Tools / Options / Advanced
 
 1. Open app
 2. Choose whether you want to open an existing database or create a new one.
-3. Select "HTTPS (WebDAV)" from the provider list <br><!--img src="KeePass2Android_select_kp2a.jpg" width=20% height=auto--><!-- --><br>![KeePass2Android_select_kp2a.324x702.jpg "KeePass2Android: Select KP2a"](KeePass2Android_select_kp2a.324x702.jpg "KeePass2Android: Select KP2a") [🖻 "KeePass2Android: Select KP2a"](KeePass2Android_select_kp2a.jpg "KeePass2Android: Select KP2a").
+3. Select "HTTPS (WebDAV)" from the provider list: <br> ![KeePass2Android_select_kp2a.324x702.jpg "KeePass2Android: Select KP2a"](KeePass2Android_select_kp2a.324x702.jpg "KeePass2Android: Select KP2a") [🖻 "KeePass2Android: Select KP2a"](KeePass2Android_select_kp2a.jpg "KeePass2Android: Select KP2a").
 4. Enter the WebDav URL: "https://ewebdav.pcloud.com/Applications/Keepass2Android (Crocoapps)/{yourdatabasename}.kdbx"
 5. Add your credentials
-
-
 
 ## ~~Sync with Dropbox~~
 
