@@ -1,4 +1,4 @@
-
+![WP](../icons/Wordperfect_logo.jpg)
 
 # Convert to "modern" file formats
 
