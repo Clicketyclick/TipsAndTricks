@@ -31,10 +31,11 @@
    - @@Windows_icon@@		M$ [Windows](/TipsAndTricks/Windows/)  
    - @@Xnview_icon@@		   [Xnview](/TipsAndTricks/Xnview/)
 
-   
+
 ## Data
 
 - [Country.io](https://clicketyclick.github.io/country.io/) mapping ISO country names (**ISO 3166-1 alpha-2** and **ISO 3166-1 alpha-3**)
+- ![Word Perfect](icons/Wordperfect_icon.jpg) [Word Perfect](/TipsAndTricks/Wordperfect/)
 
 ## External
 
