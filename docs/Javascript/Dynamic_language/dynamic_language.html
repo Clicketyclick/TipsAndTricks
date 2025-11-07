@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="dynamic_language.css">
+        <script src='dynamic_language.js'></script>
+    </header>
+
+    <body onload='parseLanguage( true );switchLanguageOn( language, true );'>
+
+        <H1>
+            <span lang="en">Hello</span>
+            <span lang="da">Goddag</span>
+            <span lang="fr">Bonjour</span>
+            <span lang="es">Hola</span>
+            <span lang="hi">नमस्ते</span>
+        </H1>
+
+        <button onClick="switchLanguageOn( 'da', true )" >Danish</button>
+        <button onClick="switchLanguageOn( 'en', true )" >English</button>
+        <button onClick="switchLanguageOn( 'fr', true )" >French</button>
+        <button onClick="switchLanguageOn( 'hi', true )" >Hindi</button>
+        <button onClick="switchLanguageOn( 'es', true )" >Spanish</button>
+        <button onClick="switchLanguageOff( '', false, true )" >All off</button>
+        <button onClick="switchLanguageOff( 'fr,es', true )" >Latin off</button>
+
+        <p>Example of how to use multiple languages dynamically in the same HTML file</p>
+
+    <!-- -->
+        <p>English:"<span lang="en">Hello</span>"</p>
+        <p>Danish:"<span lang="da">Goddag</span>"</p>
+        <p>French:"<span lang="fr">Bonjour</span>"</p>
+        <p>Spanish:"<span lang="es">Hola</span>"</p>
+        <p>Hindi:"<span lang="hi">नमस्ते</span>"</p>
+    <!-- -->
+
+    </body>
+
+</html>

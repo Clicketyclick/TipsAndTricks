@@ -1,0 +1,9 @@
+
+/*
+
+<link rel="stylesheet" href="dynamic_language.css">
+*/
+
+/* Matches every element that has a lang attribute, no matter the value */
+[lang] { display: none; }
+
