@@ -9,6 +9,8 @@ Image processing
 1. Rename to date convention (YYYY-mm-ddThh-mm-ss_filename-copy.ext)
 1. Add copyright information
 
+### EXIF and ITPC data to SQLite
+How can I [extract all EXIF and ITPC data from an image using exiftool to a SQLite database?](Exif-iptc2db.md)
 
 ### Install
 
