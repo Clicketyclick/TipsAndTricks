@@ -24,6 +24,7 @@ Parse cli arguments and insert into $_REQUEST
  *  
  *  @see       https://stackoverflow.com/a/37600661
  *  @since     2024-06-25T09:09:12 / erba
+ *  @version   2026-01-06T11:22:00 / erba
  */
 function parse_cli2request( $default = TRUE )
 {
