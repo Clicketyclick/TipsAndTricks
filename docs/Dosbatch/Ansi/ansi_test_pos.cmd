@@ -20,7 +20,7 @@ CALL ansi :ECHOe Restored c14
 
 CALL ansi :moveup 5
 
-CALL ansi "{{36;43}}Color{{0}}No color"
+CALL ansi "{{36;43}}Colour{{0}}No colour"
 
 GOTO :EOF
 
@@ -106,5 +106,6 @@ GOTO :EOF
     )
 
 GOTO :EOF
+
 
 
