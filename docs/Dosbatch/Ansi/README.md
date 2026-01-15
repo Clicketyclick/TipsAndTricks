@@ -5,14 +5,14 @@ Windows 10+ supports ANSI code for colouring out put as a default.
 However it is pretty grim to encode.
 
 ```batch
-ECHO [^[92;40mBold green on black^[0m]>CON:
+ECHO [^[[92;40mBold green on black^[[0m]>CON:
 ```
 Which shold be:
 1. Print "["
 2. Turn on GREEN on BLACK background
 3. Print "Bold green on black"
 4. Turn colour off
-5. Print "["
+5. Print "]"
 
 And of cause you will have to remember the exact syntax, coding etc.
 
@@ -22,6 +22,8 @@ A better way is to encode the colours as numbers in `{{}}` and let a script do t
 CALL ansi "[{{92;40}}Bold green on black{{0}}]"
 ```
 This is much easier to remember!
+
+BUT! This script sends coloured output directly to the console (CON:)! You cannot redirect output to file.
 
 ## ANSI Codes
 
