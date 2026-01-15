@@ -5,7 +5,7 @@ Windows 10+ supports ANSI code for colouring out put as a default.
 However it is pretty grim to encode.
 
 ```batch
-ECHO [^[92;40mBold green on black^[0m]>CON:
+ECHO [^[92;40mBold green on black^[0m]>CON:
 ```
 Which shold be:
 1. Print "["
