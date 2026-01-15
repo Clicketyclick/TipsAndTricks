@@ -18,16 +18,61 @@ And of cause you will have to remember the exact syntax, coding etc.
 
 A better way is to encode the colours as numbers in `{{}}` and let a script do the encoding:
 
-```
+```cmd
 CALL ansi "[{{92;40}}Bold green on black{{0}}]"
 ```
 This is much easier to remember!
 
 BUT! This script sends coloured output directly to the console (CON:)! You cannot redirect output to file.
 
+## Colours
+
+Foreground	| Background	| Colour Name
+---|---|---
+30	| 40	| Black
+31	| 41	| Red
+32	| 42	| Green
+33	| 43	| Yellow
+34	| 44	| Blue
+35	| 45	| Magenta
+36	| 46	| Cyan
+37  | 47	| White
+90 	| 100	| Bright Black (Gray)
+91 	| 101	| Bright Red
+92 	| 102	| Bright Green
+93 	| 103	| Bright Yellow
+94 	| 104	| Bright Blue
+95 	| 105	| Bright Magenta
+96 	| 106	| Bright Cyan
+97 	| 107	| Bright White
+
+## Subfunctions
+
+To ease the use of cursor positioning there is a set of subfunction
+
+Function|Arguments|Description
+---|---|---
+:ECHOe              | STRING        | Echo string w/o newline
+:clear_line         | -             | Clear current Line
+:cls                | -             | Clear the screen, move to (0,0)"
+:erase_eol          | -             | Erase to end of line
+:moveBackwards      | No of cols    | Move the cursor backward N columns\n")
+:moveForwards       | No of cols    | Move the cursor forward N columns
+:moveup N           | No of lines   | Move the cursor up N lines
+:pos col            | Column        | Put the cursor at column C.")
+:posH col row       | Column Row    | Put the cursor at line L and column C.")
+:posf col row       | Column Row    | Put the cursor at line L and column C.") Does not work on Windows!
+:restore_cursor_pos | -             | Set cursor at saved position
+:save_cursor_pos    | -             | Save current cursor position (before moving)
+
+```cmd
+:: Set cursor at column 10 row 20
+CALL ansi :posh 10 20
+```
+
 ## ANSI Codes
 
-## Font Effects
+### Font Effects
 
 Code         |Effect         |Note
 ---|---|---
@@ -72,5 +117,4 @@ Code         |Effect         |Note
 90–97   |Set bright foreground colour   |aixterm (not in standard)
 100–107 |Set bright background colour   |aixterm (not in standard)
 
-
-
+For more details see: [List of ANSI color escape sequences](https://stackoverflow.com/a/33206814)
