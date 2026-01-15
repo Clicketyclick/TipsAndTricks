@@ -18,6 +18,7 @@ Download book covers by ISBN
 - [ISO 86001](Iso86001_date/) - Current date in ISO 86001 (YYYY-MM-DDThh:mm:ss.000z)
 - [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
 - [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
+- [Ansi codes in CMD](Ansi/)
 
 ## Findstr w. OR
 
