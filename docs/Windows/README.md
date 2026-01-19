@@ -8,6 +8,7 @@
 - [Winget](Winget/) - WinGet is the Windows Package Manager used to upgrade apps
 - [Auto sync](sync_folder_to_onedrive) folders using OneDrive
 - Remove [drop shadow](drop_shadow) under windows
+- [Windows icons](https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/)
 
 ## Uninstall bloat ware
 
