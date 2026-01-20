@@ -9,6 +9,7 @@
 - [Auto sync](Sync_folder_to_onedrive/) folders using OneDrive
 - Remove [drop shadow](DropShadow/) under windows
 - [Windows Spotlight Images](SpotlightFiles/)
+- [Windows Multi Display](MultiDisplay/)
 
 ## Uninstall bloat ware
 
