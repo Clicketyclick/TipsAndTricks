@@ -6,8 +6,9 @@
 - [Windows WSL](wsl/)
 - [Attach shortcut](attach_to_taskbar/) to taskbar
 - [Winget](Winget/) - WinGet is the Windows Package Manager used to upgrade apps
-- [Auto sync](sync_folder_to_onedrive/) folders using OneDrive
-- Remove [drop shadow](drop_shadow/) under windows
+- [Auto sync](Sync_folder_to_onedrive/) folders using OneDrive
+- Remove [drop shadow](DropShadow/) under windows
+- [Windows Spotlight Images](SpotlightFiles/)
 
 ## Uninstall bloat ware
 
