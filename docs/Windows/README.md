@@ -2,13 +2,12 @@
 
 ## M$ Windows
 
-- [Windows System Icons](WindowsSystemFiles)
+- [Windows System Icons](WindowsSystemFiles/)
 - [Windows WSL](wsl/)
-- [Attach shortcut](attach_to_taskbar) to taskbar
+- [Attach shortcut](attach_to_taskbar/) to taskbar
 - [Winget](Winget/) - WinGet is the Windows Package Manager used to upgrade apps
-- [Auto sync](sync_folder_to_onedrive) folders using OneDrive
-- Remove [drop shadow](drop_shadow) under windows
-- [Windows icons](https://www.digitalcitizen.life/where-find-most-windows-10s-native-icons/)
+- [Auto sync](sync_folder_to_onedrive/) folders using OneDrive
+- Remove [drop shadow](drop_shadow/) under windows
 
 ## Uninstall bloat ware
 
