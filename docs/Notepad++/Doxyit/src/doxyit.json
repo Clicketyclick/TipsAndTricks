@@ -164,11 +164,12 @@
             "delimiter": "",
             "end": "    },",
 
-            "__file": "${FILE_PREFIX}${START}\n${LINE}${PREFIX}file       ${FILE}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}${PREFIX}details    \n${LINE}\n${LINE}Functions|Brief\n${LINE}---|---\n${LINE}.|.\n${LINE}\n            ${LINE}${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE}${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE}${PREFIX}since      ${ISO8601} / ${USER}\n${LINE}${PREFIX}version    ${ISO8601}\n${END}${FILE_SUFFIX}",
-            "_file": "${FILE_PREFIX}${START}\n         \"@file\":        \"${FILE}\",\n         \"@brief\":       \"$(Brief description)\",\n         \"@details\":     \"\",\n         \"@copyright\":   \"http://www.gnu.org/licenses/lgpl.txt LGPL version 3\",\n         \"@author\":      \"${AUTHOR} <${EMAIL}>\",\n         \"@since\":       \"${ISO8601} / ${USER}\",\n         \"@version\":     \"${ISO8601}\"\n\n${END}${FILE_SUFFIX}",
-            "file": "${FILE_PREFIX}${START}\n        \"@file\":        \"${FILE}\",\n        \"@brief\":       \"$(Brief description)\",\n        \"@details\":     \"\",\n        \"@copyright\":   \"http://www.gnu.org/licenses/lgpl.txt LGPL version 3\",\n        \"@author\":      \"${AUTHOR} <${EMAIL}>\",\n        \"@since\":       \"${ISO8601} / ${USER}\",\n        \"@version\":     \"${ISO8601}\"\n\n${END}\n     \"system\": {\n        \"name\":         \"${FILE}\",\n        \"version\":      \"01.00\",\n        \"revision\":     \"${ISO8601}\",\n        \"release\":      \"${ISO8601}\",\n        \"level\":        \"alpha\",\n        \"favicon\":      \"./favicon.ico\",\n        \"language\":     \"en\"\n${END}${FILE_SUFFIX}",
-            "function": "\nERROR: No function available\n",
 
+		"file_template": "${FILE_PREFIX}${START}\n\n        \"@file\":        \"${FILE}\",\n        \"@brief\":       \"$(Brief description)\",\n        \"@details\":     \"\",\n        \"@copyright\":   \"http://www.gnu.org/licenses/lgpl.txt LGPL version 3\",\n        \"@author\":      \"${AUTHOR} <${EMAIL}>\",\n        \"@since\":       \"${ISO8601} / ${USER}\",\n        \"@version\":     \"${ISO8601}\"\n ${END}${FILE_SUFFIX}",
+
+            "function_template": "...",
+            "file": "",
+            "function": "\nERROR: No function available\n",
             "file_prefix": "{\n",
             "file_suffix": "\n}\n",
             "function": "function",
@@ -178,8 +179,10 @@
             "line": " * ",
             "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
             "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
+            "template": "@",
             "prefix": "@",
-            "start": "    \"_DOXYGEN\": {"
+            "_start": "    \"_DOXYGEN\": {\n        \"@file\":        \"${FILE}\",\n        \"@brief\":       \"$(Brief description)\",\n        \"@details\":     \"\",\n        \"@copyright\":   \"http://www.gnu.org/licenses/lgpl.txt LGPL version 3\",\n        \"@author\":      \"${AUTHOR} <${EMAIL}>\",\n        \"@since\":       \"${ISO8601} / ${USER}\",\n        \"@version\":     \"${ISO8601}\"\n ",
+            "start": "    \"_DOXYGEN\": { "
         },
         "md": {
             "name": "MarkDown",

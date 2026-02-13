@@ -6,7 +6,7 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2025-06-26T10:18:28
+#:: *   @version    2024-09-26T15:08:20
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -57,12 +57,13 @@ if debug: print( "USER:" + userdata['name'] + " email:" + userdata['email']);
 if debug: print( "user_full_name:["+userdata['fullname']+"]" )
 
 # Expand headers
+if 'file_template' in config['types'][file_type]:    # Hack for JSON
+    config['templates']['file'] = config['types'][file_type]['file_template']
+if 'function_template' in config['types'][file_type]:    # Hack for JSON
+    config['templates']['function'] = config['types'][file_type]['function_template']
+
 file_header     = doxyit_lib.expandVars( config['templates']['file'], config )
 function_header = doxyit_lib.expandVars( config['templates']['function'], config )
-# special type: JSON
-specTypeList = ["json"]
-if (file_type in specTypeList): file_header     = doxyit_lib.expandVars( config['types'][ file_type ]['file'], config )
-if (file_type in specTypeList): function_header = doxyit_lib.expandVars( config['types'][ file_type ]['function'], config )
 
 #>>> Functions --------------------------------------------------------
 
@@ -115,11 +116,9 @@ else:
 
         function    = g[0][0]
         if verbose: print "function: " + function
-        #elements = g[0][1].replace(' ','').split(',')
-        # Use Type Hints
-        elements = g[0][1].replace(' ',"\t").split(',')
+        elements = g[0][1].replace(' ','').split(',')
 
-        #  *  @param [in] type $abc    $(Description for $abc)
+        #  *  @param [in] $abc    $(Description for $abc)
         config['types'][file_type]['line']
 
         param           = config['types'][file_type]['param_outer'] % config['types'][file_type]['param_inner'].join(elements)
