@@ -42,3 +42,4 @@ This structure can be used for chat logs, Q&A's ...
 </details>
 ---
 <!-- ---------------------------------------------------------------------->
+Template file: [Q&A.md](Q&A.md)
