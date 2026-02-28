@@ -33,13 +33,18 @@ This structure can be used for chat logs, Q&A's ...
 <!-- ---------------------------------------------------------------------->
 ```
 </details>
+
 ---
+
 <!-- ---------------------------------------------------------------------->
 
 #### Q: Can this structure be used for chat logs ?
 <details><summary>A!</summary>
  Absolutely. Chat log for web chats or AI logs
 </details>
+
 ---
+
 <!-- ---------------------------------------------------------------------->
+
 Template file: [Q&A.md](Q&A.md)
