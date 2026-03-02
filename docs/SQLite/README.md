@@ -2,6 +2,9 @@
 
 ## SQLite
 
+### Test bench / Fiddle
+
+- [db-fiddle](https://www.db-fiddle.com/)
 
 ### Date and time
 
