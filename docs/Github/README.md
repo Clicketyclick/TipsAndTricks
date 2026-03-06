@@ -19,3 +19,30 @@ git describe --abbrev=0 --tags
 ```
 
 https://stackoverflow.com/a/46434732
+
+### Auto build number and revision date
+
+#### [How to manage the version number in Git?](https://stackoverflow.com/a/66605369)
+
+1. Create file in project dir (or where you want) build_number and put the value 1 in this file
+2. Go to git dir and create file called "pre-commit" in .git/hooks/ (without .sample)
+3. Put this code there
+
+```bash
+currentbuildnumber=`cat build_number`
+let "currentbuildnumber++"
+printf $currentbuildnumber > build_number
+currentbranch=`git branch | tr -cd "[:alpha:]"`
+git log $currentbranch --pretty=format:"%h - %an, %ar : %s, Build: $currentbuildnumber"
+```
+
+#### Revision date
+- [date command --iso-8601 option](https://unix.stackexchange.com/a/629504)
+- [how to get local date/time in linux terminal while server configured in UTC/different timezone?](https://stackoverflow.com/a/63063754)
+
+```bash
+#For a local time, use "date".
+date +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision.local
+# For UTC time, use "date -u".
+date -u +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision
+```
