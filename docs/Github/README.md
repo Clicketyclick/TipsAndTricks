@@ -46,3 +46,15 @@ date +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision.local
 # For UTC time, use "date -u".
 date -u +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision
 ```
+
+#### Post commit log
+
+In `.git/hooks/post-commit` add the command:
+
+```bash
+git show --pretty=format:'{"commit":"%H","author":"%an","email":"%ae","date":"%aI","subject":"%f"}' --no-patch --date=iso-strict > postcommit.json
+```
+which will give you data like:
+```json
+{"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"myName","email":"me@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
+```
