@@ -35,6 +35,7 @@ printf $currentbuildnumber > build_number
 currentbranch=`git branch | tr -cd "[:alpha:]"`
 git log $currentbranch --pretty=format:"%h - %an, %ar : %s, Build: $currentbuildnumber"
 ```
+Example: [pre-commit](pre-commit)
 
 #### Revision date
 - [date command --iso-8601 option](https://unix.stackexchange.com/a/629504)
@@ -58,3 +59,4 @@ which will give you data like:
 ```json
 {"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"myName","email":"me@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
 ```
+Example: [post-commit](post-commit)
