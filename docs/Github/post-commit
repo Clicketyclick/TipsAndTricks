@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Runs after commit
+
+git show --pretty=format:'{"commit":"%H","author":"%an","email":"%ae","date":"%aI","subject":"%f"}' --no-patch --date=iso-strict > postcommit.json
