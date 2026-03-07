@@ -57,7 +57,7 @@ git show --pretty=format:'{"commit":"%H","author":"%an","email":"%ae","date":"%a
 ```
 which will give you data like:
 ```json
-{"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"myName","email":"me@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
+{"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"Who Me","email":"whome@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
 ```
 
 Or if you want "The Full Monty":
