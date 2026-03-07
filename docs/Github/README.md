@@ -59,4 +59,48 @@ which will give you data like:
 ```json
 {"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"myName","email":"me@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
 ```
+
+Or if you want "The Full Monty":
+
+```bash
+git show --pretty=format:'{
+    "commit_hash": "%H",
+    "abbreviated_commit_hash": "%h",
+    "tree_hash": "%T",
+    "abbreviated_tree_hash": "%t",
+    "parent_hashes": "%P",
+    "abbreviated_parent_hashes": "%p",
+    "author_name": "%an",
+    "author_name_mailmap": "%aN",
+    "author_email": "%ae",
+    "author_email_mailmap": "%aE",
+    "author_email_local-part": "%al",
+    "author_local-part": "%aL",
+    "author_date": "%ad",
+    "author_date_RFC2822_style": "%aD",
+    "author_date_relative": "%ar",
+    "author_date_UNIX_timestamp": "%at",
+    "author_date_ISO_8601-like_format": "%ai",
+    "author_date_strict_ISO_8601_format": "%aI",
+    "author_date_short_format_(YYYY-MM-DD)": "%as",
+    "author_date_human_style": "%ah",
+    "committer_name": "%cn",
+    "committer_name_mailmap": "%cN",
+    "committer_email": "%ce",
+    "committer_email_mailmap": "%cE",
+    "committer_email_local-part": "%cl",
+    "committer_local-part": "%cL",
+    "committer_date": "%cd",
+    "committer_date_RFC2822_style": "%cD",
+    "committer_date_relative": "%cr",
+    "committer_date_UNIX_timestamp": "%ct",
+    "committer_date_ISO_8601-like_format": "%ci",
+    "committer_date_strict_ISO_8601_format": "%cI",
+    "committer_date_short_format": "%cs",
+    "committer_date_human_style": "%ch",
+    "ref_names": "%d",
+    "ref_names_without_wrapping": "%D"
+}' --no-patch --date=iso-strict > postcommit.json
+```
+
 Example: [post-commit](post-commit)
