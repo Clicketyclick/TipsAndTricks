@@ -29,14 +29,57 @@ https://stackoverflow.com/a/46434732
 3. Put this code there
 
 ```bash
-currentbuildnumber=`cat build_number`
-let "currentbuildnumber++"
-printf $currentbuildnumber > build_number
+#!/bin/bash
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# Update Buildnumber
+# - Read buildnumber from JSON or default 0
+currentbuildnumber=$((cat repo.json 2>/dev/null || echo '{}') | jq '.build_number // 0')
+# - Increment
+((currentbuildnumber+=1))
+#echo $currentbuildnumber
+#
+# Log Buildnumber
 currentbranch=`git branch | tr -cd "[:alpha:]"`
 git log $currentbranch --pretty=format:"%h - %an, %ar : %s, Build: $currentbuildnumber"
+#
+# Get repository name
+repo=$(basename `git rev-parse --show-toplevel`)
+#
+# Get version from tags (= latest)
+version=$(git describe --abbrev=0 --tags)
+#git tag>tags
+#
+# [date command --iso-8601 option](https://unix.stackexchange.com/a/629504)
+# [how to get local date/time in linux terminal while server configured in UTC/different timezone?](https://stackoverflow.com/a/63063754)
+# For a local time, use "date".
+revision_local=$(date +'%Y-%m-%dT%H:%M:%S.%3N%:z')
+#
+# For UTC time, use "date -u".
+revision=$(date -u +'%Y-%m-%dT%H:%M:%S.%3N%:z')
+#
+# Build JSON
+json=$(cat <<EOL
+{
+    "repository":       "${repo:-REPOSITORY}",
+    "version":          "${version:-VERSION}",
+    "revision":         "${revision:-REVISION}",
+    "revision_local":   "${revision_local:-revision_local}",
+    "build_number":     ${currentbuildnumber:-0}
+}
+EOL
+)
+# Write JSON to file
+echo "$json" > repo.json
 ```
+
 Example: [pre-commit](pre-commit)
 
+<!--
 #### Revision date
 - [date command --iso-8601 option](https://unix.stackexchange.com/a/629504)
 - [how to get local date/time in linux terminal while server configured in UTC/different timezone?](https://stackoverflow.com/a/63063754)
@@ -47,6 +90,7 @@ date +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision.local
 # For UTC time, use "date -u".
 date -u +'%Y-%m-%dT%H:%M:%S.%3N%:z' > revision
 ```
+-->
 
 #### Post commit log
 
