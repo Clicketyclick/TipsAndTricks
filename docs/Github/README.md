@@ -11,6 +11,7 @@ git rm --cached FILENAME
 ### Semantic Versioning
 
 ```console
+git config --global user.name "username"
 :: Add tag
 git tag -a "v0.1.0-beta" -m "version v0.1.0-beta"
 git show v0.1.0-beta
