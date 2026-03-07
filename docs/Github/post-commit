@@ -1,8 +1,18 @@
 #!/bin/sh
-#
 # Runs after commit
+#
+# [Auto build number and revision date](https://github.com/Clicketyclick/TipsAndTricks/tree/master/docs/Github#auto-build-number-and-revision-date)
+# [Post commit log](https://github.com/Clicketyclick/TipsAndTricks/tree/master/docs/Github#post-commit-log)
+# 2026-03-07T11:05:41
+#
 # Short form
-#git show --pretty=format:'{"commit":"%H","author":"%an","email":"%ae","date":"%aI","subject":"%f"}' --no-patch --date=iso-strict > postcommit.json
+git show --pretty=format:'{
+    "commit":"%H",
+    "author":"%an",
+    "email":"%ae",
+    "date":"%aI",
+    "subject":"%f"
+}' --no-patch --date=iso-strict > postcommit.short.json
 #
 # The Full Monty
 # Source: [git-show](https://git-scm.com/docs/git-show) - Show various types of objects
@@ -44,4 +54,5 @@ git show --pretty=format:'{
     "ref_names": "%d",
     "ref_names_without_wrapping": "%D"
 }' --no-patch --date=iso-strict > postcommit.json
+
 
