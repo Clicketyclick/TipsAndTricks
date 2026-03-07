@@ -1,17 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 #
 # An example hook script to verify what is about to be committed.
 # Called by "git commit" with no arguments.  The hook should
 # exit with non-zero status after issuing an appropriate message if
 # it wants to stop the commit.
 #
-# [How to manage the version number in Git?](https://stackoverflow.com/a/66605369)
-# 1. Create file in project dir (or where you want) build_number and put the value 1 in this file
-# 2. Go to git dir and create file called "pre-commit" in .git/hooks/ (without .sample)
-# Put this code there
 #
 # Update Buildnumber
-# - Read buildnumber from JSON or 0
+# - Read buildnumber from JSON
 currentbuildnumber=$((cat repo.json 2>/dev/null || echo '{}') | jq '.build_number // 0')
 # - Increment
 ((currentbuildnumber+=1))
@@ -23,6 +19,9 @@ git log $currentbranch --pretty=format:"%h - %an, %ar : %s, Build: $currentbuild
 #
 # Get repository name
 repo=$(basename `git rev-parse --show-toplevel`)
+#
+version=$(git describe --abbrev=0 --tags)
+git tag>tags
 #
 # [date command --iso-8601 option](https://unix.stackexchange.com/a/629504)
 # [how to get local date/time in linux terminal while server configured in UTC/different timezone?](https://stackoverflow.com/a/63063754)
@@ -36,6 +35,7 @@ revision=$(date -u +'%Y-%m-%dT%H:%M:%S.%3N%:z')
 json=$(cat <<EOL
 {
     "repository":       "${repo:-REPOSITORY}",
+    "version":          "${version:-VERSION}",
     "revision":         "${revision:-REVISION}",
     "revision_local":   "${revision_local:-revision_local}",
     "build_number":     ${currentbuildnumber:-0}
