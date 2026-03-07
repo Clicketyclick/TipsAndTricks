@@ -60,7 +60,8 @@ which will give you data like:
 {"commit":"cafedeaffacebadaddbeebeefdeaddadbadbedacecab","author":"Who Me","email":"whome@nowhere.com","date":"2026-03-06T10:16:38+01:00","subject":"Commit test-2"}
 ```
 
-Or if you want "The Full Monty":
+Or if you want "The Full Monty"
+(Source: [git-show](https://git-scm.com/docs/git-show) - Show various types of objects ):
 
 ```bash
 git show --pretty=format:'{
