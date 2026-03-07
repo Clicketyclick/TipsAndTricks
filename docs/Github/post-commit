@@ -5,7 +5,7 @@
 #git show --pretty=format:'{"commit":"%H","author":"%an","email":"%ae","date":"%aI","subject":"%f"}' --no-patch --date=iso-strict > postcommit.json
 #
 # The Full Monty
-#
+# Source: [git-show](https://git-scm.com/docs/git-show) - Show various types of objects
 git show --pretty=format:'{
     "commit_hash": "%H",
     "abbreviated_commit_hash": "%h",
@@ -44,3 +44,4 @@ git show --pretty=format:'{
     "ref_names": "%d",
     "ref_names_without_wrapping": "%D"
 }' --no-patch --date=iso-strict > postcommit.json
+
