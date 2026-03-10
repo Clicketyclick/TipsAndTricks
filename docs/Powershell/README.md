@@ -2,9 +2,8 @@
 ## Powershell ![logo](logo.png)
 -->
 
-@@Powershell_logo@@
 
-## Powershell 
+## Powershell <img src="../icons/Powershell.logo.png" width=256px height=auto>
 
 - [Change screen orientation](/ChangeScreenOrientation) Powershell shortcut to changing screen orientation.
 - [Winget](../windows/Winget) WinGet is the Windows Package Manager used to upgrade apps.
@@ -26,4 +25,4 @@ Or
 powershell -command "& {git clone $(Get-Clipboard)} %*"
 
 ```
-Source: [ ![Superuser](..//icons/Superuser.icon.png "Superuser.com")&#91;&middot;} Superuser](https://superuser.com/a/1815230 "Run Powershell command from cmd with parameters")
+Source: [ <img src="../icons/Superuser.icon.png" width=48px height=auto> &#91;&middot;} Superuser](https://superuser.com/a/1815230 "Run Powershell command from cmd with parameters")
