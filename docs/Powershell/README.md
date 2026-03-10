@@ -26,4 +26,4 @@ Or
 powershell -command "& {git clone $(Get-Clipboard)} %*"
 
 ```
-Source: [ &#91;&middot;} Superuser](https://superuser.com/a/1815230 "Run Powershell command from cmd with parameters")
+Source: [ ![Superuser](..//icons/Superuser.icon.png "Superuser.com")&#91;&middot;} Superuser](https://superuser.com/a/1815230 "Run Powershell command from cmd with parameters")
