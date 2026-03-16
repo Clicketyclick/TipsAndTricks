@@ -1,4 +1,4 @@
-## Github
+## Github <src img="../icons/Github.logo.png" width=64 height=auto>
 ### Download individual directory from repository
 
 To download a folder from GitHub:
