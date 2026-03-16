@@ -1,6 +1,6 @@
 
 
-<img src="../icons/Exiftool.logo.png">
+<img src="../../icons/Exiftool.logo.png">
 
 ## Exiftool
 
