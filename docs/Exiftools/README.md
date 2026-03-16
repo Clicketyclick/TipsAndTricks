@@ -1,9 +1,10 @@
 
-@@Exiftool_logo@@
+
+<img src="../icons/Exiftool.logo.png">
 
 ## Exiftool
 
-Image processing
+### Image processing
 
 1. Copy images from camera to archive
 1. Rename to date convention (YYYY-mm-ddThh-mm-ss_filename-copy.ext)
