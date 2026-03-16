@@ -1,4 +1,5 @@
-## Github <src img="../icons/Github.logo.png" width=64 height=auto>
+## Github <img src="../icons/Github.logo.png" _width="64px" height=auto style="float: right;" >
+
 ### Download individual directory from repository
 
 To download a folder from GitHub:
