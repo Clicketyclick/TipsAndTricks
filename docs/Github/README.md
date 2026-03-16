@@ -1,4 +1,4 @@
-
+## Github
 ### Download individual directory from repository
 
 To download a folder from GitHub:
