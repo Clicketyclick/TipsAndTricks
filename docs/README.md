@@ -1,6 +1,8 @@
 
 <img src="icons/Tips2tricks.logo.png" width=128>
+
 ## Tips and Tricks
+
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
    - <img src="icons/CSS.icon.png" width=32>		      [CSS](/TipsAndTricks/CSS/)
    - <img src="icons/Dosbatch.icon.png" width=32>		[DOS batch](/TipsAndTricks/Dosbatch/) 
