@@ -1,8 +1,8 @@
 ## Github <img src="../icons/Github.logo.png" _width="64px" height=auto style="float: right;" >
-- [Support for PlantUML (puml) diagrams](puml_support)
-- [Download individual directory from repository](download_individual_directory_from_repository)
+- [Support for PlantUML (puml) diagrams](puml_support/)
+- [Download individual directory from repository](download_individual_directory_from_repository/)
 
-- [Files not removed from `.gitignore`](files_not_removed_from_gitignore)
+- [Files not removed from `.gitignore`](files_not_removed_from_gitignore/)
 
 
 ### Semantic Versioning
