@@ -1,4 +1,4 @@
-## Support for PlantUML (puml) diagrams
+## Support for PlantUML (puml) diagrams ![PlantUML](../../icons/Plantuml.icon.png)
 
 Add an action that convert `.puml` files to `.svg`. 
 The action will convert any committed `.puml` file and place the corresponding `.svg` ing the same directory.
