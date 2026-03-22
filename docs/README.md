@@ -67,7 +67,7 @@
 ## Data
 
 - [Country.io](https://clicketyclick.github.io/country.io/) mapping ISO country names (**ISO 3166-1 alpha-2** and **ISO 3166-1 alpha-3**)
-- ![Word Perfect](icons/Wordperfect_icon.jpg) [Word Perfect](/TipsAndTricks/Wordperfect/)
+- <img src="icons/Wordperfect_icon.jpg" width=32 height=auto> [Word Perfect](/TipsAndTricks/Wordperfect/)
 - [Phonenumbers](/TipsAndTricks/phonenumbers.html) <!-- Link to page -->
 
 ## External
