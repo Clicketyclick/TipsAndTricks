@@ -1,6 +1,6 @@
 ### Auto build number and revision date
 
-#### [How to manage the version number in Git?](https://stackoverflow.com/a/66605369)
+#### [How to manage the version number in Git?](https://stackoverflow.com/a/66605369) ![stackoverflow](../../icons/Stackoverflow.icon.png)
 
 1. Create file in project dir (or where you want) build_number and put the value 1 in this file
 <!--
