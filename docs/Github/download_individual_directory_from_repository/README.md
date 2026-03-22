@@ -8,5 +8,5 @@ To download a folder from GitHub:
 5. paste the URL into the text box
 6. hit &#x23CE;
 
-Source: <img src="../icons/Gitkraken.icon.png" width=32 height=auto>
+Source: <img src="../../icons/Gitkraken.icon.png" width=32 height=auto>
 [How to Download a Folder from GitHub](https://www.gitkraken.com/learn/git/github-download#how-to-download-a-folder-from-github "How to Download a Folder from GitHub")
