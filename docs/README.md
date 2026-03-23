@@ -13,7 +13,7 @@
    - <img src="icons/Iptc.icon.png" width=32>  			[IPTC](/TipsAndTricks/Iptc/)  
    - <img src="icons/Javascript.icon.png" width=32> 	[Javascripts](/TipsAndTricks/Javascript/)  
    - <img src="icons/Keepass.icon.png" width=32> 		[KeePass](/TipsAndTricks/Keepass/) Password Manager  
-   - <span style='font-size: "400%";'>&#x1F30D;</span><!--img src="icons/Marc.icon.png" width=32--> 			[Maps](Maps/) Maps in general.
+   - &#x1F30D;<!--img src="icons/Marc.icon.png" width=32--> 			[Maps](Maps/) Maps in general.
    - <img src="icons/Marc.icon.png" width=32> 			[MARC?](/TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc
    - <img src="icons/Markdown.icon.png" width=32>		[Markdown](/TipsAndTricks/Markdown/)
    - <img src="icons/Marcedit.icon.png" width=32>   	[Marcedit](/TipsAndTricks/Marcedit/)
