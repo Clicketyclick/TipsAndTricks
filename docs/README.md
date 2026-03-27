@@ -1,7 +1,4 @@
-
-<img src="icons/Tips2tricks.logo.png" width=128>
-
-## Tips and Tricks
+## Tips and Tricks <img src="icons/Tips2tricks.logo.png" width=64>
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
 
@@ -41,6 +38,7 @@
 </ul>
 </td></tr></table>
 
+---
 
 ## Data
 
