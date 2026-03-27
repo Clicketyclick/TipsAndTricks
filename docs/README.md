@@ -4,6 +4,9 @@
 ## Tips and Tricks
 
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
+
+<table border="0"><tr><td>
+   
    - <img src="icons/CSS.icon.png" width=32>		      [CSS](/TipsAndTricks/CSS/)
    - <img src="icons/Dosbatch.icon.png" width=32>		[DOS batch](/TipsAndTricks/Dosbatch/) 
    - <img src="icons/Exiftool.icon.png" width=32> 		[ExifTool](/TipsAndTricks/Exiftools/) 
@@ -19,6 +22,9 @@
    - <img src="icons/Marcedit.icon.png" width=32>   	[Marcedit](/TipsAndTricks/Marcedit/)
    - Microsoft
       - Excel               [Microsoft/Excel](/TipsAndTricks/Microsoft/Excel/)
+
+</td><td>
+
    - <img src="icons/Notepadpp.icon.png" width=32>		[Notepad++](/TipsAndTricks/Notepad++/)  
    - <img src="icons/Php.icon.png" width=32>				[PHP](/TipsAndTricks/Php/)	 
    - <img src="icons/Plantuml.icon.png" width=32>		[Plantuml](/TipsAndTricks/Plantuml/)  
@@ -32,6 +38,8 @@
    - <img src="icons/Vbscript.icon.png" width=32>		[Vbscript](/TipsAndTricks/Vbscript/)
    - <img src="icons/Windows.icon.png" width=32>		M$ [Windows](/TipsAndTricks/Windows/)  
    - <img src="icons/Xnview.icon.png" width=32>			[Xnview](/TipsAndTricks/Xnview/)
+
+</td></tr></table>
 
 <!--
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
