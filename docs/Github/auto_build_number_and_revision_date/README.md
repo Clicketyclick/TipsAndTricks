@@ -16,7 +16,7 @@
 #
 # Update Buildnumber
 # - Read buildnumber from JSON or default 0
-currentbuildnumber=$((cat repo.json 2>/dev/null || echo '{}') | jq '.build_number // 0')
+buildnumber=$(jq -r .buildnumber .postcommit.json // 0)
 # - Increment
 ((currentbuildnumber+=1))
 #echo $currentbuildnumber
