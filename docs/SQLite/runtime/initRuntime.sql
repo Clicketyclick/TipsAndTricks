@@ -14,7 +14,7 @@
  * @version    2026-05-19T08:49:31
  */
 
-DROP TABLE time_stamp IF EXISTS;
+DROP TABLE IF EXISTS time_stamp;
 
 CREATE TEMPORARY TABLE IF NOT EXISTS time_stamp(
     key     TEXT        DEFAULT('starttime'),
