@@ -30,3 +30,10 @@ SELECT * FROM (
 -- Ordering the results from the subquery by employee_id in ascending order
 ORDER BY employee_id ASC;
 ```
+
+Or even shorter:
+
+```sql
+-- Select last 10 rows from 
+SELECT * FROM ( SELECT * FROM audit ORDER BY rowid DESC LIMIT 10 );
+```
