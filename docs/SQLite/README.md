@@ -64,6 +64,13 @@ Newlines (and other special characters) can be escaped using the CHAR() function
 - [Extract nested JSON from SQLite](SQLite2JSON_hash/)
      (Based on [<img src="../logo-stackoverflow.icon.png" title="Link to Stackoverflow" width=16px height=auto>](https://stackoverflow.com/a/61004015/7485823))
 
+### Unicode
+- [Unicode decoding](Unicode/).  
+```diff
+- \u00E6\u00F8\u00E5\u00C6\u00D8\u00C5
++ æøåÆØÅ
+```
+
 ### Various
 
 - [sqlean](sqlean/)  
