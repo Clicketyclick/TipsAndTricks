@@ -5,13 +5,16 @@ Dumping the Doxygen file header in current file:
 ```php
 <?php
 /**
- *  @file       DoxyiitFileHeader.php
+ *  @file       DoxyitFileHeader.php
  *  @brief      Get DoxyIT file header and function headers
  */
 
-getDoxyFileHeader();
-echo "\n---\n";
-getDoxyFunctionHeaders();
+function demo()
+{
+    getDoxyFileHeader();
+    echo "\n---\n";
+    getDoxyFunctionHeaders();
+}
 
 /**
  *   @fn         getDoxyFileHeader()
@@ -19,7 +22,11 @@ getDoxyFunctionHeaders();
  */
 function getDoxyFileHeader()
 {
-	preg_match('/\/\*\*(.*?)\*\//s', implode( '', file( __FILE__ )), $match); fputs( STDERR, $match[0] . PHP_EOL );
+    //var_export( debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0]['file'] );
+    $file   = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0]['file'];
+    //preg_match('/\/\*\*(.*?)\*\//s', implode( '', file( __FILE__ )), $match); fputs( STDERR, $match[0] . PHP_EOL );
+    preg_match('/\/\*\*(.*?)\*\//s', implode( '', file( $file )), $match);
+    fputs( STDERR, $match[0] . PHP_EOL );
 }
 
 /**
@@ -28,8 +35,10 @@ function getDoxyFileHeader()
  */
 function getDoxyFunctionHeaders()
 {
-	preg_match_all('/\/\*\*(.*?)\*\//s', implode( '', file( __FILE__ )), $match);
-	var_export( implode( "\n\n", array_slice($match[0], 1) ) );
+    $file   = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 1)[0]['file'];
+    //preg_match_all('/\/\*\*(.*?)\*\//s', implode( '', file( __FILE__ )), $match);
+    preg_match_all('/\/\*\*(.*?)\*\//s', implode( '', file( $file )), $match);
+    var_export( implode( "\n\n", array_slice($match[0], 1) ) );
 }
 ?>
 ```
