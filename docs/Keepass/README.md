@@ -1,5 +1,4 @@
-@@Keepass_logo@@
-
+<img src="../icons/Keepass.logo.png" width=64 style="float: right;">
 # Keepass
 
 ## Sync with pCloud (WebDav)
