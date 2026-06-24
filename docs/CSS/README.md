@@ -1,16 +1,9 @@
 ## CSS
 
-3 images
-
-@@CSS_logo@@
-
----
-
 <img src="../icons/CSS.logo.png" width=64>
-
----
-
+<!--
 ![CSS](../icons/CSS.logo.png)
+-->
 
 ---
 <details><summary>Keyboard formatting (white/gray)</summary>
