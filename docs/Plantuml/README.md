@@ -1,4 +1,4 @@
-@@Plantuml_logo@@
+<img src="../icons/Plantuml.logo.png" width=64 style="float: right;">
 
 ## Embedding in MarkDown
 
