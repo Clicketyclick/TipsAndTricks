@@ -1,4 +1,4 @@
-@@Hardware_logo@@
+<img src="../icons/Hardware.logo.png" width=64 style="float: right;">
 
 ## Hardware
 
