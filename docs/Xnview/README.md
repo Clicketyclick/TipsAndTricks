@@ -1,4 +1,4 @@
-@@Xnview_logo@@
+<img src="../icons/Xnview.logo.png" width=128 style="float: right;">
 
 ## XnView
 
