@@ -1,300 +1,115 @@
-# box.cmd
+<!--
+![dos_batch_scripts](https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)
+<<img align="right" width="100" height=auto src="dos_batch_scripts.jpg">
+-->
+@@Dosbatch_logo@@
+# DOS batch scripts
 
-`box.cmd` prints a titled console message box using Unicode box-drawing characters.
+- The ["_" Windows Batch Library](https://github.com/ClicketyClickDK/Underscore) (The "underscore" Windows Batch Library)  
+is a collection of generic, ready-to-use batch scripts - and has a life (and repository) of it's own.
+- The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
+- [getBookCover](getBookCover/)  
+Download book covers by ISBN
+- [How to get piped input in windows batch file? @@Stackoverflow_icon@@](https://stackoverflow.com/a/52583931/7485823)
+- [Elevation, local and domain admin](Elevator/)
+- [Get Doxy header](get_doxy_header/)
+- [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
+- [Tail](../Powershell/tail.bat) Print the last 30 lines of each FILE to standard output.
+- [ISO 86001](Iso86001_date/) - Current date in ISO 86001 (YYYY-MM-DDThh:mm:ss.000z)
+- [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
+- [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
+- [Ansi codes in CMD](Ansi/)
+- [Message box pop-op](Msgbox/) - Build a temporary cscript to display a pop-up msgbox
 
-It is a hybrid Windows Batch + JScript script. It runs directly from `cmd.exe` using `cscript.exe`, without Node.js, Python, PowerShell modules, or external tools.
+## Findstr w. OR
 
-## Features
-
-- Accepts `TITLE` and `MSG` as command-line parameters
-- Falls back to environment variables `TITLE` and `MSG`
-- Supports literal `\n`, `\r`, `\r\n`, and `\t`
-- Supports wrapping of long message lines
-- Supports configurable inner box width
-- Supports configurable tab width
-- Supports multiple box-drawing styles
-- Supports custom characters through environment variables
-- Restores the original Windows code page after execution
-
-## Requirements
-
-- Windows
-- `cmd.exe`
-- Windows Script Host / `cscript.exe`
-
-## Encoding
-
-The script changes the console code page to UTF-8 while running:
-
-```bat
-chcp 65001
+```cmd
+findstr /I /R "@fn @brief" handleStrings.php
 ```
 
-The previous code page is restored before the script exits.
+## Get first/last line from file
 
-The box-drawing characters are stored internally as Unicode escape sequences, which makes the script less sensitive to file encoding issues.
+Source: [Fetch only first line from text file using Windows Batch File @@Stackoverflow_icon@@](https://stackoverflow.com/a/46134683)
 
-## Usage
+```cmd
 
-```bat
-box.cmd [options] [title] [message] [style] [width]
+(ECHO:A a&ECHO:B b&ECHO:C c)>file.txt
+
+:: Fetch only first line from text file using Windows Batch File - https://stackoverflow.com/a/46134683
+ECHO Get first line from file:
+SET first_line=
+SET /P first_line=<file.txt&CALL ECHO %first_line%
+
+ECHO Get last line from file:
+SET last_line=
+FOR /F "UseBackQ Delims==" %%A In ("file.txt") DO SET "last_line=%%A" 
+ECHO %last_line%
 ```
 
-## Basic example
+## ZIP
 
-```bat
-call box.cmd "My title" "Message content1\nMessage content2"
+On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser @@Superuser_icon@@](https://superuser.com/a/1473255) )
+```batch
+C:\> tar -xf archive.zip
 ```
 
-Output:
+## ls -l
 
-```text
-┏━━┫ My title ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Message content1                                                 ┃
-┃ Message content2                                                 ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```cmd
+@echo off&SETLOCAL enabledelayedexpansion
+# ls -l
+for /f "tokens=*" %%i in ('dir /a /b /-p /o:gen') do ( 
+    SET "_FILE=%%i                                       ."
+    SET "_ATTRIB=%%~ai ."
+    SET "_SIZE=           %%~zi"
+    ECHO !_FILE:~0,40!	%%~ti !_SIZE:~-11!  !_ATTRIB:~0,11!.
+)
 ```
 
-## Positional arguments
+## Get last token
 
-| Argument | Description |
-| -------- | ----------- |
-| `title` | Box title |
-| `message` | Message text. Use literal `\n` for line breaks |
-| `style` | Optional style name |
-| `width` | Optional inner box width |
-
-Example:
-
-```bat
-call box.cmd "My title" "Message" single 60
+```cmd
+:: https://stackoverflow.com/a/26493855
+:getLastToken
+SETLOCAL
+    for %%a in ("%~2\.") do set "lastPart=%%~nxa"
+    ENDLOCAL&SET "%~1=%lastPart%"
+GOTO :EOF
 ```
 
-## Options
+## Loops
 
-| Option | Description |
-| ------ | ----------- |
-| `--help` | Show help |
-| `-help` | Show help |
-| `/?` | Show help |
-| `--version` | Show version |
-| `--title=TEXT` | Set title |
-| `--message=TEXT` | Set message |
-| `--msg=TEXT` | Set message |
-| `--style=NAME` | Set style |
-| `--width=N` | Set inner box width |
-| `-w N` | Short form of `--width=N` |
-| `--tab-width=N` | Set tab width |
-| `--wrap` | Enable wrapping |
-| `--no-wrap` | Disable wrapping |
+> [!WARNING]
+> You cannot break out of an infinite loop
 
-## Environment variables
-
-| Variable | Description |
-| -------- | ----------- |
-| `TITLE` | Default title |
-| `MSG` | Default message |
-| `BOX_STYLE` | Default style |
-| `BOX_WIDTH` | Default inner box width |
-| `BOX_TAB_WIDTH` | Default tab width |
-| `TAB_WIDTH` | Fallback tab width |
-| `BOX_WRAP` | Default wrapping behavior |
-
-Example:
-
-```bat
-set "TITLE=My title"
-set "MSG=Message content1\nMessage content2"
-set "BOX_STYLE=round"
-set "BOX_WIDTH=67"
-
-call box.cmd
+```cmd
+for /L %%L in ( ) do  (
 ```
+Will hang!
 
-Command-line options override environment variables.
+Instead use huge values in loop - and bail out:
+```cmd
+set cnt=0
 
-## Escape sequences
-
-| Sequence | Meaning |
-| -------- | ------- |
-| `\n` | New line |
-| `\r` | New line |
-| `\r\n` | New line |
-| `\t` | Tab, expanded to spaces |
-
-Example:
-
-```bat
-call box.cmd "Columns" "Name\tValue\nOne\t123\nTwo\t456" --tab-width=8
+for /L %%L in (0 1 9999) do  (
+    set /a cnt+=1
+    echo Loop !cnt!
+    if /I !cnt! GTR  10 goto :break
+)
+:break
 ```
+Works nicely
 
-## Width and wrapping
+## Usefull links
 
-`--width=N` sets the inner width of the box, not including the left and right border characters.
+- [DosTips - The DOS Batch Guide @@dostips_icon@@]](https://www.dostips.com).  
+This DOS batch guide brings structure into your DOS script by using real function like constructs within a DOS batch file.
+ 
+<!--
+### Not so usefull links
 
-Example:
-
-```bat
-call box.cmd --width=40 "Wrapped" "This is a long message that should wrap inside the box."
-```
-
-Output:
-
-```text
-┏━━┫ Wrapped ┣━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ This is a long message that should    ┃
-┃ wrap inside the box.                  ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-```
-
-If the title is longer than the requested width, the box expands to fit the title.
-
-To disable wrapping:
-
-```bat
-call box.cmd --no-wrap --width=20 "No wrap" "This line will make the box wider"
-```
-
-## Supported styles
-
-### `heavy`
-
-```text
-┏━━┫ Title ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Message                              ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-```
-
-### `single`
-
-```text
-┌──┤ Title ├────────────────────────────┐
-│ Message                              │
-└──────────────────────────────────────┘
-```
-
-### `double`
-
-```text
-╔══╣ Title ╠════════════════════════════╗
-║ Message                              ║
-╚══════════════════════════════════════╝
-```
-
-### `round`
-
-```text
-╭──┤ Title ├────────────────────────────╮
-│ Message                              │
-╰──────────────────────────────────────╯
-```
-
-### `ascii`
-
-```text
-+--] Title [----------------------------+
-| Message                              |
-+--------------------------------------+
-```
-
-## Custom style
-
-Use `--style=custom` and define these environment variables:
-
-| Variable | Meaning |
-| -------- | ------- |
-| `BOX_TL` | Top-left corner |
-| `BOX_TR` | Top-right corner |
-| `BOX_BL` | Bottom-left corner |
-| `BOX_BR` | Bottom-right corner |
-| `BOX_H` | Horizontal line |
-| `BOX_V` | Vertical line |
-| `BOX_TITLE_L` | Left title separator |
-| `BOX_TITLE_R` | Right title separator |
-
-Example:
-
-```bat
-set "BOX_TL=*"
-set "BOX_TR=*"
-set "BOX_BL=*"
-set "BOX_BR=*"
-set "BOX_H=*"
-set "BOX_V=*"
-set "BOX_TITLE_L=*"
-set "BOX_TITLE_R=*"
-
-call box.cmd --style=custom "Custom" "Message"
-```
-
-## Examples
-
-### Heavy box
-
-```bat
-call box.cmd "My title" "Message content1\nMessage content2" heavy
-```
-
-### Single-line box
-
-```bat
-call box.cmd "My title" "Message content1\nMessage content2" single
-```
-
-### Double-line box
-
-```bat
-call box.cmd "My title" "Message content1\nMessage content2" double
-```
-
-### Rounded box
-
-```bat
-call box.cmd "My title" "Message content1\nMessage content2" round
-```
-
-### ASCII fallback
-
-```bat
-call box.cmd "My title" "Message content1\nMessage content2" ascii
-```
-
-### Named options
-
-```bat
-call box.cmd --title="My title" --message="Message content1\nMessage content2" --style=double --width=60
-```
-
-### Environment-driven usage
-
-```bat
-set "TITLE=My title"
-set "MSG=Message content1\nMessage content2"
-set "BOX_STYLE=round"
-set "BOX_WIDTH=60"
-
-call box.cmd
-```
-
-## Doxygen notes
-
-The script contains Doxygen/JSDoc-style comments.
-
-Because the file extension is `.cmd`, Doxygen may not scan it by default. Add something like this to your `Doxyfile`:
-
-```text
-INPUT                  = .
-FILE_PATTERNS          = *.cmd
-EXTENSION_MAPPING      = cmd=JavaScript
-EXTRACT_ALL            = YES
-JAVADOC_AUTOBRIEF      = YES
-OPTIMIZE_OUTPUT_JAVA   = YES
-```
-
-Alternatively, copy the JScript section to a `.js` file before generating documentation.
-
-## Limitations
-
-- Display width is calculated using JavaScript string length.
-- Emoji, combining marks, and East Asian full-width characters may not align perfectly.
-- The script is intended for normal console text, not full Markdown rendering.
+- [DOS Batch Programming - Eric Phelps](https://www.ericphelps.com/batch/)
+    - Common DOS workarounds and methods to accomplish tasks not covered in the Win9x manual. Particular emphasis on processing lists and lines of data.
+- [Converting DOS Batch Files to Shell Scripts](https://linux.die.net/abs-guide/dosbatch)
+    - Even the crippled DOS batch file language allowed writing some fairly powerful scripts and applications, though they often required extensive kludges and ...
+-->
