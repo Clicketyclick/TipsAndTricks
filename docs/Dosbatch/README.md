@@ -12,14 +12,14 @@ is a collection of generic, ready-to-use batch scripts - and has a life (and rep
 - The ["_" Windows Batch Library Tips &amp; Tricks](https://github.com/ClicketyClickDK/Underscore/blob/master/Tips2tricks.md)
 - [getBookCover](getBookCover/)  
 Download book covers by ISBN
-- [How to get piped input in windows batch file? @@Stackoverflow_icon@@](https://stackoverflow.com/a/52583931/7485823)
+- [How to get piped input in windows batch file? <img src="../icons/Stackoverflow.icon.png" width=32> ](https://stackoverflow.com/a/52583931/7485823)
 - [Elevation, local and domain admin](Elevator/)
 - [Get Doxy header](get_doxy_header/)
 - [`FORFILES`](forfiles/) is The-Windows-way of finding directories and files.
 - [Tail](../Powershell/tail.bat) Print the last 30 lines of each FILE to standard output.
 - [ISO 86001](Iso86001_date/) - Current date in ISO 86001 (YYYY-MM-DDThh:mm:ss.000z)
 - [getGithub.cmd](getGithub.cmd) - Download a repository and unpack specific directory - or entire repo
-- [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
+- [default value of Set /p in batch script <img src="../icons/Stackoverflow.icon.png" width=32>](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
 - [Ansi codes in CMD](Ansi/)
 - [Message box pop-op](Msgbox/) - Build a temporary cscript to display a pop-up msgbox
 - [Console box drawing](box_package/) - prints a titled console message box using Unicode box-drawing characters
@@ -33,7 +33,7 @@ findstr /I /R "@fn @brief" handleStrings.php
 
 ## Get first/last line from file
 
-Source: [Fetch only first line from text file using Windows Batch File @@Stackoverflow_icon@@](https://stackoverflow.com/a/46134683)
+Source: [Fetch only first line from text file using Windows Batch File <img src="../icons/Stackoverflow.icon.png" width=32>(https://stackoverflow.com/a/46134683)
 
 ```cmd
 
@@ -52,7 +52,7 @@ ECHO %last_line%
 
 ## ZIP
 
-On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser @@Superuser_icon@@](https://superuser.com/a/1473255) )
+On Windows 10 build 17063 or later you can use `tar.exe` (Source: [Superuser <img src="../icons/Superuser.icon.png" width=32>](https://superuser.com/a/1473255) )
 ```batch
 C:\> tar -xf archive.zip
 ```
@@ -106,7 +106,7 @@ Works nicely
 
 ## Usefull links
 
-- [DosTips - The DOS Batch Guide @@dostips_icon@@]](https://www.dostips.com).  
+- [DosTips - The DOS Batch Guide <img src="https://www.dostips.com/DosTipsLogo.gif" width=32>]](https://www.dostips.com).  
 This DOS batch guide brings structure into your DOS script by using real function like constructs within a DOS batch file.
  
 <!--
