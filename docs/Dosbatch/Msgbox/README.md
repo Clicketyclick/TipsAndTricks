@@ -4,7 +4,7 @@ Build a temporary cscript to display a pop-up
 `msgbox "message" "title" MB_OK+MB_ICONINFO`
 
 ```bat
-@ECHO OFF&SetLocal EnableDelayedExpansion
+::@ECHO OFF&SetLocal EnableDelayedExpansion
 ::**
 :: * @file       msgbox.cmd
 :: * @brief      Message box pop-op
@@ -22,16 +22,17 @@ Build a temporary cscript to display a pop-up
 :: * 
 :: * Message can have newline "\n" and tabs "\t"
 :: * Icons are prefixed to title as well
-:: *
-:: * ```bat
-:: * call msgbox.cmd "You're not admin!.\n\tThis is required to run this function" "Not elevated" MB_ICONWARNING+MB_OK
-:: *```
+:: * 
+:: * @code
+:: * call msgbox.cmd "You're not admin.\n\tThis is required to run this function" "Not elevated" MB_ICONWARNING+MB_OK
+:: * @endcode
+:: * 
 :: * Should give
-:: *```console
+::@verbatim
 :: * ⚠ Not elevated
-:: * You're not admin!.
+:: * You're not admin.
 :: *    This is required to run this function
-:: *```
+::@endverbatim
 :: *
 :: * @see        https://ss64.com/vb/msgbox.html
 :: * @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
@@ -78,6 +79,7 @@ set "styleExpr=%~3"
 if not defined styleExpr set "styleExpr=0"
 2>nul set /a "style=%styleExpr%"
 if errorlevel 1 set "style=0"
+
 
 (
     echo msg = WScript.Arguments^(0^)
