@@ -1,5 +1,6 @@
 
-@@Iptc_logo@@
+
+<img src="../icons/Iptc.logo.png" width=64 style="float: right;">
 
 # Image tagging
 
