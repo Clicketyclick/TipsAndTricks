@@ -1,4 +1,4 @@
-<img src="../icons/Marcdown.logo.png" width=64 style="float: right;">
+<img src="../icons/Markdown.logo.png" width=64 style="float: right;">
 
 ## Markdown
 
