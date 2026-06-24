@@ -106,7 +106,7 @@ Works nicely
 
 ## Usefull links
 
-- [DosTips - The DOS Batch Guide <img src="https://www.dostips.com/DosTipsLogo.gif" width=32>]](https://www.dostips.com).  
+- [DosTips - The DOS Batch Guide <img src="../icons/Dosbatch.logo.png" width=32>](https://www.dostips.com).  
 This DOS batch guide brings structure into your DOS script by using real function like constructs within a DOS batch file.
  
 <!--
