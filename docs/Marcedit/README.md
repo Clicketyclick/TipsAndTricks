@@ -1,4 +1,5 @@
-[@@Marcedit_logo@@](https://marcedit.reeset.net/)
+<img src="../icons/Marcedit.logo.png" width=64 style="float: right;">
+
 ## [MarcEdit](https://marcedit.reeset.net/)
 
 > MarcEdit has become one of the more complete metadata edit suites available to librarians.
