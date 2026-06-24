@@ -5,7 +5,7 @@
 
 |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|
 |---|---|
-|[ <img src="icons/CSS.icon.png" width=32> CSS](/TipsAndTricks/CSS/)                                      |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](TipsAndTricks/Dosbatch/)
+|[ <img src="icons/CSS.icon.png" width=32> CSS](/TipsAndTricks/CSS/)                                      |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](Dosbatch/)
 |[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](/TipsAndTricks/Exiftools/)                      |[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](TipsAndTricks/Ghostscript/)
 |[ <img src="icons/Github.icon.png" width=32> Github](/TipsAndTricks/Github/)                              |[ <img src="icons/Hardware.icon.png" width=32> Hardware](TipsAndTricks/Hardware/)  
 |[ <img src="icons/Iptc.icon.png" width=32> IPTC](/TipsAndTricks/Iptc/)                                   |[ <img src="icons/Javascript.icon.png" width=32> Javascripts](TipsAndTricks/Javascript/)  
