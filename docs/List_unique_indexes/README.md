@@ -1,6 +1,6 @@
 ## List unique indexes
 
-Source: [@@Stackoverflow_icon@@](https://stackoverflow.com/a/53629321/7485823)
+Source: [<img src="../icons/Stackoverflow.icon.png" width=32>](https://stackoverflow.com/a/53629321/7485823)
 
 As of sqlite 3.16.0 you could also use pragma functions:
 
