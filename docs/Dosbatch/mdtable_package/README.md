@@ -4,6 +4,19 @@
 
 It is a hybrid Windows Batch + JScript script, so it can be called directly from `cmd.exe` without installing Node.js, Python, PowerShell modules, or external tools.
 
+## Included
+
+```  
+mdtable_package/
+├─ mdtable.cmd
+├─ README-mdtable.md
+└─ examples/
+   ├─ basic.md
+   ├─ long.md
+   ├─ alignment.md
+   └─ run_examples.cmd
+```
+
 ## Features
 
 - Reads Markdown pipe tables from a file or from `STDIN`
