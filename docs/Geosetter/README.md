@@ -1,5 +1,6 @@
 
-
+<img src="https://geosetter.de/wp-content/uploads/2018/05/cropped-icon48-1.png"  width=64 style="float: right;">
+## Geosetter
 
 https://www.pentaxforums.com/forums/32-digital-processing-software-printing/471356-geosetter-v4-0-49-issue-exiftool-workaround.html
   Recent versions of exiftool have changed their directory structures and as a consequence Geosetter after any automated update of exiftool now breaks:
