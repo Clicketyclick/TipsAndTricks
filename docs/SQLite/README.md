@@ -1,4 +1,4 @@
-@@Sqlite_logo@@
+<img src="../icons/Sqlite.logo.png" width=128 style="float: right;">
 
 ## SQLite
 
