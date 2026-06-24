@@ -1,6 +1,6 @@
 
 
-<img src="../icons/Iptc.logo.png" width=64 style="float: right;">
+<img src="../icons/Iptc.logo.png" width=256 style="float: right;">
 
 # Image tagging
 
