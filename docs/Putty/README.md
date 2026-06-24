@@ -1,4 +1,4 @@
-@@Putty_logo@@
+<img src="../icons/Putty.logo.png" width=64 style="float: right;">
 
 ## Putty
 
