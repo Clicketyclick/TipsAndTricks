@@ -1,4 +1,4 @@
-@@Marc_logo@@
+<img src="../icons/Marc.logo.png" width=64 style="float: right;">
 
 # MARC based tips
 
