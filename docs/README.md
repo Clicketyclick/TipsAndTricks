@@ -16,7 +16,7 @@
 |[ <img src="icons/Notepadpp.icon.png" width=32> Notepad++](Notepad++/)               |[ <img src="icons/Php.icon.png" width=32> PHP](Php/)	                                        
 |[ <img src="icons/Plantuml.icon.png" width=32> Plantuml](Plantuml/)                  |[ <img src="icons/Powershell.icon.png" width=32> Powershell](Powershell/)                    
 |[ <img src="icons/Putty.icon.png" width=32> PuTTY](Putty/)                           |[ <img src="icons/Shell.icon.png" width=32> Shell](Shell/)   Linux batch: Shell, Bash, vi etc.   
-|[ <img src="icons/Sqlite.icon.png" width=32> SQLite](Sqlite/)                        |[ <img src="icons/Synology.icon.png" width=32> Synology](Synology/)                       
+|[ <img src="icons/Sqlite.icon.png" width=32> SQLite](SQLite/)                        |[ <img src="icons/Synology.icon.png" width=32> Synology](Synology/)                       
 |[ <img src="icons/Totalcmd.icon.png" width=32> TotalCmd](TotalCmd/)                  |[ <img src="icons/Unicode.icon.png" width=32> Unicode](Unicode/)   Unicode, UTF-8         
 |[ <img src="icons/Vbscript.icon.png" width=32> Vbscript](Vbscript/)                  |[ <img src="icons/Windows.icon.png" width=32> M$ Windows](Windows/)                      
 |[ <img src="icons/Xnview.icon.png" width=32> Xnview](Xnview/)                  
