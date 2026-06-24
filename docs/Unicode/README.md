@@ -1,4 +1,4 @@
-@@Unicode_logo@@
+<img src="../icons/Unicode.logo.png" width=128 style="float: right;">
 
 ## Unicode
 
