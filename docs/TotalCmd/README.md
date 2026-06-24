@@ -1,4 +1,4 @@
-@@Totalcmd_logo@@
+<img src="../icons/Totalcmd.logo.png" width=128 style="float: right;">
 
 ## Totalcmd
 
