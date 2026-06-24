@@ -1,4 +1,4 @@
-@@Ghostscript_logo@@
+<img src="../icons/Ghostscript.logo.png" width=64 style="float: right;">
 
 ## Ghostscript
 
