@@ -3,11 +3,11 @@
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
 
 
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;sub|
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|
 |---|---|
-|[ <img src="icons/CSS.icon.png" width=32> CSS](/TipsAndTricks/CSS/)                                      |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](Dosbatch/)
-|[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](/TipsAndTricks/Exiftools/)                      |[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](TipsAndTricks/Ghostscript/)
-|[ <img src="icons/Github.icon.png" width=32> Github](/TipsAndTricks/Github/)                              |[ <img src="icons/Hardware.icon.png" width=32> Hardware](TipsAndTricks/Hardware/)  
+|[ <img src="icons/CSS.icon.png" width=32> CSS](CSS/)                                      |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](Dosbatch/)
+|[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](Exiftools/)                      |[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](Ghostscript/)
+|[ <img src="icons/Github.icon.png" width=32> Github](Github/)                              |[ <img src="icons/Hardware.icon.png" width=32> Hardware](Hardware/)  
 |[ <img src="icons/Iptc.icon.png" width=32> IPTC](/TipsAndTricks/Iptc/)                                   |[ <img src="icons/Javascript.icon.png" width=32> Javascripts](TipsAndTricks/Javascript/)  
 |[ <img src="icons/Keepass.icon.png" width=32> KeePass](TipsAndTricks/Keepass/) Password Manager        |[ <img src="icons/Marc.icon.png" width=32> MARC?](TipsAndTricks/Marc/) MARC21, danMARC2, BESmarc  
 |[ <img src="icons/Markdown.icon.png" width=32> Markdown](TipsAndTricks/Markdown/)                   |[ <img src="icons/Marcedit.icon.png" width=32> Marcedit](TipsAndTricks/Marcedit/)
