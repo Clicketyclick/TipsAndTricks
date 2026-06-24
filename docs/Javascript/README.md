@@ -1,4 +1,4 @@
-@@Javascript_logo@@
+<img src="../icons/Javascript.logo.png" width=64 style="float: right;">
 
 ## Javascripts
 
