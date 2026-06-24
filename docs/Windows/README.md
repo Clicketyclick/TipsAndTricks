@@ -1,4 +1,4 @@
-@@Windows_logo@@
+<img src="../icons/Windows.logo.png" width=128 style="float: right;">
 
 ## M$ Windows
 
