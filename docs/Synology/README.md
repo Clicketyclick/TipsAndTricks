@@ -1,4 +1,4 @@
-@@Synology_logo@@
+<img src="../icons/Synology.logo.png" width=128 style="float: right;">
 
 ## Synology NAS
 
