@@ -3,7 +3,7 @@
 - [Index](/TipsAndTricks) for various tips and tricks. Index is subdevided by platform
 
 
-|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;sub|
 |---|---|
 |[ <img src="icons/CSS.icon.png" width=32> CSS](/TipsAndTricks/CSS/)                                      |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](Dosbatch/)
 |[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](/TipsAndTricks/Exiftools/)                      |[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](TipsAndTricks/Ghostscript/)
