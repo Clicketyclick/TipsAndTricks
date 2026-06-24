@@ -2,7 +2,9 @@
 ![dos_batch_scripts](https://user-images.githubusercontent.com/15011459/209822156-0371b1a4-ee1f-43ef-a11d-97cdcc4742dd.jpg)
 <<img align="right" width="100" height=auto src="dos_batch_scripts.jpg">
 -->
-@@Dosbatch_logo@@
+
+<img src="../icons/Dosbatch.logo.png" width=64 style="float: right;">
+
 # DOS batch scripts
 
 - The ["_" Windows Batch Library](https://github.com/ClicketyClickDK/Underscore) (The "underscore" Windows Batch Library)  
