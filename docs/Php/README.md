@@ -1,4 +1,4 @@
-@@Php_logo@@
+<img src="../icons/Php.logo.png" width=64 style="float: right;">
 
 ## PHP 
 
