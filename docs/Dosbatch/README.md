@@ -20,6 +20,8 @@ Download book covers by ISBN
 - [default value of Set /p in batch script @@Stackoverflow_icon@@](https://stackoverflow.com/a/48655341): `SET /P "MyVar=" || SET "MyVar=My Default Value"`
 - [Ansi codes in CMD](Ansi/)
 - [Message box pop-op](Msgbox/) - Build a temporary cscript to display a pop-up msgbox
+- [Console box drawing](box_package/) - prints a titled console message box using Unicode box-drawing characters
+- [MardDown to Console table drawing](mdtable_package/) - converts a Markdown pipe table into a console table using box-drawing characters.
 
 ## Findstr w. OR
 
