@@ -3,3 +3,4 @@
 ## Hardware
 
 - [Canon scanners](canon)
+- [Garmin](Garmin)
