@@ -2,5 +2,5 @@
 
 ## Hardware
 
-- [Canon scanners](canon)
+- [Canon scanners](Canon)
 - [Garmin](Garmin)
