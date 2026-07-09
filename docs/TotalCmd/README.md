@@ -2,27 +2,21 @@
 
 ## Totalcmd
 
-### Backup
+<details><summary>Files to backup</summary>
 
-- AppData/Roaming/Giesler/wcx_ftp.ini
-- *.key
+- `AppData/Roaming/Giesler/wcx_ftp.ini`
+- `*.key`
+</details>
 
+<details><summary>Hotkey configuration</summary>
 
-### Hotkeys
-
-Configuration / Options / Misc
+`Configuration` / `Options` / `Misc`
 
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> = cm_FileSync
 
+</details>
 
-### Rename
-
-Mask: ISO8601
-- Filename: `[N].[Y]-[M]-[D]T[hms]`
-  - or `[N].[d]T[t]`
-- Extension: `[E]`
-
-### Preserve data on FTP upload 
+<details><summary>Preserve data on FTP upload</summary>
 
 https://www.ghisler.ch/board/viewtopic.php?t=48954
 
@@ -39,13 +33,17 @@ PreserveDates=1
 SpecialFlags=4096
 ```
 
+</details>
+
 ### INI tricks
 
-- "F2 Queue"
+<details><summary>F2 Queue</summary>
 
 ```ini
 [Configuration]
 AlwaysCopyInBackground=2
 ```
-
+</details>
 - [Default rename mask in Multi-rename tool](Default rename mask in Multi-rename tool/)
+
+
