@@ -1,5 +1,14 @@
 
-##     Default rename mask in Multi-rename tool
+### Rename
+
+Reference: https://www.ghisler.ch/wiki/index.php/Multi-rename_tool
+
+Mask: ISO8601
+- Filename: `[N].[Y]-[M]-[D]T[hms]`
+  - or `[N].[d]T[t]`
+- Extension: `[E]`
+
+### Default rename mask in Multi-rename tool
 
 
 > Is there a way to redefine the default rename mask in Totalcmd's Multi-rename tool?
