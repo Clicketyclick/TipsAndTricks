@@ -41,9 +41,11 @@ SpecialFlags=4096
 
 ### INI tricks
 
-"F2 Queue"
+- "F2 Queue"
+
 ```ini
 [Configuration]
 AlwaysCopyInBackground=2
 ```
 
+- [Default rename mask in Multi-rename tool](Default rename mask in Multi-rename tool/)
