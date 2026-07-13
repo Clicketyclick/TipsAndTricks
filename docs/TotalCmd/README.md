@@ -47,3 +47,6 @@ AlwaysCopyInBackground=2
 - [Default rename mask in Multi-rename tool](Default rename mask in Multi-rename tool/)
 
 
+### SSH / SFTP
+
+- [Total Commander SFTP Setup to One.com](Ssh-ftp@one.com/)
