@@ -1,7 +1,7 @@
 ## Update a date stamp in the current file on save
 
 <!-- https://chatgpt.com/c/6a56012d-b448-83eb-a53b-a9631cec6ff9 -->
-> [!TIP]
+> [!CAUTION]
 > Add separator `T` between date and time to match ISO-8601 [^1].
 > ```py
 >     #timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -9,6 +9,10 @@
 > ```
 
 [^1]: `T` is the time designator that precedes the time components of the duration representation
+
+> [!TIP]
+> Use updated [`UpdateTimestamp.py`](UpdateTimestamp.py) that supports JSON style too.
+
 
 The most reliable approach is the **PythonScript** plugin, using Notepad++’s `FILEBEFORESAVE` event. This updates the text immediately before Notepad++ writes the file. PythonScript supports persistent callbacks for document save events. ([Super User][1])
 
