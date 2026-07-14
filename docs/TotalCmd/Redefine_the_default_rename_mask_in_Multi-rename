@@ -1,0 +1,50 @@
+
+## Redefine the default rename mask in Multi-rename tool
+
+Not by overwriting Total Commander’s built-in **`<Default>`** entry. That entry resets the Multi-Rename Tool to “no changes to the names.” ([ghisler.ch][1])
+
+The practical way is to save your preferred rename mask as a preset, then tell Total Commander to load that preset whenever the Multi-Rename Tool opens.
+
+### Set your own startup default
+
+1. Open **Multi-Rename Tool** with `Ctrl+M`.
+2. Enter your preferred mask, for example:
+
+```text
+Rename mask: file name   [Y]-[M]-[D]_[N]
+Extension                [E]
+```
+
+3. Press **F2 Load/save settings** → **Save settings**.
+4. Give it a name, for example:
+
+```text
+MyDefault
+```
+
+5. Edit `wincmd.ini` via **Configuration → Change Settings Files Directly...**
+6. Under `[Configuration]`, add:
+
+```ini
+[Configuration]
+MultiRenameLoadSettings=MyDefault
+```
+
+`MultiRenameLoadSettings` defines what settings the Multi-Rename Tool starts with: empty means last-used settings, a valid name loads that saved preset, and an unknown name loads the built-in defaults. ([ghisler.ch][2])
+
+The saved MRT presets themselves are stored in `wincmd.ini` under the `[rename]` section, unless that section has been redirected to another file. ([ghisler.ch][3])
+
+### Alternative: button or shortcut only
+
+Instead of changing global MRT startup behavior, you can create a button/user command with:
+
+```text
+MULTIRENAME MyDefault
+```
+
+That opens MRT with your saved preset without changing how plain `Ctrl+M` behaves. The `MULTIRENAME <profile_name>` command is the standard way to launch MRT with a saved rename profile. ([ghisler.ch][4])
+
+[1]: https://www.ghisler.ch/wiki/index.php/Multi-rename_tool "Multi-rename tool - TotalcmdWiki"
+[2]: https://ghisler.ch/board/viewtopic.php?t=49044 "9.12: multi file rename, lower cases as default setting? - Total Commander"
+[3]: https://www.ghisler.ch/board/viewtopic.php?t=84251 "Is there a way to make the rename forget? - Total Commander"
+[4]: https://ghisler.ch/board/viewtopic.php?t=42942 "Multi Rename Tool: change the defaults settings - Total Commander"
