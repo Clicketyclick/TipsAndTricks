@@ -37,15 +37,9 @@ SpecialFlags=4096
 
 ### INI tricks
 
-<details><summary>F2 Queue</summary>
-
-```ini
-[Configuration]
-AlwaysCopyInBackground=2
-```
-</details>
+- [Redefine the default rename mask in Multi-rename tool](Redefine_the_default_rename_mask_in_Multi-rename)
 - [Default rename mask in Multi-rename tool](Default rename mask in Multi-rename tool/)
-
+- [Always copy in the background (F2 Queue) ](Queue_always_copy_background)
 
 ### SSH / SFTP
 
