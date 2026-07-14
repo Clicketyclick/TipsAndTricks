@@ -119,5 +119,3 @@ To restrict it to PHP files, add this at the beginning of `update_timestamp_on_s
         return
 ```
 
-[1]: https://superuser.com/questions/1850364/notepad-modify-document-on-save "script - Notepad++ : modify document on Save - Super User"
-[2]: https://github.com/bruderstein/PythonScript/blob/master/docs/source/scintilla.rst?utm_source=chatgpt.com "PythonScript/docs/source/scintilla.rst at master"
