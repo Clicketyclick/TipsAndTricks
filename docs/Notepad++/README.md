@@ -1,6 +1,7 @@
 # Notepad++ <img src='../icons/Notepadpp.logo.png' width=256>
 
 - [Configuration](Configuration/)
+- [Update a date stamp in the current file on save](Update_modified_timestamp/)
 
 <!--
 <fieldset>
