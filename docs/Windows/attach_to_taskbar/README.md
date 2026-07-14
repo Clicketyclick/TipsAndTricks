@@ -1,6 +1,14 @@
-## Attatch to taskbar
+## Attatche to taskbar
 
 ### Shortcut
+> [!IMPORTANT]
+> None of the tips and by-passing from various sites actually works in Window 11!
+> 
+> Create a shortcut to `cmd.exe` and copy it to taskbar. THEN edit the shortcut on the taskbar to run your script!
+
+
+<del>
+
 
 Make a directory for you shortcuts and icon like `%HOMEPATH%\links`
 
@@ -30,5 +38,8 @@ Use PowerShell:
 DEL /F /S /Q /A "%AppData%\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\*"
 REG DELETE HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband /F
 taskkill /f /im explorer.exe
+
 start explorer.exe
 ```
+-->
+</del>
