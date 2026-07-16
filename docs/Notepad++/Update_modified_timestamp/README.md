@@ -12,6 +12,8 @@
 
 > [!TIP]
 > Use updated [`UpdateTimestamp.py`](UpdateTimestamp.py) that supports JSON style too.
+>
+> This version is expanded to update `@modified`, `@release`, and `@revision`.
 
 
 The most reliable approach is the **PythonScript** plugin, using Notepad++’s `FILEBEFORESAVE` event. This updates the text immediately before Notepad++ writes the file. PythonScript supports persistent callbacks for document save events. ([Super User][1])
