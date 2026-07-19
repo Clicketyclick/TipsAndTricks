@@ -6,18 +6,19 @@
 
 The host `ssh.XXX.service.one` is an **SSH/SFTP server**, not a conventional FTP server. 
 Total Commander’s normal **FTP Connect** dialog does not handle SFTP; SFTP requires the separate 
-Total Commander SFTP file-system plugin. one.com also documents this server access specifically as SSH/SFTP. ([ghisler.com][1])
+Total Commander SFTP file-system plugin. one.com also documents this server access specifically as SSH/SFTP. ([ghisler.com][^1])
 
 ## Configure Total Commander
 
 1. Install the official **SFTP plugin** from Total Commander’s plugin page. The current Windows plugin is SFTP 3.10.
 2. Do **not** use:
-   `Net → FTP Connect` or `Ctrl+F`
-3. Open the drive list with `Alt+F1` or `Alt+F2`.
+   `Net → FTP Connect` or <kbd>Ctrl</kbd>+<kbd>F</kbd>
+3. Open the drive list with <kbd>Alt</kbd>+<kbd>F1</kbd> or <kbd>Alt</kbd>+<kbd>F2</kbd>.
 4. Select **Network Neighborhood**: `\`
 5. Open **Secure FTP**.
-6. Choose `_F7=New Connection`, or press `F7` and enter a name for the connection. The SFTP configuration dialog appears after you enter the connection name. ([ghisler.ch][2])
-7. Configure it approximately as follows:
+6. Choose `_F7=New Connection`, or press <kbd>F7</kbd> and enter a name for the connection. The SFTP configuration dialog appears after you enter the connection name. ([ghisler.ch][^2])
+   1. <kbd>Alt</kbd>+<kbd>Enter</kbd> for editing an entry 
+8. Configure it approximately as follows:
 
 ```text
 Connect to:  ssh.XXX.service.one
@@ -45,7 +46,7 @@ Control Panel
 ```
 
 Use the username and password shown or created there. The SSH/SFTP password can 
-differ from the ordinary FTP password. ([One.com Support][3])
+differ from the ordinary FTP password. ([One.com Support][^3])
 
 ## Compare with FileZilla
 
@@ -66,7 +67,10 @@ configure that same private key in the plugin.
 The most likely cause of your current error is that Total Commander is 
 attempting ordinary FTP—usually port 21—against an SFTP/SSH hostname on port 22.
 
-[1]: https://www.ghisler.com/plugins.htm?utm_source=chatgpt.com "Total Commander - Plugins"
-[2]: https://www.ghisler.ch/board/viewtopic.php?t=37728 "SFTP Plugin: How to actually USE this plugin? - Total Commander"
-[3]: https://help.one.com/hc/en-us/articles/115005585689-Using-SFTP "Using SFTP – Support | one.com"
+[^1]: https://www.ghisler.com/plugins.htm?utm_source=chatgpt.com "Total Commander - Plugins"
+[^2]: https://www.ghisler.ch/board/viewtopic.php?t=37728 "SFTP Plugin: How to actually USE this plugin? - Total Commander"
+[^3]: https://help.one.com/hc/en-us/articles/115005585689-Using-SFTP "Using SFTP – Support | one.com"
+
+---
+
 
