@@ -1,7 +1,7 @@
 
 #::**
 #:: * @file       UpdateTimestamp.py
-#:: * @brief      Make Notepad++ update a date stamp in the current file on save
+#:: * @brief      Make Notepad++ update a date stamp in the current file on save.
 #:: * @details    Define the supported tags in one list and update every existing occurrence of `@date`
 #:: * 
 #:: *  Legacy date tags (`@modified`, `@release`, and `@revision`) are removed and replaced by `@date`.
@@ -9,13 +9,17 @@
 #:: * 
 #:: * Functions|Brief
 #:: * ---|---
-#:: * update_timestamp_on_save(args)    | Pattern match and replace.
+#:: * update_date_on_save(args)                 | Pattern match and replace.
+#:: * merge_json_date_fields(text, timestamp)   | Updating date in JSON
+#:: * merge_text_date_fields(text, timestamp)   | Updating date in text
 #:: * 
-#:: * @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
-#:: * @author     Erik Bachmann <Erik@ClicketyClick.dk>
-#:: * @since      2026-07-14T16:50:00 / erba
-#:: * @version    2026-07-16T13:36:07
-#:: * @date       2026-07-20T13.50.23
+#:: * @note         `@version` is not modified-
+#:: * 
+#:: * @copyright    http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+#:: * @author       Erik Bachmann <Erik@ClicketyClick.dk>
+#:: * @since        2026-07-14T16:50:00 / erba
+#:: * @version      2026-07-16T13:36:07
+#:: * @date         2026-07-20T14.00.28
 #:: **
 
 from datetime import datetime
