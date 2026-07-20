@@ -56,6 +56,7 @@ Copy from one table to another - one column at a time
 - [Get the latest X rows of each action](latest_x_rows_of_each_action) Tail for SQLite
 - [Diff on two tables](diff_on_two_tables)
 - [Queue system](Queue/)
+- [Efficiently count rows](Count_rows/)
 
 ### Strings
 
