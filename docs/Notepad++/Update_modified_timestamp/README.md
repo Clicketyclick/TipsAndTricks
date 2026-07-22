@@ -61,9 +61,10 @@ Save it as:
 ```text
 UpdateTimestamp.py
 ```
+(i.e. `"%USERPROFILE%\AppData\Roaming\Notepad++\plugins\Config\PythonScript\scripts\UpdateTimestamp.py"`)
 
-Insert:
-
+Insert the souce from [UpdateTimestamp.py](UpdateTimestamp.py)
+<!--
 ```python
 from datetime import datetime
 from Npp import editor, notepad, NOTIFICATION
@@ -93,6 +94,7 @@ notepad.callback(
     [NOTIFICATION.FILEBEFORESAVE]
 )
 ```
+-->
 
 `editor.rereplace()` performs a regular-expression replacement directly in the active document; the final argument limits it to the first matching line. ([GitHub][2])
 
@@ -110,7 +112,7 @@ Set **Initialisation** to:
 ALLSTARTUP
 ```
 
-Then add this line to PythonScript’s `startup.py`:
+Then add this line to PythonScript’s `startup.py` (in [`"C:\Program Files\Notepad++\plugins\PythonScript\scripts\startup.py"`]):
 
 ```python
 import UpdateTimestamp
