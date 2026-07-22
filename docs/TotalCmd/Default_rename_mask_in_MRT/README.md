@@ -1,5 +1,4 @@
-
-### Rename
+### Rename using Multi-rename tool
 
 Reference: https://www.ghisler.ch/wiki/index.php/Multi-rename_tool
 
