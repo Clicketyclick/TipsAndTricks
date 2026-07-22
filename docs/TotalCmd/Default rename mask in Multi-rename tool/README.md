@@ -13,6 +13,10 @@ Mask: ISO8601
 
 > Is there a way to redefine the default rename mask in Totalcmd's Multi-rename tool?
 
+changes to the names.” ([ghisler.ch](https://www.ghisler.ch/wiki/index.php/Multi-rename_tool "Multi-rename tool - TotalcmdWiki")[^1])
+
+The practical way is to save your preferred rename mask as a preset, then tell Total Commander to load that preset whenever the Multi-Rename Tool opens.
+
 <!--
 Yes, you can redefine the default rename mask in Total Commander's Multi-Rename Tool.
 -->
@@ -22,11 +26,35 @@ Yes, you can redefine the default rename mask in Total Commander's Multi-Rename 
 
 2. **Set as default**: Add this line to your `wincmd.ini` under `[Configuration]`:
    ```
+   [Configuration]
    MultiRenameLoadSettings=YourProfileName
    ```
    This will automatically load your saved mask every time you open the Multi-Rename Tool.
 
 3. **Toolbar button**: Create a button with command `MULTIRENAME YourProfileName` to always open the tool with your custom mask.
+
+
+`MultiRenameLoadSettings` defines what settings the Multi-Rename Tool starts with: empty means last-used settings, a valid name loads that saved preset, and an unknown name loads the built-in defaults. ([ghisler.ch](https://ghisler.ch/board/viewtopic.php?t=49044 "9.12: multi file rename, lower cases as default setting? - Total Commander")[^2])
+
+The saved MRT presets themselves are stored in `wincmd.ini` under the `[rename]` section, unless that section has been redirected to another file. ([ghisler.ch](https://www.ghisler.ch/board/viewtopic.php?t=84251 "Is there a way to make the rename forget? - Total Commander")[^3])
+
+### Alternative: button or shortcut only
+
+Instead of changing global MRT startup behavior, you can create a button/user command with:
+
+```text
+MULTIRENAME MyDefault
+```
+
+That opens MRT with your saved preset without changing how plain `Ctrl+M` behaves. The `MULTIRENAME <profile_name>` command is the standard way to launch MRT with a saved rename profile. ([ghisler.ch](https://ghisler.ch/board/viewtopic.php?t=42942 "Multi Rename Tool: change the defaults settings - Total Commander")[^4])
+
+
+---
+[^1]: https://www.ghisler.ch/wiki/index.php/Multi-rename_tool "Multi-rename tool - TotalcmdWiki"
+[^2]: https://ghisler.ch/board/viewtopic.php?t=49044 "9.12: multi file rename, lower cases as default setting? - Total Commander"
+[^3]: https://www.ghisler.ch/board/viewtopic.php?t=84251 "Is there a way to make the rename forget? - Total Commander"
+[^4]: https://ghisler.ch/board/viewtopic.php?t=42942 "Multi Rename Tool: change the defaults settings - Total Commander"
+
 
 <!--
 Total Commander's Multi-Rename Tool (MRT) lets you save a set of settings (including the rename mask) and then load that set automatically every time MRT opens.
