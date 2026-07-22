@@ -12,7 +12,7 @@ Mask: ISO8601
 
 > Is there a way to redefine the default rename mask in Totalcmd's Multi-rename tool?
 
-changes to the names.” ([ghisler.ch](https://www.ghisler.ch/wiki/index.php/Multi-rename_tool "Multi-rename tool - TotalcmdWiki")[^1])
+Not by overwriting Total Commander’s built-in **`<Default>`** entry. That entry resets the Multi-Rename Tool to “no changes to the names.”  ([ghisler.ch](https://www.ghisler.ch/wiki/index.php/Multi-rename_tool "Multi-rename tool - TotalcmdWiki")[^1])
 
 The practical way is to save your preferred rename mask as a preset, then tell Total Commander to load that preset whenever the Multi-Rename Tool opens.
 
