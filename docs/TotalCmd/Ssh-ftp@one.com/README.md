@@ -6,7 +6,7 @@
 
 The host `ssh.XXX.service.one` is an **SSH/SFTP server**, not a conventional FTP server. 
 Total Commander’s normal **FTP Connect** dialog does not handle SFTP; SFTP requires the separate 
-Total Commander SFTP file-system plugin. one.com also documents this server access specifically as SSH/SFTP. ([ghisler.com](https://www.ghisler.com/plugins.htm?utm_source=chatgpt.com "Total Commander - Plugins")[^1])
+Total Commander SFTP file-system plugin. one.com also documents this server access specifically as SSH/SFTP. ([ghisler.com<img src="../../icons/Totalcmd.icon.png" width=16>](https://www.ghisler.com/plugins.htm?utm_source=chatgpt.com "Total Commander - Plugins")[^1])
 
 ## Configure Total Commander
 
@@ -16,7 +16,7 @@ Total Commander SFTP file-system plugin. one.com also documents this server acce
 3. Open the drive list with <kbd>Alt</kbd>+<kbd>F1</kbd> or <kbd>Alt</kbd>+<kbd>F2</kbd>.
 4. Select **Network Neighborhood**: `\`
 5. Open **Secure FTP**.
-6. Choose `_F7=New Connection`, or press <kbd>F7</kbd> and enter a name for the connection. The SFTP configuration dialog appears after you enter the connection name. ([ghisler.ch](https://www.ghisler.ch/board/viewtopic.php?t=37728 "SFTP Plugin: How to actually USE this plugin? - Total Commander")[^2])
+6. Choose `_F7=New Connection`, or press <kbd>F7</kbd> and enter a name for the connection. The SFTP configuration dialog appears after you enter the connection name. ([ghisler.ch<img src="../../icons/Totalcmd.icon.png" width=16>](https://www.ghisler.ch/board/viewtopic.php?t=37728 "SFTP Plugin: How to actually USE this plugin? - Total Commander")[^2])
    1. <kbd>Alt</kbd>+<kbd>Enter</kbd> for editing an entry 
 8. Configure it approximately as follows:
 
