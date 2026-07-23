@@ -43,4 +43,4 @@ SpecialFlags=4096
 
 ### SSH / SFTP
 
-- [Total Commander SFTP Setup to One.com](Ssh-ftp@one.com/)
+- [Total Commander SFTP Setup](Ssh-ftp@one.com/)
