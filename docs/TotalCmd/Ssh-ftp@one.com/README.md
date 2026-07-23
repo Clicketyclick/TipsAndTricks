@@ -46,7 +46,7 @@ Control Panel
 ```
 
 Use the username and password shown or created there. The SSH/SFTP password can 
-differ from the ordinary FTP password. ([One.com Support](https://help.one.com/hc/en-us/articles/115005585689-Using-SFTP "Using SFTP – Support | one.com")[^3])
+differ from the ordinary FTP password. ([One.com Support<img src="../icons/One_com.icon.png" width=16>](https://help.one.com/hc/en-us/articles/115005585689-Using-SFTP "Using SFTP – Support | one.com")[^3])
 
 ## Compare with FileZilla
 
