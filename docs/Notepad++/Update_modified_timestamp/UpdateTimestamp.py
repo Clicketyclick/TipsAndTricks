@@ -5,18 +5,20 @@
 #:: * @details    Define the supported tags in one list and update every existing occurrence of `@date`
 #:: * 
 #:: *  Legacy date tags (`@modified`, `@release`, and `@revision`) are removed and replaced by `@date`.
-#:: *  `@version` and `@since` receive the current timestamp. If their value contains a semantic
+#:: *  `@version` receives the current timestamp on every save. If its value contains a semantic
 #:: *  version, the semantic version and any following text are preserved after the timestamp.
+#:: *  `@since` is initialized only once. An existing timestamp is preserved unchanged.
 #:: * 
 #:: * Functions|Brief
 #:: * ---|---
 #:: * update_date_on_save(args)                 | Pattern match and replace.
 #:: * merge_json_date_fields(text, timestamp)   | Updating date in JSON
 #:: * merge_text_date_fields(text, timestamp)   | Updating date in text
-#:: * update_json_timestamp_fields(text, timestamp) | Updating `@version` and `@since` in JSON
-#:: * update_text_timestamp_fields(text, timestamp) | Updating `@version` and `@since` in text
+#:: * update_json_timestamp_fields(text, timestamp) | Refresh `@version`; initialize `@since`
+#:: * update_text_timestamp_fields(text, timestamp) | Refresh `@version`; initialize `@since`
 #:: * 
 #:: * @note         Semantic versions such as `1.2.3` are retained after the timestamp.
+#:: * @note         `@since` is write-once after it contains an ISO-style timestamp.
 #:: * 
 #:: * @copyright    http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: * @author       Erik Bachmann <Erik@ClicketyClick.dk>
@@ -39,12 +41,17 @@ LEGACY_DATE_TAGS = (
     "@revision",
 )
 
-# These standard Doxygen tags remain independent. Their values are timestamped,
-# but they are never merged into @date or removed.
-TIMESTAMPED_TAGS = (
+# These standard Doxygen tags remain independent and are never merged into
+# @date or removed. @version is refreshed; @since is initialized only once.
+REFRESHED_TIMESTAMP_TAGS = (
     "@version",
+)
+
+INITIAL_TIMESTAMP_TAGS = (
     "@since",
 )
+
+TIMESTAMPED_TAGS = REFRESHED_TIMESTAMP_TAGS + INITIAL_TIMESTAMP_TAGS
 
 ALL_DATE_TAGS = (DATE_TAG,) + LEGACY_DATE_TAGS
 
@@ -71,6 +78,17 @@ SEMANTIC_VERSION_RE = re.compile(
         r'(?:\+[0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*)?'
     r')'
     r'(?![0-9A-Za-z.-])'
+)
+
+# Accept both the selected dotted time representation and standard ISO-style
+# colon separators. Fractional seconds and a UTC/offset suffix are optional.
+EXISTING_TIMESTAMP_RE = re.compile(
+    r'^\s*'
+    r'\d{4}-\d{2}-\d{2}T'
+    r'\d{2}(?::|\.)\d{2}(?::|\.)\d{2}'
+    r'(?:[.,]\d+)?'
+    r'(?:Z|[+-]\d{2}:?\d{2})?'
+    r'(?=\s|$)'
 )
 
 CLOSING_COMMENT_RE = re.compile(
@@ -166,6 +184,66 @@ def build_timestamped_value(value, timestamp, preserve_comment_closer=False):
         return timestamp + " " + preserved + suffix
 
     return timestamp + suffix
+
+
+def build_since_value(value, timestamp, preserve_comment_closer=False):
+    """
+    Initialize an @since value only when it has no timestamp yet.
+
+    Existing timestamp examples are returned unchanged:
+
+        2026-07-14T16:50:00 / erba
+        2026-07-14T16.50.00 1.2.3
+
+    An uninitialized semantic version receives the first-save timestamp:
+
+        1.2.3 / erba
+            -> TIMESTAMP 1.2.3 / erba
+    """
+
+    suffix = ""
+    content = value
+
+    if preserve_comment_closer:
+        suffix_match = CLOSING_COMMENT_RE.search(content)
+
+        if suffix_match:
+            suffix = suffix_match.group("suffix")
+            content = content[:suffix_match.start()]
+
+    # @since is write-once after a timestamp has been established.
+    if EXISTING_TIMESTAMP_RE.match(content):
+        return content.rstrip() + suffix
+
+    semantic_version_match = SEMANTIC_VERSION_RE.search(content)
+
+    if semantic_version_match:
+        preserved = content[semantic_version_match.start():].strip()
+        return timestamp + " " + preserved + suffix
+
+    return timestamp + suffix
+
+
+def build_tag_timestamped_value(
+    tag,
+    value,
+    timestamp,
+    preserve_comment_closer=False
+):
+    """Apply the lifecycle rule belonging to a timestamped tag."""
+
+    if tag == "@since":
+        return build_since_value(
+            value,
+            timestamp,
+            preserve_comment_closer=preserve_comment_closer
+        )
+
+    return build_timestamped_value(
+        value,
+        timestamp,
+        preserve_comment_closer=preserve_comment_closer
+    )
 
 
 def merge_json_date_fields(text, timestamp):
@@ -336,15 +414,11 @@ def merge_text_date_fields(text, timestamp):
 
 def update_json_timestamp_fields(text, timestamp):
     """
-    Update @version and @since JSON properties.
+    Update timestamp-bearing JSON properties.
 
-    A semantic version and any text following it are preserved:
-
-        "@version": "1.2.3"
-            -> "@version": "TIMESTAMP 1.2.3"
-
-        "@since": "old value"
-            -> "@since": "TIMESTAMP"
+    @version is refreshed on every save. @since is initialized only when it
+    does not already begin with an ISO-style timestamp. Semantic versions and
+    following text are preserved after a newly written timestamp.
     """
 
     lines = text.splitlines(True)
@@ -357,7 +431,8 @@ def update_json_timestamp_fields(text, timestamp):
             new_lines.append(line)
             continue
 
-        new_value = build_timestamped_value(
+        new_value = build_tag_timestamped_value(
+            match.group("tag"),
             match.group("value"),
             timestamp
         )
@@ -382,10 +457,11 @@ def update_json_timestamp_fields(text, timestamp):
 
 def update_text_timestamp_fields(text, timestamp):
     """
-    Update @version and @since in text/Doxygen comments.
+    Update timestamp-bearing tags in text/Doxygen comments.
 
-    A semantic version and any following text are preserved after the current
-    timestamp. Closing block-comment markers are preserved.
+    @version is refreshed on every save. @since is initialized once and then
+    preserved when it already begins with an ISO-style timestamp. Closing
+    block-comment markers are preserved.
     """
 
     lines = text.splitlines(True)
@@ -398,7 +474,8 @@ def update_text_timestamp_fields(text, timestamp):
             new_lines.append(line)
             continue
 
-        new_value = build_timestamped_value(
+        new_value = build_tag_timestamped_value(
+            match.group("tag"),
             match.group("value"),
             timestamp,
             preserve_comment_closer=True
