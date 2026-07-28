@@ -2,12 +2,12 @@
 #:: *   @file       doxyit.py
 #:: *   @brief      Insert Doxygen headers
 #:: *   @details    Inserting file header or function header
-#:: *   
+#:: *
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
-#:: *   @since      2024-09-24T01:16:27 / Bruger
-##      @date       2026-07-28T08:17:14
-#:: *   @version    2026-07-28T08:17:19
+#:: *   @since      2026-07-28T09.03.52
+##      @date       2026-07-28T09.03.52
+#:: *   @version    2026-07-28T09.03.52
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -40,11 +40,22 @@ config['globals']   = {}
 config['globals']['iso'] = doxyit_lib.getIsoDate()
 config['globals']['currentFilename'] = currentFilename
 config['globals']['file_type'] = file_type
-user        = doxyit_lib.getUserInfo()
-# Warn if user is not defined
-if user not in config['users']: print "User not found in doxyit.json "
-userdata    = config['users'][user]
-config['globals']['user'] = doxyit_lib.getUserInfo()
+user = doxyit_lib.getUserInfo() or 'DEFAULT'
+
+# Resolve the user once and store the resolved value. Previously this block
+# selected DEFAULT, but config['globals']['user'] was then overwritten with
+# the original, missing login name.
+if user not in config['users']:
+    print "User '%s' not found in doxyit.json; using DEFAULT" % user
+    user = 'DEFAULT'
+
+userdata = config['users'].get(user, {
+    'name': 'unknown',
+    'fullname': 'unknown',
+    'email': 'unknown'
+})
+
+config['globals']['user'] = user
 
 if debug: print "isodate: "+config['globals']['iso']
 

@@ -14,8 +14,8 @@
 #:: *   
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     Erik Bachmann <Erik@ClicketyClick.dk>
-#:: *   @since      2024-09-24T22:00:00 / ErBa
-#:: *   @version    2025-06-26T10:38:02
+#:: *   @since      2026-07-28T09.05.14
+#:: *   @version    2026-07-28T09.05.14
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -41,7 +41,7 @@ verbose=False
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-25T07:57:44
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def getConfig(json_file):
     if debug: print( "json_file: " + json_file )
@@ -73,7 +73,7 @@ def getConfig(json_file):
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:58:22
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def getUserInfo():
     # Get user info
@@ -103,12 +103,29 @@ def getUserInfo():
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:58:50
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def expandVars( template, config ):
     file_type       = config['globals']['file_type']
-    user            = config['globals']['user']
-    userdata        = config['users'][user]
+    user            = config['globals'].get('user') or 'DEFAULT'
+    users           = config.get('users', {})
+
+    # Use DEFAULT whenever the logged-in user is not configured.
+    if user not in users:
+        print "User '%s' not found in doxyit.json; using DEFAULT" % user
+        user = 'DEFAULT'
+
+    # Keep the resolved user in globals so subsequent expansions do not
+    # repeat the lookup or warning.
+    config['globals']['user'] = user
+
+    # The inline values are a final safety net if DEFAULT is missing too.
+    userdata = users.get(user, {
+        'name': 'unknown',
+        'fullname': 'unknown',
+        'email': 'unknown'
+    })
+
 
     template        = template.replace("${START}",     config['types'][file_type]['start'] or "" )
     template        = template.replace("${END}",       config['types'][file_type]['end'] or "" )
@@ -124,9 +141,9 @@ def expandVars( template, config ):
 
     template        = template.replace("${ISO8601}",   config['globals']['iso'] or "No date")
 
-    template        = template.replace("${USER}",      userdata['name'] or "unknown" or "" )
-    template        = template.replace("${AUTHOR}",    userdata['fullname'] or "unknown" or "" )
-    template        = template.replace("${EMAIL}",     userdata['email'] or "unknown" or "" )
+    template        = template.replace("${USER}",      userdata.get('name') or "unknown" )
+    template        = template.replace("${AUTHOR}",    userdata.get('fullname') or "unknown" )
+    template        = template.replace("${EMAIL}",     userdata.get('email') or "unknown" )
 
     path, file_name = os.path.split( config['globals']['currentFilename'] );
     template        = template.replace("${FILE}", file_name )  #os.path.basename(currentFilename))
@@ -150,7 +167,7 @@ def expandVars( template, config ):
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:58:58
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def getNextLine():
     ## At end of file?
@@ -189,7 +206,7 @@ def getNextLine():
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:59:03
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def getIsoDate():
     return datetime.datetime.now().isoformat()[:19]
@@ -213,7 +230,7 @@ def getIsoDate():
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:59:06
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def setDebug( flag ):
     global debug
@@ -241,7 +258,7 @@ def setDebug( flag ):
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-09-26T13:59:13
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def setVerbose( flag ):
     global verbose
@@ -294,7 +311,7 @@ def setVerbose( flag ):
 #:: *   @warning    
 #:: *   
 #:: *   @see        https://
-#:: *   @since      2024-10-01T10:49:15
+#:: *   @since      2026-07-28T09.05.14
 #:: **
 def inArray( needle, haystack ):
     status = False

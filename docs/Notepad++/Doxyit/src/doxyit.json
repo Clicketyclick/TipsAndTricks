@@ -5,9 +5,9 @@
         "@details": "",
         "@copyright": "http://www.gnu.org/licenses/lgpl.txt LGPL version 3",
         "@author": "Erik Bachmann <Erik@ClicketyClick.dk>",
-        "@since": "2025-06-26T10:19:43 / erba",
-        "@date": "2026-07-28T08:17:42",
-        "@version": "2026-07-28T08:17:48"
+        "@since": "2026-07-28T09.04.00",
+        "@date": "2026-07-28T09.04.00",
+        "@version": "2026-07-28T09.04.00"
     },
     "system": {
         "name": "doxyit",
@@ -21,6 +21,13 @@
         "function": "${FUNCTION_PREFIX}${START}\n${LINE}${PREFIX}fn         ${FUNCTION}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}\n${PARAM}\n${LINE}${PREFIX}return     $(Return description)\n${LINE}\n${LINE}${PREFIX}details    $(More details)\n${LINE}\n${LINE}@code\n${LINE}@endcode\n@verbatim\n@endverbatim\n${LINE}<!--\n${LINE}${PREFIX}todo       \n${LINE}${PREFIX}bug        \n${LINE}${PREFIX}warning    \n${LINE}${PREFIX}note    \n${LINE}-->\n${LINE}${PREFIX}see        https://\n${LINE}${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
     },
     "users": {
+        "DEFAULT": {
+            "name": "UNKNOWN USER",
+            "fullname": "UNKNOWN USER",
+            "email": "noone@nowhere.com",
+            "phone": "+45",
+            "address": "Thierd Stone from the Sun"
+        },
         "erba": {
             "name": "erba",
             "fullname": "Erik Bachmann",
@@ -28,7 +35,7 @@
             "phone": "+45",
             "address": "Odense, Denmark"
         },
-        "e_bac": {
+        "_e_bac": {
             "name": "erba",
             "fullname": "Erik Bachmann",
             "email": "Erik@ClicketyClick.dk",
