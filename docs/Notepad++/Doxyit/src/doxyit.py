@@ -6,7 +6,8 @@
 #:: *   @copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3
 #:: *   @author     User Name <SomeOne@ClicketyClick.dk>
 #:: *   @since      2024-09-24T01:16:27 / Bruger
-#:: *   @version    2024-09-26T15:08:20
+##      @date       2026-07-28T08:17:14
+#:: *   @version    2026-07-28T08:17:19
 #:: **
 
 import os   # https://docs.python.org/3/library/os.html#os.environ
@@ -40,6 +41,8 @@ config['globals']['iso'] = doxyit_lib.getIsoDate()
 config['globals']['currentFilename'] = currentFilename
 config['globals']['file_type'] = file_type
 user        = doxyit_lib.getUserInfo()
+# Warn if user is not defined
+if user not in config['users']: print "User not found in doxyit.json "
 userdata    = config['users'][user]
 config['globals']['user'] = doxyit_lib.getUserInfo()
 
