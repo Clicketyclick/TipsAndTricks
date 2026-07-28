@@ -7,7 +7,8 @@
 |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|
 |---|---|
 |[ <img src="icons/CSS.icon.png" width=32> CSS](CSS/)                                 |[ <img src="icons/Dosbatch.icon.png" width=32> DOS batch](Dosbatch/)
-|[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](Exiftools/)                 |[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](Ghostscript/)
+|[ <img src="icons/Exiftool.icon.png" width=32> ExifTool](Exiftools/)                 |[ <img src="icons/Fire.icon.png" width=32> Firefox](Firefox/)
+[ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](Ghostscript/)          |
 |[ <img src="icons/Github.icon.png" width=32> Github](Github/)                        |[ <img src="icons/Hardware.icon.png" width=32> Hardware](Hardware/)  
 |[ <img src="icons/Iptc.icon.png" width=32> IPTC](Iptc/)                              |[ <img src="icons/Javascript.icon.png" width=32> Javascripts](Javascript/)  
 |[ <img src="icons/Keepass.icon.png" width=32> KeePass](Keepass/) Password Manager    |[ <img src="icons/Marc.icon.png" width=32> MARC?](Marc/) MARC21, danMARC2, BESmarc  
