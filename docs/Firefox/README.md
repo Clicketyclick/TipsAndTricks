@@ -1,3 +1,4 @@
+<img src="../icons/Firefox.logo.png"  width=64 style="float: right;">
 
 ## Firefox
 
