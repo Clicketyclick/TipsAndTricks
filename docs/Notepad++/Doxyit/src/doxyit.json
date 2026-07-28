@@ -1,14 +1,16 @@
 {
-    "_DOXYGEN": {
-        "@file": "doxyit.json",
-        "@brief": "Configuration data for doxyit",
-        "@details": "",
-        "@copyright": "http://www.gnu.org/licenses/lgpl.txt LGPL version 3",
-        "@author": "Erik Bachmann <Erik@ClicketyClick.dk>",
-        "@since": "2026-07-28T09.04.00",
-        "@date": "2026-07-28T09.04.00",
-        "@version": "2026-07-28T09.04.00"
-    },
+    "_DOXYGEN": { 
+        "@file":        "doxyit.json",
+        "@brief":       "Configuration data for doxyit",
+        "@details":     "",
+        "@copyright":   "http://www.gnu.org/licenses/lgpl.txt LGPL version 3",
+        "@author":      "Erik Bachmann <Erik@ClicketyClick.dk>",
+        "@since":       "2024-09-27T10.00.00",
+        "@version":     "2026-07-28T10.27.11"
+        "@date":        "2026-07-28T10.27.11"
+     },
+}
+{
     "system": {
         "name": "doxyit",
         "version": "01.00",
@@ -17,14 +19,15 @@
         "language": "en"
     },
     "templates": {
-        "file": "${FILE_PREFIX}${START}\n${LINE}${PREFIX}file       ${FILE}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}${PREFIX}details    \n${LINE}\n${LINE}Functions|Brief\n${LINE}---|---\n${LINE}.|.\n${LINE}\n${LINE}${PREFIX}copyright  http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE}${PREFIX}author     ${AUTHOR} <${EMAIL}>\n${LINE}${PREFIX}since      ${ISO8601} / ${USER}\n${LINE}${PREFIX}version    ${ISO8601}\n${LINE}${PREFIX}date        ${ISO8601}\n${END}${FILE_SUFFIX}",
-        "function": "${FUNCTION_PREFIX}${START}\n${LINE}${PREFIX}fn         ${FUNCTION}\n${LINE}${PREFIX}brief      $(Brief description)\n${LINE}\n${PARAM}\n${LINE}${PREFIX}return     $(Return description)\n${LINE}\n${LINE}${PREFIX}details    $(More details)\n${LINE}\n${LINE}@code\n${LINE}@endcode\n@verbatim\n@endverbatim\n${LINE}<!--\n${LINE}${PREFIX}todo       \n${LINE}${PREFIX}bug        \n${LINE}${PREFIX}warning    \n${LINE}${PREFIX}note    \n${LINE}-->\n${LINE}${PREFIX}see        https://\n${LINE}${PREFIX}since      ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
+        "file": "${FILE_PREFIX}${START}\n${LINE}${PREFIX}file        ${FILE}\n${LINE}${PREFIX}brief       $(Brief description)\n${LINE}${PREFIX}details     \n${LINE}\n${LINE}Functions|Brief\n${LINE}---|---\n${LINE}.|.\n${LINE}\n${LINE}${PREFIX}copyright   http://www.gnu.org/licenses/lgpl.txt LGPL version 3\n${LINE}${PREFIX}author      ${AUTHOR} <${EMAIL}>\n${LINE}${PREFIX}since       ${ISO8601} / ${USER}\n${LINE}${PREFIX}version     ${ISO8601}\n${LINE}${PREFIX}date        ${ISO8601}\n${END}${FILE_SUFFIX}",
+        "function": "${FUNCTION_PREFIX}${START}\n${LINE}${PREFIX}fn          ${FUNCTION}\n${LINE}${PREFIX}brief       $(Brief description)\n${LINE}\n${PARAM}\n${LINE}${PREFIX}return     $(Return description)\n${LINE}\n${LINE}${PREFIX}details     $(More details)\n${LINE}\n${LINE}@code\n${LINE}@endcode\n@verbatim\n@endverbatim\n${LINE}<!--\n${LINE}${PREFIX}todo        \n${LINE}${PREFIX}bug         \n${LINE}${PREFIX}warning     \n${LINE}${PREFIX}note     \n${LINE}-->\n${LINE}${PREFIX}see         https://\n${LINE}${PREFIX}since       ${ISO8601}\n${END}${FUNCTION_SUFFIX}"
     },
     "users": {
         "DEFAULT": {
+            "comment": "This is a fallback user! Do NOT update, but copy",
             "name": "UNKNOWN USER",
             "fullname": "UNKNOWN USER",
-            "email": "noone@nowhere.com",
+            "email": "Erik@ClicketyClick.dk",
             "phone": "+45",
             "address": "Thierd Stone from the Sun"
         },
@@ -35,7 +38,7 @@
             "phone": "+45",
             "address": "Odense, Denmark"
         },
-        "_e_bac": {
+        "e_bac": {
             "name": "erba",
             "fullname": "Erik Bachmann",
             "email": "Erik@ClicketyClick.dk",
@@ -47,7 +50,7 @@
             "fullname": "Erik Bachmann",
             "email": "ErikBachmann@ClicketyClick.dk",
             "phone": "+45",
-            "address": "Thierd Stone from the Sun"
+            "address": "Odense, Denmark"
         }
     },
     "types": {
@@ -56,13 +59,13 @@
             "comment_prefix": "REM ",
             "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
             "end": "::**",
-            "file_prefix": "@ECHO OFF&SetLocal EnableDelayedExpansion\n",
+            "file_prefix": "@ECHO OFF\nSetLocal EnableDelayedExpansion\n",
             "file_suffix": "\n:: ",
             "function": ":",
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": ":: *  ",
+            "line": ":: ",
             "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
             "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
@@ -90,13 +93,13 @@
             "comment_prefix": "REM ",
             "delimiter": "${COMMENT_PREFIX}----------------------------------------------------------------------",
             "end": "::**",
-            "file_prefix": "@ECHO OFF&SetLocal EnableDelayedExpansion\n",
+            "file_prefix": "@ECHO OFF\nsSetLocal EnableDelayedExpansion\n",
             "file_suffix": "\n:: ",
             "function": ":",
             "function_prefix": "\n",
             "function_suffix": "",
             "header_zone": 5,
-            "line": ":: * ",
+            "line": ":: ",
             "param_inner": "\t$(description)\n${LINE}${PREFIX}param [in]\t",
             "param_outer": "${LINE}${PREFIX}param [in]\t%s\t$(description)",
             "prefix": "@",
