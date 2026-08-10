@@ -10,6 +10,7 @@
 - Remove [drop shadow](DropShadow/) under windows
 - [Windows Spotlight Images](SpotlightFiles/)
 - [Windows Multi Display](MultiDisplay/)
+- [Windows God mode](God_mode/)
 
 ## Uninstall bloat ware
 
