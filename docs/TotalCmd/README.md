@@ -35,6 +35,10 @@ SpecialFlags=4096
 
 </details>
 
+
+- [Synchronize directories](Sync_dirs/)
+
+
 ### INI tricks
 
 <!-- [Redefine the default rename mask in Multi-rename tool](Redefine_the_default_rename_mask_in_Multi-rename)-->
