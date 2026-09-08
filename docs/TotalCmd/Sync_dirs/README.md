@@ -3,7 +3,7 @@
 
 ### Ignore specific subdirectories
 
-Yes. In **Total Commander → Commands → Synchronize Dirs**, use the file filter field between the two directory paths. Put exclusions after a vertical bar `|`.
+In **Total Commander → Commands → Synchronize Dirs**, use the file filter field between the two directory paths. Put exclusions after a vertical bar `|`.
 
 For example:
 
@@ -35,8 +35,6 @@ So, for a typical development tree I might use:
 
 You can **save this as part of a Synchronize Dirs profile**, so you don't need to enter it each time. ([Ghisler][2])
 
-If you tell me the exact subdirectories you want ignored, I can give you the precise filter expression—including cases where a directory should be excluded only at a specific level.
-
 [1]: https://ghisler.ch/board/viewtopic.php?p=399155&utm_source=chatgpt.com "Way to ignore directories for FTP and synchronize - Total Commander"
 [2]: https://ghisler.ch/board/viewtopic.php?p=263382&utm_source=chatgpt.com "Save/Restore Synchronize directories settings - Total Commander"
 
@@ -67,5 +65,4 @@ That is particularly convenient if you have profiles such as `Backup`, `WebServe
 
 [1]: https://ghisler.ch/board/viewtopic.php?t=36633&utm_source=chatgpt.com "Save/Restore Synchronize directories settings - Total Commander"
 [2]: https://www.ghisler.ch/board/viewtopic.php?t=76014&utm_source=chatgpt.com "Sticky filter option for Synchronize directories - Total Commander"
-
 
