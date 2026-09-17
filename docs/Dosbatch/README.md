@@ -25,6 +25,15 @@ Download book covers by ISBN
 - [Console box drawing](box_package/) - prints a titled console message box using Unicode box-drawing characters
 - [MardDown to Console table drawing](mdtable_package/) - converts a Markdown pipe table into a console table using box-drawing characters.
 
+## Touch me
+
+Set the batch file date to now on run
+
+```cmd
+:: Touch me
+@COPY /B %~0+,, %~0
+```
+
 ## Findstr w. OR
 
 ```cmd
