@@ -46,3 +46,30 @@ For example
 ``` Batchfile
 net use U: \\wsl$\Ubuntu /PERSISTENT:YES
 ```
+
+## Troubleshut
+
+### No LAN?
+
+Add/edit `~/.wslconfig`:
+```diff
++ [wsl2]
++ networkingMode=mirrored
+```
+
+Restart WSL:
+```
+wsl --shutdown
+wsl
+ping -c 3 google.com
+```
+
+[More detailed](wsl_lan_troubleshoot/)
+<details>
+ <summary>More details</summary>
+ 
+</details>
+
+
+
+
