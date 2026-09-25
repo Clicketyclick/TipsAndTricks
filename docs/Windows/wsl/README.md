@@ -65,11 +65,13 @@ ping -c 3 google.com
 ```
 
 [More detailed](wsl_lan_troubleshoot/)
+
+<!--
 <details>
  <summary>More details</summary>
  
 </details>
-
+-->
 
 
 
