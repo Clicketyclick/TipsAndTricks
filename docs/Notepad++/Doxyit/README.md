@@ -126,10 +126,12 @@ In general: [How do I run specific script with a keyboard shortcut?](https://com
 >
 > Now go to Settings (menu) -> Shortcut Mapper… and select the Plugin commands tab. Scrolling down somewhat you should see your script in the Name column (along with “Pythonscript” in the Plugin column). Go ahead and select your script and assign a keycombo to it just like you would for any other command.
 
-1. In "Filter": type "doxyit" and the matching entries will be presented
-2. Select "doxyit" and press <kbd>Modify</kbd>
-3. Personally I select <kbd>⇧ Shift</kbd><kbd>⌃ Control</kbd><kbd>D</kbd>
-4. Make sure that there are no conflicting sequenses
+1. Go to Settings (menu) -> Shortcut Mapper…
+2. Select the Plugin commands tab
+3. In "Filter": type "doxyit" and the matching entries will be presented
+4. Select "doxyit" and press <kbd>Modify</kbd>
+5. Personally I select <kbd>⇧ Shift</kbd><kbd>⌃ Control</kbd><kbd>D</kbd>
+6. Make sure that there are no conflicting sequenses
 
 ## Using DoxyIT
 
