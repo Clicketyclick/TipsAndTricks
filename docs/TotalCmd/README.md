@@ -2,43 +2,15 @@
 
 ## Totalcmd
 
-<details><summary>Files to backup</summary>
+- [Hotkey configuration](Hotkey_configuration/)
+- [Preserve data on FTP upload](Preserve_data_on_ftp_upload/)
+- [Synchronize directories](Sync_dirs/)
+
+
+### Files to backup
 
 - `AppData/Roaming/Giesler/wcx_ftp.ini`
 - `*.key`
-</details>
-
-<details><summary>Hotkey configuration</summary>
-
-`Configuration` / `Options` / `Misc`
-
-<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> = cm_FileSync
-
-</details>
-
-<details><summary>Preserve data on FTP upload</summary>
-
-https://www.ghisler.ch/board/viewtopic.php?t=48954
-
-In `"%USERPROFILE%\AppData\Roaming\GHISLER\wcx_ftp.ini"` set
-
-```
-[default]
-PreserveDates=1
-;Preserve file date/time on downloads
-```
-
-AND under the specific FTP configuration in `"%USERPROFILE%\AppData\Roaming\GHISLER\wcx_ftp.ini"`
-
-```
-PreserveDates=1
-SpecialFlags=4096
-```
-
-</details>
-
-
-- [Synchronize directories](Sync_dirs/)
 
 
 ### INI tricks
