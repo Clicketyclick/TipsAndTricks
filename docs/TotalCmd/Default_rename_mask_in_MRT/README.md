@@ -21,12 +21,12 @@ Yes, you can redefine the default rename mask in Total Commander's Multi-Rename 
 -->
 **Methods:**
 
-1. **Save as profile**: Configure your desired mask in the Multi-Rename Tool, then press **F2 → Save settings** to save it as a named profile.
+1. **Save as profile**: Configure your desired mask in the Multi-Rename Tool, then press **F2 → Save settings** to save it as a named profile: `ISOdate`.
 
 2. **Set as default**: Add this line to your `wincmd.ini` under `[Configuration]`:
    ```
    [Configuration]
-   MultiRenameLoadSettings=YourProfileName
+   MultiRenameLoadSettings=ISOdate
    ```
    This will automatically load your saved mask every time you open the Multi-Rename Tool.
 
