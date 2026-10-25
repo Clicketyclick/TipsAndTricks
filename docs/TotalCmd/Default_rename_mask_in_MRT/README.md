@@ -29,7 +29,8 @@ Yes, you can redefine the default rename mask in Total Commander's Multi-Rename 
    MultiRenameLoadSettings=ISOdate
    ```
    This will automatically load your saved mask every time you open the Multi-Rename Tool.
-
+> [!warning]
+> Never add a comment `;` after the configuraion. Always on a separate line
 3. **Toolbar button**: Create a button with command `MULTIRENAME YourProfileName` to always open the tool with your custom mask.
 
 
