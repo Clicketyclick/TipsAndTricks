@@ -90,3 +90,42 @@ exiftool -tagsfromfile in.json  ${IMG}
 exiftool -tagsfromfile @ -iptc:all -codedcharacterset=utf8 *.jpg
 ```
 
+#### Generate GUID in images
+
+Since ExifTool 13.59 (May 27, 2026), it has supported the [NewUUID tag](https://chatgpt.com/c/6ae89a57-5dfc-83ed-97d1-5dc66f22e8f1), which generates a random UUID version 4.
+
+For a single JPG image, run this in Windows CMD:
+
+```
+exiftool -if "not $XMP-iptcExt:DigitalImageGUID" "-XMP-iptcExt:DigitalImageGUID<NewUUID" image.jpg
+```
+
+This command:
+
+- Generates a new UUID.
+- Writes it to XMP-iptcExt:DigitalImageGUID.
+- Leaves an existing GUID unchanged.
+- Creates an _original backup file.
+
+Verify the resulting metadata:
+
+```
+exiftool -G1 -a -s -DigitalImageGUID image.jpg
+```
+
+For repeat processing, you can add -P to preserve file modification timestamps and -overwrite_original to avoid creating backup files.
+
+```
+exiftool -P -if "not $XMP-iptcExt:DigitalImageGUID" "-XMP-iptcExt:DigitalImageGUID<NewUUID" image.jpg
+```
+
+To process all JPG, PNG and TIFF images in a directory, including subdirectories:
+
+```bat
+exiftool -r ^
+  -ext jpg -ext jpeg -ext png -ext tif -ext tiff ^
+  -if "not $XMP-iptcExt:DigitalImageGUID" ^
+  "-XMP-iptcExt:DigitalImageGUID<NewUUID" ^
+  "D:\Images"
+```
+
