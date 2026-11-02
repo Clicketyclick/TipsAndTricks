@@ -18,6 +18,7 @@
 - [Showing the use of variables LINENO and BASH_LINENO](lineno.sh)
 - [<img src="../icons/Stackoverflow.icon.png" width=32> Stackoverflow: How to print file details of files matching grep pattern](https://stackoverflow.com/a/39145516): `grep -Zl PATTERN * | xargs -0 ls -l`
 - [Pass associative array by reference](pass_array_by_ref.md)
+- [Pause execution till keypress](pause_till_keypress.md)
 
 ### Remove files with names that contains special characters
 - [<img src="../icons/Linux_com.logo.png" width=32> Linux Shell Tip: Remove files with names that contains spaces, and special characters such as -, —](https://www.linux.com/training-tutorials/linux-shell-tip-remove-files-names-contains-spaces-and-special-characters-such/)  [<span title="CopyLeft &#x1F12F; Local copy">(&#x0254;)</span>](remove_files_w_special_chars/)
