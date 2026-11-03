@@ -11,7 +11,8 @@
 [ <img src="icons/Ghostscript.icon.png" width=32> Ghostscript](Ghostscript/)          |
 |[ <img src="icons/Github.icon.png" width=32> Github](Github/)                        |[ <img src="icons/Hardware.icon.png" width=32> Hardware](Hardware/)  
 |[ <img src="icons/Iptc.icon.png" width=32> IPTC](Iptc/)                              |[ <img src="icons/Javascript.icon.png" width=32> Javascripts](Javascript/)  
-|[ <img src="icons/Keepass.icon.png" width=32> KeePass](Keepass/) Password Manager    |[ <img src="icons/Marc.icon.png" width=32> MARC?](Marc/) MARC21, danMARC2, BESmarc  
+|[ <img src="icons/Keepass.icon.png" width=32> KeePass](Keepass/) Password Manager    |[ <img src="icons/Linux.icon.png" width=32> Linux](Linux/) 
+|[ <img src="icons/Marc.icon.png" width=32> MARC?](Marc/) MARC21, danMARC2, BESmarc    |.
 |[ <img src="icons/Markdown.icon.png" width=32> Markdown](Markdown/)                  |[ <img src="icons/Marcedit.icon.png" width=32> Marcedit](Marcedit/)
 |[ &#x1F30D; Maps in general](Maps/)                                                  |[ Microsoft - Excel](Microsoft/Excel/)  
 |[ <img src="icons/Notepadpp.icon.png" width=32> Notepad++](Notepad++/)               |[ <img src="icons/Php.icon.png" width=32> PHP](Php/)	                                        
