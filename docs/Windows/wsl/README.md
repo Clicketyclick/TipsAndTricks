@@ -1,6 +1,8 @@
 
 ## Windows WSL
 
+- [Compact WSL](Compact_wsl/)
+
 ### Install
 
 [How to install the Linux Windows Subsystem in Windows 11](https://techcommunity.microsoft.com/t5/windows-11/how-to-install-the-linux-windows-subsystem-in-windows-11/m-p/2701207) / ammarjaved ‎Aug 30 2021 10:15 PM - last edited on ‎Nov 09 2023 11:09 AM
