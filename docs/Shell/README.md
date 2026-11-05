@@ -20,6 +20,16 @@
 - [Pass associative array by reference](pass_array_by_ref.md)
 - [Pause execution till keypress](pause_till_keypress.md)
 
+### grep occurences in file
+
+Source: https://unix.stackexchange.com/a/6985
+
+grep's -o will only output the matches, ignoring lines; wc can count them:
+
+```bash
+grep -o 'needle' file | wc -l
+```
+
 ### Remove files with names that contains special characters
 - [<img src="../icons/Linux_com.logo.png" width=32> Linux Shell Tip: Remove files with names that contains spaces, and special characters such as -, —](https://www.linux.com/training-tutorials/linux-shell-tip-remove-files-names-contains-spaces-and-special-characters-such/)  [<span title="CopyLeft &#x1F12F; Local copy">(&#x0254;)</span>](remove_files_w_special_chars/)
 
