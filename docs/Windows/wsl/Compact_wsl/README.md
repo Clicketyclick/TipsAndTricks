@@ -7,14 +7,16 @@ Source: https://superuser.com/a/1940195
 As of WSL v2.9.8, there is now a built-in command to compact WSL's VHDX:
 
 
-```bash
+```bat
+REM Shutdown wsl
 wsl --shutdown
+REM UPdate packages
 wsl --update
-# List volume
+REM List volume
 wsl -l -v
 wsl --manage Ubuntu --compact
-# Start WSL
+REM Start WSL
 wsl 
-# List volume
+REM List volume
 wsl -l -v
 ```
