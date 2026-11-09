@@ -8,15 +8,15 @@ As of WSL v2.9.8, there is now a built-in command to compact WSL's VHDX:
 
 
 ```bat
-REM Shutdown wsl
+:: Shutdown wsl
 wsl --shutdown
-REM UPdate packages
+:: UPdate packages
 wsl --update
-REM List volume
+:: List volume
 wsl -l -v
 wsl --manage Ubuntu --compact
-REM Start WSL
+:: Start WSL
 wsl 
-REM List volume
+:: List volume
 wsl -l -v
 ```
