@@ -26,3 +26,11 @@ Enter the following command and press Enter:
 dism /online /Enable-Feature /FeatureName:TelnetClient
 ```
 Wait for the process to complete. Once done, Telnet will be installed.
+
+## Run shortcut Elevated
+
+1. Right click shortcut
+2. Select "Properties"
+3. Click <kbd>Advanced</kbd>
+4. Select "Run as admin"
+5. Click <kbd>OK</kbd>
