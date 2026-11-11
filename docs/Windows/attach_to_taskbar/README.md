@@ -1,4 +1,4 @@
-## Attatche to taskbar
+## Attache to taskbar
 
 ### Shortcut
 > [!IMPORTANT]
