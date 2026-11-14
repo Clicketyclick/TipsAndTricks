@@ -40,7 +40,46 @@ winget list | Select-String -Pattern 'unknown'  -SimpleMatch
 ' or case sensitive
 winget list | Select-String -Pattern 'Unknown' -CaseSensitive -SimpleMatch
 ```
-## References
+
+### Automation
+
+Create a script: `%USERPROFILE%\winget_upgrade.cmd`:
+
+```bat
+@ECHO OFF
+SETLOCAL EnableDelayedExpansion
+
+:init
+    ::https://stackoverflow.com/questions/7985755/how-to-detect-if-cmd-is-running-as-administrator-has-elevated-privileges#comment103360290_16285248
+    net session >nul 2>&1 && (echo IS admin&goto :admin)|| (echo not admin&goto :user&goto :eof)
+    :: Wait for result to sink in ;-)
+    timeout /t 10
+GOTO :EOF
+
+:admin
+    ::#' List upgradable packages
+    winget upgrade
+    ::#' Do the upgrade
+    winget upgrade --all
+GOTO :eof
+
+:user
+    SET "TITLE=Not elevated!"
+    SET "MSG=You're not admin!.\nThis is required to run this funtion"  MB_WARNING+MS_OD
+
+    call box "%TITLE%" "%MSG%" 
+    call msgbox "%MSG%" "%TITLE%" MB_WARNING+MS_OD
+GOTO :EOF
+```
+
+Create a shortcut with:
+- location: `%USERPROFILE%`
+- Destination: `%USERPROFILE%\winget_upgrade.cmd`
+- icon: `%SystemDrive%\bin\icons\Windows_Package_Manager_logo.ico`
+- Advanced/Run as Admin: Checked
+
+
+### References
 
 - [Winget: The best way to keep Windows apps updated](https://www.computerworld.com/article/3684171/winget-the-best-way-to-keep-windows-apps-updated.html) / Ed Tittel,
 Computerworld | JAN 19, 2023 3:00 AM PST
