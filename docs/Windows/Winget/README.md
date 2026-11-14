@@ -47,14 +47,32 @@ Create a script: `%USERPROFILE%\winget_upgrade.cmd`:
 
 ```bat
 @ECHO OFF
-SETLOCAL EnableDelayedExpansion
+SetLocal EnableDelayedExpansion
+::**
+:: @file        winget_upgrade.cmd
+:: @brief       Automate winget upgrade
+:: @details     
+:: 
+:: Functions | Brief                
+:----------- | ---------------------
+:: :init     | Init and setup       
+:: :admin    | Upgrade if elevated  
+:: :user     | Error if not elevated
+:: 
+:: @copyright   http://www.gnu.org/licenses/lgpl.txt LGPL version 3
+:: @author      Erik Bachmann <Erik@ClicketyClick.dk>
+:: @since       2026-11-14T07:51:24 / erba
+:: @version     2026-11-14T07.54.20
+:: @date        2026-11-14T07.54.20
+::**
 
 :init
     ::https://stackoverflow.com/questions/7985755/how-to-detect-if-cmd-is-running-as-administrator-has-elevated-privileges#comment103360290_16285248
     net session >nul 2>&1 && (echo IS admin&goto :admin)|| (echo not admin&goto :user&goto :eof)
-    :: Wait for result to sink in ;-)
+    :: Time to let it sink in ;-)
     timeout /t 10
 GOTO :EOF
+
 
 :admin
     ::#' List upgradable packages
